@@ -209,6 +209,18 @@ var slides = [
 `
 }
 ,{
+"set" : 4,
+"idLabel" : "Final-Pattern",
+"deck" : 3,
+"content" : `
+## Final ##
+
+<h3 class="swap">[nameOfFile]-[version].[extension]</h3>
+<h3 class="swap">myFile-1.0.15.psd</h3>
+
+`
+}
+,{
 "set" : 5,
 "idLabel" : "Font-Stacks",
 "type" : "section",
