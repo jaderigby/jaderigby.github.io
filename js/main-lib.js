@@ -9,7 +9,7 @@ function slidesLayout() {
 	let currYAsInt = baseYVal;
 	let currZAsInt = baseZVal;
 
-	var iOS = !!navigator.platform && iPad|iPhone|iPod/.test(navigator.platform);
+	var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
 	if (iOS) {
 		_$('#Navigation').css('display', 'block');
