@@ -12,7 +12,7 @@ function slidesLayout() {
 	var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
 	if (iOS) {
-		_$('#touchControls').css('display', 'block');
+		_$('.touch-controls').css('display', 'block');
 	}
 
 	const slidesNode = document.getElementById('slides');
@@ -255,6 +255,42 @@ document.getElementById('reveal').onclick = function(e) {
 		}
 }
 
+document.getElementById('revealBack').onclick = function(e) {
+	if (currFrame !== 'first') {
+		if (_$("#" + currFrame + ' .fade').items.length !== 0) {
+			let items = _$("#" + currFrame + ' .show').items;
+			let latest = 0;
+			if (items.length > 0) {
+				latest = items.length - 1;
+			}
+			let showList = _$('#' + currFrame + ' .fade').items;
+			let currShow = showList[latest];
+			hide(currShow);
+		}
+		else if (_$("#" + currFrame + ' .swap').items.length !== 0) {
+			let latestSwap = 0;
+			let latestSwapReverse = 0;
+			let showList = _$('#' + currFrame + ' .swap').items;
+			for (let i = 0; i < showList.length; i++) {
+				if (showList[i].classList.contains('show')) {
+					latestSwap++;
+					break;
+				}
+				else {
+					latestSwap++;
+				}
+			}
+
+			latestSwapReverse = ((latestSwap - 2) < 0) ? (showList.length - 1) : (latestSwap - 2);
+
+			(showList).forEach( (_item_) => {
+				hide(_item_);
+			});
+			show(showList[latestSwapReverse]);
+		}
+	}
+}
+
 window.addEventListener('keydown', function(e) {
 	// console.log("Key: ",e.keyCode);
 	if (currFrame === 'first') {
@@ -336,7 +372,7 @@ window.addEventListener('keydown', function(e) {
 				});
 				show(showList[latestSwap]);
 			}
-			else if (e.keyCode === n_key) {
+			else if (e.keyCode === n_key ) {
 				window.location.href = '#first';
 			}
 			// else if (e.keyCode === tab_key) {
@@ -378,19 +414,9 @@ document.getElementById('moveRight').onclick = function(e) {
 	impress().next();
 };
 
-(function() {
-	if (localStorage.communicationsMeritBadge) {
-		var str = localStorage.communicationsMeritBadge;
-		_$('#courtOfHonorScript').item.value = str;
-	}
-})();
-
-_$('#slides').delegate('#'+ currFrame +' input[type="submit"]', 'click', function(e) {
-	var str = _$('#'+ currFrame +' textarea').item.value;
-	localStorage.communicationsMeritBadge	 = str;
-	alert("Script has been saved");
-});
-
+document.getElementById('homeBtn').onclick = function(e) {
+	window.location.href = '#first';
+};
 
 
 // window.addEventListener("hashchange", function() {
