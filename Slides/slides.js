@@ -215,8 +215,8 @@ var slides = [
 "content" : `
 ## Versioning: Final Result ##
 
-<h3 class="fade show">[nameOfFile]-[version].[extension]</h3>
-<h3 class="fade">myFile-1.0.15.psd</h3>
+<h3 class="swap show center-justify">[nameOfFile]-[version].[extension]</h3>
+<h3 class="fade center-justify">myFile-1.0.15.psd</h3>
 
 `
 }
