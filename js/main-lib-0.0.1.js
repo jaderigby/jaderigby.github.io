@@ -12,6 +12,7 @@ function slidesLayout() {
 	// var iOS = !!navigator.platform && iPad|iPhone|iPod/.test(navigator.platform);
 
 	var iOS = true;
+
 	if (iOS) {
 		_$('#Navigation').css('display', 'block');
 		_$('#touchControls').css('display', 'block');
@@ -146,6 +147,10 @@ slidesLayout();
 	trigger.addEventListener('mouseleave', function(e) {
 		_$('#sourceBar').removeClass('active');
 	});
+
+	document.getElementById('sidebarTrigger').onclick = function(e) {
+		_$('#sourceBar').toggleClass('active');
+	};
 
 	// const bar = _$('#sourceBar').item;
 	// _$(bar).delegate('mouseenter', 'li', () => {

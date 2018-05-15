@@ -583,6 +583,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	bottom: 0;
 	right: 0;
 }
+#sidebarTrigger {
+	position: fixed;
+	width: 80px;
+	top: 0;
+	bottom: 0;
+	background-color: transparent;
+}
 #Navigation, #touchControls {
 	display: none;
 }
