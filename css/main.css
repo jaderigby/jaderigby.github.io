@@ -589,6 +589,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	top: 0;
 	bottom: 0;
 	background-color: transparent;
+	z-index: 998;
 }
 #Navigation, #touchControls {
 	display: none;
