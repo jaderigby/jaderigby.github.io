@@ -576,6 +576,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	width: 120px;
 	height: 50px;
 }
+#touchControls {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	bottom: 0;
+	right: 0;
+}
 #Navigation, #touchControls {
 	display: none;
 }
