@@ -12,7 +12,8 @@ function slidesLayout() {
 	var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
 	if (iOS) {
-		_$('.touch-controls').css('display', 'block');
+		_$('#Navigation').css('display', 'block');
+		_$('#touchControls').css('display', 'block');
 	}
 
 	const slidesNode = document.getElementById('slides');
