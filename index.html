@@ -2,48 +2,78 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=1024" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<link rel="stylesheet" type="text/css" href="css/prism-okaidia.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<title>UX Guidelines</title>
+		<!-- <link rel="stylesheet" type="text/css" href="your/filepath/here" /> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+			}
+			h1 {
+				font-size: 3.2rem;
+			}
+			h2 {
+				font-size: 2.8rem;
+			}
+			h3 {
+				font-size: 2.4rem;
+			}
+			h4 {
+				font-size: 2rem
+			}
+			h5 {
+				font-size: 1.6rem;
+			}
+			h6 {
+				font-size: 1.2rem;
+			}
+			body {
+				background-color: #444;
+			}
+			#container {
+				margin: 0 auto 30px;
+				padding: 30px;
+				width: 960px;
+				min-height: 500px;
+				background-color: #fff;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 0 35px rgba(0,0,0,0.5);
+				font-family: arial, verdana, sans-serif;
+			}
+			.centerize {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0
+			}
+			.cf:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+      a {
+        color: rgb(51, 119, 128);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      li {
+        margin: 10px 0;
+      }
+		</style>
+		<title>My Blog</title>
 	</head>
 	<body>
-		<div id="sidebarTrigger"></div>
-		<div id="Navigation">
-			<div id="homeBtn"></div>
-			<div id="revealBack"></div>
+		<div id="container">
+			<ul>
+        <li><a href="ux-guidelines-vol1/index.html">UX Guidelines Vol. 1</a></li>
+        <li><a href="ux-guidelines-vol2/index.html">UX Guidelines Vol. 2</a></li>
+        <li><a href="ux-guidelines-vol3/index.html">UX Guidelines Vol. 3</a></li>
+      </ul>
 		</div>
-		<div id="title" class="title">
-			UX Guidelines
-		</div>
-		<div id="sourceBarTrigger">
-			<div id="sourceBar">
-				<ul></ul>
-			</div>
-		</div>
-		<div id="touchControls">
-			<div id="moveLeft"></div>
-			<div id="moveRight"></div>
-			<div id="reveal"></div>
-		</div>
-		<div id="impress">
-			<div
-			 id="first"
-			 class="step"
-			 data-x="-4000"
-			 data-y="0"
-			 data-scale="10"
-			>
-			</div>
-			<div id="slides"></div>
-		</div>
-		<script src="js/impress.js"></script>
-		<script src="bower_components/remarkable/dist/remarkable.min.js"></script>
-		<script src="js/customloop.js"></script>
-		<script src="Slides/slides.js"></script>
-		<script src="js/jquishy.min.js"></script>
-		<script src="js/prism.js"></script>
-		<script src="js/main-lib-0.0.1.js"></script>
 	</body>
 </html>
