@@ -1,4 +1,6 @@
-var slides = [
+const title = "UX Guidelines: Vol. 3";
+
+const slides = [
 {
 "set" : 1,
 "idLabel" : "Versioning",

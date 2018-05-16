@@ -1,4 +1,4 @@
-const title = "UX Guidelines: Vol. 1"
+const title = "UX Guidelines: Vol. 1";
 
 const slides = [
 {
