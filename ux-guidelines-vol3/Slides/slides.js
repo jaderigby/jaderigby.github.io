@@ -1,5 +1,7 @@
 const title = "UX Guidelines: Vol. 3";
 
+const date = "5/22/2018";
+
 const slides = [
 {
 "set" : 1,
