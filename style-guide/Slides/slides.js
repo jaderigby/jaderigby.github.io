@@ -37,7 +37,7 @@ const slides = [
 "idLabel" : "Versioning",
 "type" : "section",
 "content" : `
-# Versioning #
+# File Versioning #
 `
 }
 ,{
