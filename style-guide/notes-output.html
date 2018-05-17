@@ -163,6 +163,9 @@
           <p>
             <button id="download" type="button" name="button">Download File</button>
           </p>
+					<p>
+            <button id="viewFile" type="button" name="button">View File</button>
+          </p>
         </article>
       </section>
 		</div>
@@ -354,6 +357,10 @@
   		});
   		let mdText = md.render(doc);
 
+			let filename = title.replace(/\s+/g, '-').toLowerCase();
+			filename = filename.replace(':', '');
+			filename = filename.replace('.', '');
+
       const finalText = prefix + dateLine + mainTitle + mdText + suffix;
 
       document.getElementById('outputContent').value = finalText;
@@ -365,13 +372,15 @@
       };
 
       document.getElementById('download').onclick = () => {
-        let filename = title.replace(/\s+/g, '-').toLowerCase();
-        filename = filename.replace(':', '');
-        filename = filename.replace('.', '');
         filename = filename + "-notes.html";
 
         download(filename, finalText);
       };
+
+			document.getElementById('viewFile').onclick = () => {
+				var wnd = window.open("about:blank", "", "_blank");
+				wnd.document.write(finalText);
+			};
 
       function download(filename, text) {
         var element = document.createElement('a');

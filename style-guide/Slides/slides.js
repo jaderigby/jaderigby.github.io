@@ -62,4 +62,23 @@ Example: __myFile-1.2.3.psd__
 
 `
 }
+,{
+"set" : 3,
+"idLabel" : "Metadata",
+"type" : "section",
+"content" : `
+# Metadata #
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Metadata",
+"content" : `
+## Metadata Intro ##
+
+### PSD ###
+
+### Word ###
+`
+}
 ]
