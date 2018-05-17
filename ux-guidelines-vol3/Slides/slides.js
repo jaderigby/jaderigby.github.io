@@ -7,8 +7,7 @@ const slides = [
 "set" : 1,
 "idLabel" : "Versioning",
 "type" : "section",
-"content" : `
-<h1>Versioning<br /><span class="split-line">Guidelines</span></h1>
+"content" : `<h1>Versioning<br /><span class="split-line">Guidelines</span></h1>
 `
 }
 ,{
