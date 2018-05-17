@@ -71,9 +71,6 @@
         box-sizing: border-box;
         width: 100%;
       }
-      #textCopier {
-        display: none;
-      }
       p {
         margin: 15px 0;
       }
@@ -166,7 +163,6 @@
           <p>
             <button id="download" type="button" name="button">Download File</button>
           </p>
-
         </article>
       </section>
 		</div>
@@ -353,7 +349,9 @@
   		});
   		let mdText = md.render(doc);
 
-      document.getElementById('outputContent').value = prefix + mdText + suffix;
+      const finalText = prefix + dateLine + mainTitle + mdText + suffix;
+
+      document.getElementById('outputContent').value = finalText;
 
       document.getElementById('textCopier').onclick = () => {
         var textToCopy = document.getElementById("outputContent");
@@ -367,7 +365,7 @@
         filename = filename.replace('.', '');
         filename = filename + "-notes.html";
 
-        download(filename, prefix + dateLine + mainTitle + mdText + suffix);
+        download(filename, finalText);
       };
 
       function download(filename, text) {
