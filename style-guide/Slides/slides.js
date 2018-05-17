@@ -41,7 +41,7 @@ const slides = [
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Semantic-Versioning",
 "content" : `
 ## Semantic Versioning ##
