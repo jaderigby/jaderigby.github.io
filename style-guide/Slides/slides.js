@@ -5,31 +5,61 @@ const date = "5/16/2018";
 const slides = [
 {
 "set" : 1,
-"idLabel" : "Versioning",
+"idLabel" : "Font-Stacks",
 "type" : "section",
-"content" : `<h1>Versioning<br /><span class="split-line">Guidelines</span></h1>
+"content" : `
+# Font Stacks #
 `
 }
 ,{
 "set" : 1,
-"idLabel" : "Font-Stacks",
+"idLabel" : "Font-Stacks-List",
+"content" : `
+## Fonts ##
+- __Montserrat__ = Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
+- __Raleway__ = Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif
+- __Open Sans__ = "Open Sans", Verdana, Helvetica, sans-serif
+- __Lato__ = Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
+- __Roboto__ = Roboto, Verdana, Helvetica, sans-serif
+- __Fira Sans__ = "Fira Sans", Helvetica, Arial, Verdana, sans-serif
+- __Hind__ = Hind, Helvetica, Arial, Verdana, sans-serif
+- __Hind Madurai__ = "Hind Madurai", Helvetica, Arial, Verdana, sans-serif
+- __Source Sans Pro__ = "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif
+- __PT Sans__ = "PT Sans", Helvetica, Arial, Verdana, sans-serif
+- __PT Sans Narrow__ = "PT Sans Narrow", Helvetica, Arial, Verdana, sans-serif
+- __Helvetica Neue__ = "Helvetica Neue", Helvetica, Arial, sans-serif
+- __Helvetica__ = Helvetica, Arial, Verdana, sans-serif
+- __Play__ = 'Play', arial, sans-serif
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Versioning",
 "type" : "section",
 "content" : `
-montserrat = Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
-raleway = Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif
-open-sans = "Open Sans", Verdana, Helvetica, sans-serif
-lato = Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
-roboto = Roboto, Verdana, Helvetica, sans-serif
-fira-sans = "Fira Sans", Helvetica, Arial, Verdana, sans-serif
-hind = Hind, Helvetica, Arial, Verdana, sans-serif
-source-sans-pro = "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif
-pt-sans = "PT Sans", Helvetica, Arial, Verdana, sans-serif
-pt-sans-narrow = "PT Sans Narrow", Helvetica, Arial, Verdana, sans-serif
-helvetica-neue = "Helvetica Neue", Helvetica, Arial, sans-serif
-raleway = Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif
-montserrat = Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
-helvetica = Helvetica, Arial, Verdana, sans-serif
-play = 'Play', arial, sans-serif
+# Versioning #
+`
+}
+,{
+"set" : 1,
+"idLabel" : "Semantic-Versioning",
+"content" : `
+## Semantic Versioning ##
+
+Example: __myFile-1.2.3.psd__
+
+### In Software: ###
+
+- MAJOR = backwards compatible breaking
+- MINOR = new feature
+- PATCH = bug fixes
+
+### For Creatives: ###
+
+- MAJOR = new concept
+- MINOR = revised sections of a cohesive original
+- SUB = common tweaks and changes
+
 `
 }
 ]

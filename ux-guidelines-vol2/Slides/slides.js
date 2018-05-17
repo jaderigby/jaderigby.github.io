@@ -53,7 +53,7 @@ const slides = [
 <ul>
   <li class="fade">MAJOR = new concept</li>
   <li class="fade">MINOR = revised sections of a cohesive original</li>
-  <li class="fade">PATCH = minor tweeks and changes</li>
+  <li class="fade">PATCH = minor tweaks and changes</li>
 </ul>
 `
 }
