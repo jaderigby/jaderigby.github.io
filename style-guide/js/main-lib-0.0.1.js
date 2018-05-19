@@ -258,6 +258,7 @@ document.getElementById('reveal').onclick = function(e) {
 					hide(_item_);
 				});
 				show(showList[latestSwap]);
+				handleSwapDots(currFrame);
 			}
 		}
 }
@@ -294,8 +295,39 @@ document.getElementById('revealBack').onclick = function(e) {
 				hide(_item_);
 			});
 			show(showList[latestSwapReverse]);
+			handleSwapDots(currFrame);
 		}
 	}
+}
+
+function initSwapDots() {
+	_$(".swap-wrap").items.forEach(function(_item_) {
+		const count = _$(_item_).item.children.length;
+		let dots = "";
+
+		for (let i = 0; i < count; i++) {
+			dots += `<div class="dot" data-index="${i}"></div>`;
+		}
+		dots = `<div class="swap-dots">${dots}</div>`;
+		_$(_item_.parentElement).append(dots);
+	});
+}
+
+initSwapDots();
+
+function handleSwapDots(par) {
+	let activeItem = null;
+	_$("#" + par + " .swap").items.forEach(function(_item_, _i_) {
+		if (_item_.classList.contains('show')) {
+			activeItem = _i_;
+		}
+	});
+	_$("#" + par + " .swap-dots .dot").items.forEach(function(_item_) {
+		if (parseInt(_$(_item_).attr('data-index')) === activeItem) {
+			_$("#" + par + " .swap-dots .dot").removeClass('current');
+			_$(_item_).addClass('current');
+		}
+	});
 }
 
 window.addEventListener('keydown', function(e) {
@@ -328,16 +360,13 @@ window.addEventListener('keydown', function(e) {
 					}
 				}
 
-				// if (showList.length === latestSwap) {
-				// 	latestSwap = 0;
-				// }
-
 				latestSwapReverse = ((latestSwap - 2) < 0) ? (showList.length - 1) : (latestSwap - 2);
 
 				(showList).forEach( (_item_) => {
 					hide(_item_);
 				});
 				show(showList[latestSwapReverse]);
+				handleSwapDots(currFrame);
 			}
 		}
 		else {
@@ -378,13 +407,11 @@ window.addEventListener('keydown', function(e) {
 					hide(_item_);
 				});
 				show(showList[latestSwap]);
+				handleSwapDots(currFrame);
 			}
 			else if (e.keyCode === n_key ) {
 				window.location.href = '#first';
 			}
-			// else if (e.keyCode === tab_key) {
-			// 	$('#' + currFrame + ' .link').focus();
-			// }
 		}
 	}
 });
@@ -424,15 +451,3 @@ document.getElementById('moveRight').onclick = function(e) {
 document.getElementById('homeBtn').onclick = function(e) {
 	window.location.href = '#first';
 };
-
-
-// window.addEventListener("hashchange", function() {
-// 	if ($('#' + currFrame + ' .fire').length > 0) {
-// 		$('#' + currFrame).find('.fire').css('display', 'block');
-// 		$('#' + currFrame).find('.fire').animate({
-// 			opacity: 1
-// 		}, 500, function() {
-// 			$(this).addClass('show');
-// 		});
-// 	}
-// });
