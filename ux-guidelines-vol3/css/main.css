@@ -6,6 +6,11 @@
 	font-family: "Lato";
 	src: url('../fonts/Lato-Regular.ttf')  format('truetype');
 }
+@font-face {
+  font-family: "Lato";
+  src: url("fonts/Lato-Bold.ttf");
+  font-weight: bold;
+}
 
 #sourceBarTrigger {
 	position: fixed;
