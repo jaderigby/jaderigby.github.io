@@ -1,6 +1,6 @@
-const title = "Style Guide";
+const title = "BR Style Guide";
 
-const date = "5/16/2018";
+const date = "5/19/2018";
 
 const slides = [
 {
@@ -74,11 +74,72 @@ Example: __myFile-1.2.3.psd__
 "set" : 3,
 "idLabel" : "Metadata",
 "content" : `
-## Metadata Intro ##
+## Metadata Details ##
 
-### PSD ###
+For the Mac:
 
-### Word ###
+- usually located at: "File > Properties"
+- Photoshop: "File > File Info"
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Metadata-Breakdown",
+"content" : `
+## Metadata Breakdown ##
+
+- __Creation Date__ &mdash; Often given to you for free
+- __Modified Date__ &mdash; Often given to you for free; Place in Comments, if no other option.
+- __Author__ &mdash; For Multiple Authors, record additional authors in the Comments.
+- __*Keywords__ &mdash; Keywords breakdown is given in the section below.
+
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Metadata-Keywords",
+"content" : `
+## Metadata Keywords ##
+
+1. __Product__ &mdash; SeroVital, GF-9, etc
+2. __Category__ &mdash; Neck Cream, etc
+3. __Campaign__ &mdash; Memorial Day, etc
+4. __Classification__ &mdash; Landing Page, Email, etc
+
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Metadata-Search",
+"content" : `
+## Metadata Search Guide ##
+
+### How To Search (Mac): ###
+
+- Keyword Combinations
+  - "this __AND__ that"
+  - "SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email"
+- File type
+  - "__kind__:word"
+    - word
+    - psd
+    - pdf
+    - image
+    - movie
+- metadata category
+  - "__author__:John"
+  - "__title__:SaroVital Homepage"
+  - ... etc
+
+### All Together: ###
+
+"SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email __kind__:word"
+
+### How To Search (Windows): ###
+
+- [Resource](https://www.pcworld.com/article/2905674/the-art-of-windows-file-search.html)
+- [Additional Info](https://www.howtogeek.com/173703/how-to-use-windows-advanced-search-features-everything-you-need-to-know/)
+
 `
 }
 ]

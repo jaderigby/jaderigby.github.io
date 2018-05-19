@@ -23,7 +23,7 @@ cite {
 }
 
 .red {
-	color: #ff1111;
+	color: #a70202;
 }
 
 .panel-inner {
@@ -269,6 +269,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f51f3147', e
 	border: 5px solid white;
 	border-radius: 5px;
 	box-shadow: 0 8px 42px rgba(0,0,0,0.21);
+}
+.main-image.large img {
+	margin-top: -20px;
+	max-width: 740px;
+	border: none;
+	border-radius: none;
+	box-shadow: none;
 }
 .thumb img {
 	margin-left: -3px;

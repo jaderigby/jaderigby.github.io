@@ -200,67 +200,16 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 <div class="swap-wrap">
 
-  <div class="swap show">
-    <h3 class="center-justify">Goal:</h3>
-    <h4 class="center-justify">Find original document for = SeroVital Neck Cream Content, Memorial Day Sale Email</h4>
+  <div class="swap">
+
+
+
   </div>
 
   <div class="swap">
-    <div class="main-image large">
-      <img src="images/files.png" />
-    </div>
-  </div>
 
-  <div class="swap">
-    <h4 class="center-justify">Search by title: <span class="red"><strong>test</strong></span></h4>
-  </div>
 
-  <div class="swap">
-    <div class="main-image large">
-      <img src="images/title.png" />
-    </div>
-  </div>
 
-  <div class="swap">
-    <h4 class="center-justify">Search by title and doctype: <span class="red"><strong>test.doc</strong></span></h4>
-  </div>
-
-  <div class="swap">
-    <div class="main-image large">
-      <img src="images/title-and-doctype.png" />
-    </div>
-  </div>
-
-  <div class="swap">
-    <h4 class="center-justify">Let's use keywords!</h4>
-    <p class="center-justify">Search: <span class="red"><strong>SeroVital AND Memorial Day kind:doc</strong></span></p>
-  </div>
-
-  <div class="swap">
-    <div class="main-image large">
-      <img src="images/keywords.png" />
-    </div>
-  </div>
-
-  <div class="swap">
-    <p class="center-justify">Refined: <strong>SeroVital AND Memorial Day <span class="red">AND email</span> kind:doc</strong></p>
-  </div>
-
-  <div class="swap">
-    <div class="main-image large">
-      <img src="images/keywords-refined.png" />
-    </div>
-  </div>
-
-  <div class="swap">
-    <h4 class="center-justify">Now just give me the word document!</h4>
-    <p class="center-justify">Only Word Doc: <strong>SeroVital AND Memorial Day AND email <span class="red">kind:word</span></strong></p>
-  </div>
-
-  <div class="swap">
-    <div class="main-image large">
-      <img src="images/just-word-doc.png" />
-    </div>
   </div>
 
 </div>
