@@ -21,9 +21,16 @@ const slides = [
 
   <div class="swap">
 
-> Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
+> Structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage an information resource.
+<cite>&mdash; Wikipedia</cite>
 
-<cite>&mdash; Some Dude</cite>
+In short, it is data about a file regarding its author, date, and other useful information.
+
+  </div>
+
+  <div class="swap">
+
+> Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
 
   </div>
   <div class="swap">
@@ -36,22 +43,6 @@ const slides = [
   </div>
 
 </div>
-`
-}
-,{
-"set" : 1,
-"idLabel" : "Metadata-Intro-Contd",
-"deck" : 2,
-"content" : `
-## Metadata Intro: Cont’d ##
-
-- Though metadata varies from file type to file type, they typically include the following:
-    - Creation Date
-    - Modified Date
-    - Author
-    - Subject
-    - Keywords
-    - Comments
 `
 }
 ,{
@@ -70,24 +61,51 @@ const slides = [
 "content" : `
 ## Metadata: Our Main Focus ##
 
-- __4__ Most Important Metadata Elements To Us:
-  1. Creation Date
-  2. Modified Date
-  3. Author
-  4. Keywords
-`
-}
-,{
-"set" : 1,
-"idLabel" : "Metadata-Why",
-"deck" : 2,
-"content" : `
-## Why These? ##
+<div class="swap-wrap">
+
+  <div class="swap">
+
+#### Though metadata varies from file type to file type, they typically include the following: ####
+
+<section class="half">
+  <article>
+    <ul>
+      <li>Creation Date</li>
+      <li>Modified Date</li>
+      <li>Author</li>
+    </ul>
+  </article>
+  <article>
+    <ul>
+      <li>Subject</li>
+      <li>Keywords</li>
+      <li>Comments</li>
+    </ul>
+  </article>
+
+  </div>
+
+  <div class="swap">
+
+#### __4__ Most Important Metadata Elements To Us: ####
+
+1. Creation Date
+2. Modified Date
+3. Author
+4. Keywords
+
+  </div>
+
+  <div class="swap">
 
 - __Creation Date__ &mdash; Gives us the first view into the creation timeline
 - __Modified Date__ &mdash; Gives a sense of relevancy
 - __Author__ &mdash; Ownership: Who to ask questions
 - __*Keywords__ &mdash; For intelligent searches and linking different assets to the same project (will be covered coming up)
+
+  </div>
+
+</div>
 `
 }
 ,{
@@ -108,7 +126,7 @@ const slides = [
 
   <div class="swap">
 
-### Example: ###
+#### Example: ####
 
 - SeroVital
 - Neck Cream
@@ -120,7 +138,7 @@ const slides = [
 
   <div class="swap">
 
-Don't worry about classifications such as file type, etc:  Start from general and go to specific, leaving out the generic, such as "file type" &mdash; These are already part of the file's definition.
+Start from general and go to specific, leaving out the generic, such as "file type" &mdash; These are already part of the file's definition.
 
   </div>
 
@@ -159,10 +177,10 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 ### How To Search: ###
 
-- __Keyword Combinations__
+- Keyword Combinations
   - "this __AND__ that"
   - "SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email"
-- __File type__
+- File type
   - "__kind__:word"
 
   </div>
