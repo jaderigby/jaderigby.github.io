@@ -21,6 +21,15 @@ const slides = [
 - Metadata varies from file type to file type
 - PSDs contain metadata
 - Word docs do, as well
+`
+}
+,{
+"set" : 1,
+"idLabel" : "Metadata-Intro",
+“deck” : 2,
+"content" : `
+## Metadata Intro: Cont’d ##
+
 - Though metadata varies from file type to file type, they typically include the following:
     - Creation Date
     - Modified Date
