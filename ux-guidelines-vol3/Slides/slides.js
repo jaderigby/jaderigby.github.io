@@ -26,7 +26,7 @@ const slides = [
 ,{
 "set" : 1,
 "idLabel" : "Metadata-Intro-Contd",
-“deck” : 2,
+"deck" : 2,
 "content" : `
 ## Metadata Intro: Cont’d ##
 
