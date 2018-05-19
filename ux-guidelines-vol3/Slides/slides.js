@@ -23,6 +23,8 @@ const slides = [
 
 > Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
 
+<cite>&mdash; Some Dude</cite>
+
   </div>
   <div class="swap">
 
@@ -85,7 +87,7 @@ const slides = [
 - __Creation Date__ &mdash; Gives us the first view into the creation timeline
 - __Modified Date__ &mdash; Gives a sense of relevancy
 - __Author__ &mdash; Ownership: Who to ask questions
-- __* Keywords__ &mdash; For intelligent searches and linking different assets to the same project (will be covered coming up)
+- __*Keywords__ &mdash; For intelligent searches and linking different assets to the same project (will be covered coming up)
 `
 }
 ,{
@@ -158,10 +160,10 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 ### How To Search: ###
 
 - __Keyword Combinations__
-  - "this AND that"
-  - "SeroVital AND Memorial Day AND Sale AND Email"
+  - "this __AND__ that"
+  - "SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email"
 - __File type__
-  - "kind:word"
+  - "__kind__:word"
 
   </div>
 
@@ -169,7 +171,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 ### All Together: ###
 
-"SeroVital AND Memorial Day AND Sale AND Email kind:word"
+"SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email __kind__:word"
 
   </div>
 
