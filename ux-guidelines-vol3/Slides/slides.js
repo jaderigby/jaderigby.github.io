@@ -121,6 +121,7 @@ In short, it is data about a file regarding its author, date, and other useful i
 - Kewords serve as a robust indexing feature
 - Like categories, only better!
 - Keep specific and succinct, but use as many as seem logical
+- Start from general and go to specific, leaving out the generic, such as "file type" &mdash; These are already part of the file's definition.
 
   </div>
 
@@ -133,12 +134,6 @@ In short, it is data about a file regarding its author, date, and other useful i
 - New Years
 - Sale
 - Landing Page
-
-  </div>
-
-  <div class="swap">
-
-Start from general and go to specific, leaving out the generic, such as "file type" &mdash; These are already part of the file's definition.
 
   </div>
 
