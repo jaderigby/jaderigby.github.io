@@ -182,6 +182,18 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap">
 
+#### Other Possible: ####
+
+- word
+- psd
+- pdf
+- image
+- movie
+
+  </div>
+
+  <div class="swap">
+
 ### All Together: ###
 
 "SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email __kind__:word"
