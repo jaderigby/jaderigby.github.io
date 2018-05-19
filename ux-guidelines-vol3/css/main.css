@@ -603,7 +603,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 #moveLeft {
 	position: fixed;
 	bottom: 30px;
-	right: 155px;
+	right: 145px;
 	width: 26px;
 	height: 30px;
 	background-color: rgba(255,255,255,0.5);
@@ -643,7 +643,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	z-index:999;
 	background-color: rgba(255,255,255,0.5);
 	bottom: 23px;
-	right: 90px;
+	right: 85px;
 	border-radius: 100%;
 }
 
