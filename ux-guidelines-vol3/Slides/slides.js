@@ -139,10 +139,16 @@ In short, it is data about a file regarding its author, date, and other useful i
 
   <div class="swap">
 
-1. __Product__ &mdash; SeroVital, GF-9, etc
-2. __Category__ &mdash; Neck Cream, etc
+1. __Brand__ &mdash; SeroVital, GF-9, etc
+2. __Product__ &mdash; Neck Cream, etc
 3. __Campaign__ &mdash; Memorial Day, etc
-4. __Classification__ &mdash; Landing Page, Email, etc
+	- can also break down to: a) Sale, b) Special, c) Limited Time 
+4. __Classification__
+	- Landing Page
+	- Microsite
+	- Full site
+	- Kyno site
+	- email
 
 __Note:__ Reserve Multiple authors for comments section.
 
