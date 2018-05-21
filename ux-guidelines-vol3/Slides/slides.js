@@ -143,12 +143,7 @@ In short, it is data about a file regarding its author, date, and other useful i
 2. __Product__ &mdash; Neck Cream, etc
 3. __Campaign__ &mdash; Memorial Day, etc
 	- can also break down to: a) Sale, b) Special, c) Limited Time 
-4. __Classification__
-	- Landing Page
-	- Microsite
-	- Full site
-	- Kyno site
-	- email
+4. __Classification__ &mdash; a) Landing Page, b) Microsite, c) Full site, d) Kyno site, e) Email
 
 __Note:__ Reserve Multiple authors for comments section.
 
