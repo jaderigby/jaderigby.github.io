@@ -142,7 +142,7 @@ In short, it is data about a file regarding its author, date, and other useful i
 1. __Brand__ &mdash; SeroVital, GF-9, etc
 2. __Product__ &mdash; Neck Cream, etc
 3. __Campaign__ &mdash; Memorial Day, etc
-	- Subcategory @mdash; a) Sale, b) Special, c) Limited Time 
+	- Subcategory &mdash; a) Sale, b) Special, c) Limited Time 
 4. __Classification__ &mdash; a) Landing Page, b) Microsite, c) Full site, d) Kyno site, e) Email
 
 __Note:__ Reserve Multiple authors for comments section.
