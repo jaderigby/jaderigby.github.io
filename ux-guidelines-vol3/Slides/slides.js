@@ -183,7 +183,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap">
 
-#### Other Possible: ####
+#### Other Possible Kinds: ####
 
 - word
 - psd
