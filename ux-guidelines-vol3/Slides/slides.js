@@ -139,10 +139,11 @@ In short, it is data about a file regarding its author, date, and other useful i
 
   <div class="swap">
 
-1. __Product__ &mdash; SeroVital, GF-9, etc
-2. __Category__ &mdash; Neck Cream, etc
+1. __Brand__ &mdash; SeroVital, GF-9, etc
+2. __Product__ &mdash; Neck Cream, etc
 3. __Campaign__ &mdash; Memorial Day, etc
-4. __Classification__ &mdash; Landing Page, Email, etc
+	- __Subcategory__ &mdash; a) Sale, b) Special, c) Limited Time 
+4. __Classification__ &mdash; a) Landing Page, b) Microsite, c) Full site, d) Kyno site, e) Email
 
 __Note:__ Reserve Multiple authors for comments section.
 
@@ -182,7 +183,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap">
 
-#### Other Possible: ####
+#### Other Possible Kinds: ####
 
 - word
 - psd
