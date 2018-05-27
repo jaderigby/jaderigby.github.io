@@ -2,12 +2,19 @@ function slidesLayout() {
 	const xDiff = 2025;
 	const yDiff = -1500;
 	const zDiff = -2200;
+	const zFlowYDiff = 650;
+	const zFlowFirstZDiff = -600;
+	const zFlowZDiff = -1300;
+	const xRotate = -90;
 	const baseXVal = -8400;
 	const baseYVal = 1500;
 	const baseZVal = 0;
+	const baseXRotation = 0;
 	let currXAsInt = baseXVal;
 	let currYAsInt = baseYVal;
 	let currZAsInt = baseZVal;
+	let currXRotationAsInt = baseXRotation;
+	let trackZFlow = 0;
 
 	// var iOS = !!navigator.platform && iPad|iPhone|iPod/.test(navigator.platform);
 
@@ -34,6 +41,17 @@ function slidesLayout() {
 			// if "deck", pause x,y and start using z
 			if (_slide_.deck) {
 				currZAsInt = zDiff * (_slide_.deck - 1);
+			}
+			else if (_slide_.flow && _slide_.flow === 'z') {
+				if (trackZFlow === 0) {
+					currXRotationAsInt = xRotate;
+					currYAsInt = zFlowYDiff + currYAsInt;
+					currZAsInt = zFlowFirstZDiff + currZAsInt;
+				}
+				else {
+					currZAsInt = zFlowZDiff + currZAsInt;
+				}
+				trackZFlow++;
 			}
 			else if (_slide_.prev.set === _slide_.set) {
 				currXAsInt = xDiff + currXAsInt;
@@ -70,7 +88,20 @@ function slidesLayout() {
 						currYAsInt = baseYVal;
 					}
 				}
-				else if (_slide_.deck) {
+				else if (_slide_.next.flow && !("flow" in _slide_)) {
+					let iter = 1;
+					while (_slide_.up(iter) && "flow" in _slide_.up(iter) && _slide_.next.flow) {
+						iter++;
+					}
+					if (_slide_.up(iter + 1) && _slide_.set === _slide_.up(iter + 1).set) {
+					  siblingClass = 'sibling-right';
+						nextArrows = arrows;
+					}
+					else if (_slide_.up(iter + 1) && _slide_.up(iter).set !== _slide_.up(iter + 1).set) {
+					  siblingClass = '';
+					}
+				}
+				else if (_slide_.deck || _slide_.flow) {
 					siblingClass = '';
 					nextArrows = '';
 				}
@@ -90,6 +121,7 @@ function slidesLayout() {
 	 data-x="${currXAsInt}"
 	 data-y="${currYAsInt}"
 	 data-z="${currZAsInt}"
+	 data-rotate-x="${currXRotationAsInt}"
 	 data-scale="1.3"
 	>
 		<div class="panel-inner">${mdText}</div>
@@ -104,7 +136,7 @@ function slidesLayout() {
 	 data-row="${_slide_.set}"
 	 data-x="${currXAsInt}"
 	 data-y="${currYAsInt}"
-	 data-z="${currZAsInt}"
+	 data-z="${currZAsInt}"	 data-rotate-x="${currXRotationAsInt}"
 	 data-scale="1.3"
 	>
 		<div class="panel-inner">${mdText}</div>
@@ -120,6 +152,17 @@ function slidesLayout() {
 			if (_slide_.next) {
 				if (!(_slide_.next.deck)) {
 					currZAsInt = baseZVal;
+				}
+			}
+		}
+
+		// reset for y,z, if no more in flow
+		if (_slide_.flow) {
+			if (_slide_.next) {
+				if (!(_slide_.next.flow)) {
+					currZAsInt = baseZVal;
+					currXRotationAsInt = 0;
+					currYAsInt = baseYVal;
 				}
 			}
 		}
@@ -141,10 +184,10 @@ slidesLayout();
 
 	const trigger = _$('#sourceBarTrigger').item;
 
-	trigger.addEventListener('mouseenter', function(e) {
+	trigger.addEventListener('mouseenter', (e) => {
 		_$('#sourceBar').addClass('active');
 	});
-	trigger.addEventListener('mouseleave', function(e) {
+	trigger.addEventListener('mouseleave', (e) => {
 		_$('#sourceBar').removeClass('active');
 	});
 
@@ -204,7 +247,7 @@ rootElement.addEventListener( "impress:stepleave", function(event) {
 	}
 });
 
-window.addEventListener('hashchange', function(e) {
+window.addEventListener('hashchange', (e) => {
 	currFrame = getFrame(window.location.href);
 	assignVal('first', '#title', 'show');
 });
@@ -217,7 +260,7 @@ const n_key = 78;
 const d_key = 68;
 const tab_key = 9;
 
-document.getElementById('reveal').onclick = function(e) {
+_$('#reveal').click((e) => {
 	if (currFrame === 'first') {
 	}
 		else {
@@ -236,7 +279,6 @@ document.getElementById('reveal').onclick = function(e) {
 			else if (_$("#" + currFrame + ' .swap').items.length !== 0) {
 				let latestSwap = 0;
 				let showList = _$('#' + currFrame + ' .swap').items;
-				console.log("showList: ", showList);
 				for (let i = 0; i < showList.length; i++) {
 					if (showList[i].classList.contains('show')) {
 						latestSwap++;
@@ -248,11 +290,8 @@ document.getElementById('reveal').onclick = function(e) {
 				}
 
 				if (showList.length === latestSwap) {
-					console.log("latestSwap: ", latestSwap);
 					latestSwap = 0;
 				}
-
-				console.log("latestSwap: ", latestSwap);
 
 				(showList).forEach( (_item_) => {
 					hide(_item_);
@@ -261,9 +300,9 @@ document.getElementById('reveal').onclick = function(e) {
 				handleSwapDots(currFrame);
 			}
 		}
-}
+});
 
-document.getElementById('revealBack').onclick = function(e) {
+_$('#revealBack').click((e) => {
 	if (currFrame !== 'first') {
 		if (_$("#" + currFrame + ' .fade').items.length !== 0) {
 			let items = _$("#" + currFrame + ' .show').items;
@@ -298,7 +337,7 @@ document.getElementById('revealBack').onclick = function(e) {
 			handleSwapDots(currFrame);
 		}
 	}
-}
+});
 
 function initSwapDots() {
 	_$(".swap-wrap").items.forEach(function(_item_) {
@@ -330,7 +369,7 @@ function handleSwapDots(par) {
 	});
 }
 
-window.addEventListener('keydown', function(e) {
+window.addEventListener('keydown', (e) => {
 	// console.log("Key: ",e.keyCode);
 	if (currFrame === 'first') {
 	}
@@ -385,7 +424,6 @@ window.addEventListener('keydown', function(e) {
 			else if (e.keyCode === d_key && _$("#" + currFrame + ' .swap').items.length !== 0) {
 				let latestSwap = 0;
 				let showList = _$('#' + currFrame + ' .swap').items;
-				console.log("showList: ", showList);
 				for (let i = 0; i < showList.length; i++) {
 					if (showList[i].classList.contains('show')) {
 						latestSwap++;
@@ -397,11 +435,8 @@ window.addEventListener('keydown', function(e) {
 				}
 
 				if (showList.length === latestSwap) {
-					console.log("latestSwap: ", latestSwap);
 					latestSwap = 0;
 				}
-
-				console.log("latestSwap: ", latestSwap);
 
 				(showList).forEach( (_item_) => {
 					hide(_item_);
@@ -440,17 +475,16 @@ function hide(myItem) {
 	_$(myItem).css('height', '0');
 }
 
-document.getElementById('moveLeft').onclick = function(e) {
+_$('#moveLeft').click(() => {
 	impress().prev();
-};
+});
 
-document.getElementById('moveRight').onclick = function(e) {
+_$('#moveRight').click(() => {
 	impress().next();
-};
+});
 
-document.getElementById('homeBtn').onclick = function(e) {
+_$('#homeBtn').click(() => {
 	window.location.href = '#first';
-};
+});
 
-var presentationTitle = document.getElementById('title');
-presentationTitle.innerHTML = title;
+_$('#title').item.innerHTML = title;

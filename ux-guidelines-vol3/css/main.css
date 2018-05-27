@@ -406,8 +406,8 @@ h2.primary img {
 .swap {
 	height: 0;
 	opacity: 0;
-	max-width: 920px;
-	max-height: 600px;
+	width: 920px;
+	height: 600px;
 	transition: all 0.5s ease-out;
 }
 .swap h3, .swap h4, .swap h5, .swap h6, .swap > p, .swap ul, .swap ol {
@@ -418,6 +418,14 @@ ul.swap, ol.swap {
 }
 .swap.show {
 	opacity: 1;
+}
+.swap.switch {
+	transform-origin: 460px 200px;
+	transform: scale(0.75);
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.swap.switch.show {
+	transform: scale(1);
 }
 pre.reduced {
 	font-size: 1.2rem;
