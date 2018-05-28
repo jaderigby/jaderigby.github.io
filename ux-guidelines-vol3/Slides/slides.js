@@ -220,27 +220,27 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/files.png" />
+      <img src="images/files2.png" />
     </div>
   </div>
 
   <div class="swap switch">
-    <h4 class="center-justify">Search by title: <span class="red"><strong>test</strong></span></h4>
+    <h4 class="center-justify">Search by title: <span class="red"><strong>SeroVital</strong></span></h4>
   </div>
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/title.png" />
+      <img src="images/title2.png" />
     </div>
   </div>
 
   <div class="swap switch">
-    <h4 class="center-justify">Search by title and doctype: <span class="red"><strong>test.doc</strong></span></h4>
+    <h4 class="center-justify">Search by title and doctype: <span class="red"><strong>SeroVital.doc</strong></span></h4>
   </div>
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/title-and-doctype.png" />
+      <img src="images/title-and-doctype2.png" />
     </div>
   </div>
 
@@ -251,7 +251,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/keywords.png" />
+      <img src="images/keywords2.png" />
     </div>
   </div>
 
@@ -261,7 +261,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/keywords-refined.png" />
+      <img src="images/keywords-refined2.png" />
     </div>
   </div>
 
@@ -272,7 +272,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   <div class="swap switch">
     <div class="main-image large">
-      <img src="images/just-word-doc.png" />
+      <img src="images/just-word-doc2.png" />
     </div>
   </div>
 
