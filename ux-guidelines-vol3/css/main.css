@@ -473,6 +473,7 @@ ul > li > ul > li:before {
 	font-size: 1.7rem;
 	line-height: 1.8;
 	display: inline-block;
+	vertical-align: 40%;
 }
 textarea.demo {
 	position: absolute;
