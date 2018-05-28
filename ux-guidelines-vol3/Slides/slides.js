@@ -14,7 +14,6 @@ const slides = [
 ,{
 "set" : 1,
 "idLabel" : "Metadata-Intro",
-"flow" : "z",
 "content" : `
 ## Metadata: What Is It? ##
 
@@ -49,7 +48,6 @@ In short, it is data about a file regarding its author, date, and other useful i
 ,{
 "set" : 1,
 "idLabel" : "Metadata-Where",
-"flow" : "z",
 "content" : `
 ## Metadata: Where? ##
 
@@ -60,7 +58,6 @@ In short, it is data about a file regarding its author, date, and other useful i
 ,{
 "set" : 1,
 "idLabel" : "Metadata-Our-Main-Focus",
-"flow" : "z",
 "content" : `
 ## Metadata: Our Main Focus ##
 
