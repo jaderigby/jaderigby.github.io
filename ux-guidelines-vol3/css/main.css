@@ -470,7 +470,7 @@ li > ul, li > ol {
 ul > li > ul > li:before {
 	content: "○";
 	list-style: none;
-	font-size: 0.7rem;
+	font-size: 1rem;
 	vertical-align: 50%;
 }
 textarea.demo {
