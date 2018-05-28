@@ -14,7 +14,7 @@ const slides = [
 ,{
 "set" : 1,
 "idLabel" : "Metadata-Intro",
-“flow” : “z”,
+"flow" : "z",
 "content" : `
 ## Metadata: What Is It? ##
 
