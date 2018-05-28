@@ -471,6 +471,7 @@ ul > li > ul > li:before {
 	content: "○";
 	list-style: none;
 	font-size: 0.7rem;
+	vertical-align: 50%;
 }
 textarea.demo {
 	position: absolute;
