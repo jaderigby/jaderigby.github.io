@@ -470,7 +470,7 @@ li > ul, li > ol {
 ul > li > ul > li:before {
 	content: "○";
 	list-style: none;
-	font-size: 1rem;
+	font-size: 0.7rem;
 }
 textarea.demo {
 	position: absolute;
