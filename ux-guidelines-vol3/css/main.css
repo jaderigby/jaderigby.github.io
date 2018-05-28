@@ -463,6 +463,7 @@ ul > li:before {
   content: "•";
   position: absolute;
   margin-left: -40px;
+	line-height: 1.2;
 }
 li > ul, li > ol {
 	margin-top: 15px;
@@ -472,6 +473,7 @@ ul > li > ul > li:before {
 	list-style: none;
 	font-size: 1.7rem;
 	position: absolute;
+	line-height: 1.7;
 }
 textarea.demo {
 	position: absolute;
