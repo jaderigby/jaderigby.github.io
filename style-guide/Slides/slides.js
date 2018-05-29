@@ -104,8 +104,12 @@ For the Mac:
 1. __Product__ &mdash; SeroVital, GF-9, etc
 2. __Category__ &mdash; Neck Cream, etc
 3. __Campaign__ &mdash; Memorial Day, etc
-4. __Classification__ &mdash; Landing Page, Email, etc
-
+4. __Classification__
+  - Full Site
+  - Landing Page
+  - Microsite
+  - Kyno
+  - Email
 `
 }
 ,{
