@@ -1,3 +1,4 @@
-- [Asian Buffalo Chicken](/asian-buffalo-chicken.md)
-- [Baked Shrimp Scampi](/baked-shrimp-scampi.md)
-- [Chicken Parmegiana](/chicken-parmegiana.md)
+- [Asian Buffalo Chicken](../asian-buffalo-chicken.md)
+- [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
+- [Chicken Parmegiana](../chicken-parmegiana.md)
+- [Instant Pot Red Curry](../instant-pot-red-curry.md)
