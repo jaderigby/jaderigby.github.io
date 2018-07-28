@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- <link rel="stylesheet" type="text/css" href="your/filepath/here" /> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+		<link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
+		<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+		}
+		.main-title {
+			text-align: center;
+			font-size: 2.8rem;
+			border-bottom: 1px solid #e0e0e0;
+			font-weight: bold;
+			font-family: 'Lato', serif;
+		}
+		h1, h2, h3 {
+			font-family: 'Lato', arial, verdana, sans-serif;
+		}
+		h2, h3 {
+			text-transform: uppercase;
+		}
+		h1 {
+			font-size: 2.6rem;
+			padding-bottom: 0.3rem;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		h2 {
+			font-size: 1.5rem;
+			/* border-bottom: 1px solid #e0e0e0; */
+		}
+		h3 {
+			font-size: 1.3rem;
+		}
+		h2, h3, h4, h5, h6 {
+			line-height: 1.5;
+			margin: 15px 0;
+		}
+		h1 {
+			margin: 40px 0 25px;
+		}
+		h2 {
+			margin: 35px 0 10px;
+		}
+		body {
+			font-size: 1.1rem;
+			background-color: #252525;
+		}
+			#container {
+				margin: 0 auto 30px;
+				width: 1200px;
+				min-height: 500px;
+				background-color: #fff;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 0 40px rgba(0,0,0,0.6);
+				font-family: arial, verdana, sans-serif;
+			}
+			.centerize {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0
+			}
+			.cf:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+			ul, ol {
+        line-height: 1.5;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				margin-left: 25px;
+			}
+			p {
+				margin-top: 25px;
+				margin-bottom: 25px;
+			}
+			.title {
+				padding: 26px 0 33px;
+				/* text-align: center; */
+				color: #29a2ff; /* rgb(27, 157, 255) rgb(10, 150, 255) rgb(22, 155, 255) */
+				text-shadow: 0 0 150px #000, 0 0 54px rgba(0,0,0,0.55), 0 0 44px rgba(0,0,0,0.55), 0 0 20px #000;
+				font-size: 6.5rem;
+				background: url('img/slide-01.jpg');
+				font-family: 'Lobster', serif;
+				background-position: 70%;
+				/* background-image: url('img/fresh-food-banner.jpg');
+				font-family: 'Lobster', serif;
+				background-position-y: 50%;
+				background-size: cover; */
+			}
+			#content {
+				padding-top: 25px;
+				font-family: 'Lato', arial, verdana, sans-serif;
+			}
+			.thirds > aside img, .fifths > aside img, .sevenths > aside img {
+				width: 100%;
+				height: auto;
+			}
+			.thirds {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: stretch;
+			}
+			.thirds > aside {
+				width: calc(33.5% - 12.5px);
+			}
+			.thirds > article {
+				width: calc(66.5% - 12.5px);
+			}
+			.thirds > aside + article {
+				margin-left: 25px;
+			}
+			.thirds > article + aside {
+				margin-right: 25px;
+			}
+			.thirds, .fifths, .sevenths {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: stretch;
+			}
+			.fifths > aside {
+				width: calc(40% - 12.5px);
+			}
+			.fifths > article {
+				width: calc(60% - 12.5px);
+			}
+			.fifths > aside + article {
+				margin-left: 25px;
+			}
+			.fifths > article + aside {
+				margin-right: 25px;
+			}
+			.sevenths > aside {
+				width: calc(28% - 12.5px);
+			}
+			.sevenths > article {
+				width: calc(72% - 12.5px);
+			}
+			.sevenths > aside + article {
+				margin-left: 25px;
+			}
+			.sevenths > article + aside {
+				margin-right: 25px;
+			}
+			.thirds aside.single {
+				width: calc(17% - 12.5px);
+			}
+			.thirds aside.single + article {
+				width: calc(83% - 12.5px);
+			}
+			.fifths aside.single {
+				width: calc(20% - 12.5px);
+			}
+			.fifths aside.single + article {
+				width: calc(80% - 12.5px);
+			}
+			.sevenths aside.single {
+				width: calc(14% - 12.5px);
+			}
+			.sevenths aside.single + article {
+				width: calc(86% - 12.5px);
+			}
+			aside img {
+				margin-top: 25px;
+				padding: 5px;
+				box-shadow: 0 0 20px rgba(0,0,0,0.3);
+			}
+			hr {
+				border: 1px solid #bfbfbf;
+			}
+			section {
+				margin-bottom: 40px;
+			}
+			.center-justify {
+				text-align: center;
+			}
+			#sidebar {
+				font-size: 1rem;
+				padding-top: 40px;
+				background: #4a012f;
+			}
+			#sidebar ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			#sidebar li {
+				margin: 0;
+				padding: 0;
+			}
+			#sidebar li a {
+				display: block;
+				text-decoration: none;
+				color: #bb89aa; /* bb89aa, bb89aa */
+				padding: 7px 0 7px 25px;
+			}
+			#sidebar li a:hover {
+				background-color: #690849;
+			}
+		</style>
+		<title>Recipes</title>
+	</head>
+	<body>
+		<div id="container">
+			<div class="title center-justify">Recipes</div>
+			<section class="fifths">
+				<aside id="sidebar" class="single"></aside>
+				<article>
+					<div id="content"></div>
+				</article>
+			</section>
+		</div>
+    <script src="js/remarkable.min.js"></script>
+    <script src="js/jquishy+children.min.js"></script>
+    <script>
+      const md = new Remarkable();
+      md.set({
+        html: true
+      });
+			fetch('../asian-buffalo-chicken.md')
+			  .then(response => response.text())
+			  .then((text) => {
+					let mdText = md.render(text);
+					_$('#content').vanilla.innerHTML = mdText;
+				});
+			fetch('nav.md')
+			  .then(response => response.text())
+			  .then((text) => {
+					let mdText = md.render(text);
+					_$('#sidebar').vanilla.innerHTML = mdText;
+				});
+
+			_$('#sidebar').delegate('a', 'click', (e) => {
+				e.preventDefault();
+				let selectedFile = _$(e.target).attr('href');
+				fetch(selectedFile)
+				  .then(response => response.text())
+				  .then((text) => {
+						let mdText = md.render(text);
+						_$('#content').vanilla.innerHTML = mdText;
+					});
+			})
+
+				/*
+				4a012f
+
+				rgb(22, 155, 255)
+
+				rgb(22, 230, 255)
+
+				rgb(22, 219, 255)
+
+				rgb(22, 208, 255)
+
+				rgb(22, 198, 255)
+
+				292929
+				272727
+
+				*/
+    </script>
+	</body>
+</html>
