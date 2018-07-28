@@ -1,6 +1,6 @@
-## Instant Pot Red Curry ##
+# Instant Pot Red Curry #
 
-### Ingredients ###
+## Ingredients ##
 
 - 3 Tbsp Thai red curry paste (preferably Maesri or Mae Ploy brand)
 - 1 14-oz can regular-fat coconut milk
@@ -16,7 +16,7 @@
 - 4 lime leaves, slightly bruised *
 - 12 Thai basil leaves
 
-### Directions ###
+## Directions ##
 
 1. Press ‘Saute’ and stir in red curry paste and 1/2 can of coconut milk until mixture is bubbly, about a minute or two.
 2. Press 'Cancel'.
