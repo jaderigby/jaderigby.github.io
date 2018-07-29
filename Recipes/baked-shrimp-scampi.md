@@ -1,5 +1,7 @@
 # Baked Shrimp Scampi #
 
+&#9733; &#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - 2 pounds (12 to 15 per pound) shrimp in the shell

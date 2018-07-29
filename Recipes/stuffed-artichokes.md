@@ -1,5 +1,7 @@
 # Stuffed Artichoke Hearts #
 
+&#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - 4 medium artichokes (1 artichoke)
@@ -18,8 +20,6 @@
 1/2 cup tomato
 1/8 cup chopped onion
 dash pepper
-
-__Rating:__ &#9733; &#9733; &#9733; &#9733;
 
 ## Directions ##
 

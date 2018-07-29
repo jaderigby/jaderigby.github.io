@@ -1,5 +1,7 @@
 # Instant Pot Red Curry #
 
+&#9733; &#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - 3 Tbsp Thai red curry paste (preferably Maesri or Mae Ploy brand)
