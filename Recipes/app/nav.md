@@ -12,3 +12,4 @@
 - [Chicken Alfredo](../chicken-alfredo.md)
 - [Hawaiian Haystacks](../hawaiian-haystacks.md)
 - [Grilled Chicken With Cheese Sauce](../grilled-chicken-with-cheese-sauce.md)
+- [Grilled Pork Loin Chops](../grilled-pork-loin-chops.md)
