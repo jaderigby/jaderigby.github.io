@@ -11,3 +11,4 @@
 - [Chicken Salad Sandwich](../chicken-salad-sandwich.md)
 - [Chicken Alfredo](../chicken-alfredo.md)
 - [Hawaiian Haystacks](../hawaiian-haystacks.md)
+- [Grilled Chicken With Cheese Sauce](../grilled-chicken-with-cheese-sauce.md)
