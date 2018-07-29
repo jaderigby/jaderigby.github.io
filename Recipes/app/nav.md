@@ -1,3 +1,5 @@
+- [Sous Vide Notes](../sous-vide-notes.md)
+- [Stuffed Artichokes](../stuffed-artichokes.md)
 - [Asian Buffalo Chicken](../asian-buffalo-chicken.md)
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
 - [Chicken Parmegiana](../chicken-parmegiana.md)
