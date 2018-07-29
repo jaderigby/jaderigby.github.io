@@ -1,4 +1,4 @@
-# Chicken Parmegiana #
+# Chicken Parmigiana #
 
 ## Ingredients ##
 

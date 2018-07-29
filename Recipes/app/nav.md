@@ -2,7 +2,7 @@
 - [Stuffed Artichokes](../stuffed-artichokes.md)
 - [Asian Buffalo Chicken](../asian-buffalo-chicken.md)
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
-- [Chicken Parmegiana](../chicken-parmegiana.md)
+- [Chicken Parmigiana](../chicken-parmigiana.md)
 - [Instant Pot Red Curry](../instant-pot-red-curry.md)
 - [Instant Pot Jambalaya](../instant-pot-jambalaya.md)
 - [Slow Cooker Texas Pulled Pork](../slow-cooker-texas-pulled-pork.md)
