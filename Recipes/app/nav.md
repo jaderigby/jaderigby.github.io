@@ -7,3 +7,7 @@
 - [Instant Pot Jambalaya](../instant-pot-jambalaya.md)
 - [Slow Cooker Texas Pulled Pork](../slow-cooker-texas-pulled-pork.md)
 - [Taco Seasoning](../taco-seasoning.md)
+- [Cheese Ball](../cheese-ball.md)
+- [Chicken Salad Sandwich](../chicken-salad-sandwich.md)
+- [Chicken Alfredo](../chicken-alfredo.md)
+- [Hawaiian Haystacks](../hawaiian-haystacks.md)
