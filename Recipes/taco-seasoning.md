@@ -1,7 +1,6 @@
 # Taco Seasoning #
 
-
-### Ingredients ###
+## Ingredients ##
 
 2 tsp Chili Powder
 1-1/2 tsp Ground Cumin
@@ -14,7 +13,6 @@
 1/4 tsp Black Pepper
 1 tbsp sugar
 
-
-### Directions ###
+## Directions ##
 
 Mix together ingredients and store.

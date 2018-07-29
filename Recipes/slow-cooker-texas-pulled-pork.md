@@ -1,12 +1,6 @@
-->Recipes<-
-===========
+# Slow Cooker Texas Pulled Pork #
 
-[navigation:bar]
-
-Slow Cooker Texas Pulled Pork
------------------------------
-
-#### Ingredients
+## Ingredients ##
 
 - 1 teaspoon vegetable oil
 - 1 (4 pound) pork shoulder roast
@@ -23,7 +17,7 @@ Slow Cooker Texas Pulled Pork
 - 8 hamburger buns, split
 - 2 tablespoons butter, or as needed
 
-#### Directions
+## Directions ##
 
 1. Pour the vegetable oil into the bottom of a slow cooker. Place the pork roast into the slow cooker; pour in the barbecue sauce, apple cider vinegar, and chicken broth. Stir in the brown sugar, yellow mustard, Worcestershire sauce, chili powder, onion, garlic, and thyme. Cover and cook on High until the roast shreds easily with a fork, 5 to 6 hours.
 
