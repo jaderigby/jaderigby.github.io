@@ -1,6 +1,6 @@
-## Instant Pot Jambalaya ##
+# Instant Pot Jambalaya #
 
-### Ingredients ###
+## Ingredients ##
 
 - 1 Tbsp oil
 - 12 oz. Andouille sausage, cut into 1/2 inch slices
@@ -21,7 +21,7 @@
 - Chopped parsley to garnish
 - 1/2 cup shallots (thinly sliced) - optional
 
-### Directions ###
+## Directions ##
 
 1. Rub shrimp with 1 tsp of Cajun seasoning and set aside.
 2. Press 'Saute' and add oil to inner pot of Instant Pot.
