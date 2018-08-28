@@ -9,6 +9,7 @@
 - [Grilled Chicken With Cheese Sauce](../grilled-chicken-with-cheese-sauce.md)
 - [Grilled Pork Loin Chops](../grilled-pork-loin-chops.md)
 - [Hawaiian Haystacks](../hawaiian-haystacks.md)
+- [Ice Cream And Fudge Cake](../ice-cream-and-fudge-cake.md)
 - [Instant Pot Red Curry](../instant-pot-red-curry.md)
 - [Instant Pot Jambalaya](../instant-pot-jambalaya.md)
 - [Slow Cooker Texas Pulled Pork](../slow-cooker-texas-pulled-pork.md)
