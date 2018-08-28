@@ -3,6 +3,7 @@
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
 - [Cafe Rio Salad](../cafe-rio-salad.md)
 - [Cheese Ball](../cheese-ball.md)
+- [Cheese Sauce](../cheese-sauce.md)
 - [Chicken Alfredo](../chicken-alfredo.md)
 - [Chicken Parmigiana](../chicken-parmigiana.md)
 - [Chicken Salad Sandwich](../chicken-salad-sandwich.md)
