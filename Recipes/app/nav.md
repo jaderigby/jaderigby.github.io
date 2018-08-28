@@ -1,6 +1,7 @@
 - [Sous Vide Notes](../sous-vide-notes.md)
 - [Asian Buffalo Chicken](../asian-buffalo-chicken.md)
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
+- [Barbequed Spare Ribs](../barbequed-spare-ribs.md)
 - [Cafe Rio Salad](../cafe-rio-salad.md)
 - [Cheese Ball](../cheese-ball.md)
 - [Cheese Sauce](../cheese-sauce.md)
