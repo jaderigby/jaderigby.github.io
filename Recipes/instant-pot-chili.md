@@ -1,4 +1,4 @@
-# Instsnt Pot Chili #
+# Instant Pot Chili #
 
 ## Ingredients ##
 
