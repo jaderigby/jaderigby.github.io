@@ -1,4 +1,4 @@
-# Asian Buffalo Chicken #
+# Asian Lettuce Wraps #
 
 ## Ingredients ##
 
