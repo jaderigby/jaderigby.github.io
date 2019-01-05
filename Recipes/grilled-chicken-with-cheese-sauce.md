@@ -18,8 +18,8 @@ __For Sauce:__
 - Lawreys Seasoning Salt
 - Garlic Bread Sprinkle
 - 1 cup 3 Cheese Italian Blend
-- 2 tbsps butter
-- 2 tbsps flour
+- 2 tbsp butter
+- 2 tbsp flour
 - 1 cup milk (works best with 2% milk)
 - salt & pepper to taste
 - [1 1/2 cups freshly shredded cheddar cheese (not pre-grated)]
