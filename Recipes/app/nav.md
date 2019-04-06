@@ -18,4 +18,5 @@
 - [Instant Pot Jambalaya](../instant-pot-jambalaya.md)
 - [Slow Cooker Texas Pulled Pork](../slow-cooker-texas-pulled-pork.md)
 - [Stuffed Artichokes](../stuffed-artichokes.md)
+- [Taco Mix](../taco-mix.md)
 - [Taco Seasoning](../taco-seasoning.md)
