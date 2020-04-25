@@ -12,14 +12,6 @@
 - 1/4 tsp ground black pepper
 - 12 skinless chicken thighs
 
-- **Prep:** 30min
-
-- **Cook:** 1hr
-
-- **Ready In:** 1hr 30min
-
--  **Rating:** ★ ★ ★ ★
-
 ## Directions ##
 
 1.  In a small saucepan over low heat, combine the cornstarch, cold
