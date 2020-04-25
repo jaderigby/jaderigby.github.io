@@ -2,23 +2,23 @@
 
 ## Ingredients ##
 
--   1 tbsp cornstarch
--   1 tbsp cold water
--   1/2 cup white sugar
--   1/2 cup soy sauce
--   1/4 cup cider vinegar
--   1 clove garlic, minced
--   1/2 tsp ground ginger
--   1/4 tsp ground black pepper
--   12 skinless chicken thighs
+- 1 tbsp cornstarch
+- 1 tbsp cold water
+- 1/2 cup white sugar
+- 1/2 cup soy sauce
+- 1/4 cup cider vinegar
+- 1 clove garlic, minced
+- 1/2 tsp ground ginger
+- 1/4 tsp ground black pepper
+- 12 skinless chicken thighs
 
--   **Prep:** 30min
+- **Prep:** 30min
 
--   **Cook:** 1hr
+- **Cook:** 1hr
 
--   **Ready In:** 1hr 30min
+- **Ready In:** 1hr 30min
 
--   **Rating:** ★ ★ ★ ★
+-  **Rating:** ★ ★ ★ ★
 
 ## Directions ##
 
