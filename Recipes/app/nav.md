@@ -1,6 +1,7 @@
 - [Sous Vide Notes](../sous-vide-notes.md)
 - [Asian Buffalo Chicken](../asian-buffalo-chicken.md)
 - [Asian Lettuce Wraps](../asian-lettuce-wraps.md)
+- [Baked Chicken Teriyaki](../baked-chicken-teriyaki.md)
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
 - [Barbequed Spare Ribs](../barbequed-spare-ribs.md)
 - [Cafe Rio Salad](../cafe-rio-salad.md)
