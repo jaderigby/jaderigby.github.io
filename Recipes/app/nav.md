@@ -4,7 +4,7 @@
 - [Baked Chicken Teriyaki](../baked-chicken-teriyaki.md)
 - [Baked Shrimp Scampi](../baked-shrimp-scampi.md)
 - [Barbequed Spare Ribs](../barbequed-spare-ribs.md)
-- [Bulgogi Beef](bulgogi-beef.md)
+- [Bulgogi Beef](../bulgogi-beef.md)
 - [Cafe Rio Salad](../cafe-rio-salad.md)
 - [Cheese Ball](../cheese-ball.md)
 - [Cheese Sauce](../cheese-sauce.md)
