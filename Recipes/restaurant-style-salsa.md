@@ -17,4 +17,4 @@
 
 2. Add the cilantro and diced tomatoes.  Pulse in blender/food processor until desired consistency.
 
-2. 
+__Note:__ Double recipe to fit in Vitamix 
