@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="segments/css/wc-segments.lib.min.css" />
+        <script src="segments/js/segments.lib.js"></script>
+        <script src="js/jquishy.min.js"></script>
+        <style>
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-family: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            body {
+                line-height: 1;
+                margin: 0;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            table {
+                border-collapse: separate;
+                border-spacing: 0;
+                vertical-align: middle;
+            }
+            caption,
+            th,
+            td {
+                text-align: left;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+            a img {
+                border: none;
+            }
+            body {
+                font-family: Helvetica Neue, arial, verdana, sans-serif;
+                font-weight: 300;
+                background-color: rgb(0, 255, 13);
+                position: fixed;
+                height: 100%;
+                width: 100%;
+            }
+            panel-wrapper {
+                background-color: #fff;
+            }
+            .left-justify {
+                text-align: left !important;
+            }
+            .center-justify {
+                text-align: center !important;
+            }
+            .right-justify {
+                text-align: right !important;
+            }
+            .center {
+                margin: 0 auto;
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+            h1 {
+                font-size: 3.3rem;
+                padding: 25px 0;
+                line-height: 1.15;
+            }
+            h2 {
+                padding: 20px 0;
+                font-size: 2.5rem;
+            }
+            h3 {
+                padding: 15px 0;
+                font-size: 1.9rem;
+            }
+            h4 {
+                font-size: 1.6rem;
+            }
+            h5 {
+                font-size: 0.83rem;
+            }
+            h6 {
+                font-size: 0.67rem;
+            }
+            h4,
+            h5 {
+                line-height: 1.3;
+            }
+            .container {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: absolute;
+                margin: auto;
+                /* background-color: rgba(0,0,0,0.2); */
+            }
+            .container > .title {
+                flex: 1;
+            }
+            .title {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                font-size: 90px;
+                text-align: center;
+                font-family: ArialMT;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white;
+                line-height: 1.2;
+                height: 108px;
+            }
+            .title-shown {
+                opacity: 0;
+                transition: all 1.75s ease-in;
+            }
+            .title-shown.active {
+                opacity: 1;
+                transition: all 1.75s 2s ease-out;
+            }
+            .title-shown.hide {
+                opacity: 0;
+            }
+            .title.title-overlay {
+                color:rgb(0, 255, 13);
+                transform: translateX(-31px);
+                z-index: 2;
+            }
+            .title.title-overlay.active {
+                transition: all 1.75s 2s ease-out;
+            }
+            .title.title-overlay.active {
+                transform: translateX(0px);
+                opacity: 0;
+            }
+            .title.title-overlay.out {
+                transition: all 1.75s ease-in;
+            }
+            .title.title-overlay.out {
+                transform: translateX(31px);
+                opacity: 1;
+            }
+            .breaker {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: red;
+                z-index: 100;
+            }
+            .breaker.hide {
+                opacity: 0;
+            }
+        </style>
+        <title>Title-animations</title>
+    </head>
+    <body>
+        <div class="breaker"></div>
+        <div class="container">
+            <div class="title title-overlay">Double Sheetbend</div>
+            <div class="title title-shown">Double Sheetbend</div>
+        </div>
+        <script>
+            setTimeout(function() {
+                _$('.title-overlay').addClass('active');
+                _$('.title-shown').addClass('active');
+            }, 100);
+
+            setTimeout(function() {
+                _$('.breaker').addClass('hide');
+            }, 2000);
+
+            setTimeout(function() {
+                _$('.title-overlay').removeClass('active');
+                _$('.title-shown').removeClass('active');
+                _$('.title-overlay').addClass('out');
+                _$('.title-shown').addClass('out');
+            }, 6000);
+            
+            setTimeout(function() {
+                _$('.breaker').removeClass('hide');
+            }, 7750);
+        </script>
+    </body>
+</html>
