@@ -174,10 +174,48 @@
             .info-message {
                 color: #aaa;
             }
+            .stick {
+                padding-left: 45px;
+                position: fixed;
+            }
+            #speed {
+                width: 45px;
+                font-size: 1.5rem;
+            }
+            .hidden {
+                display: none;
+            }
+            button {
+                padding: 4px 15px;
+                border-radius: 4px;
+                font-size: 1.1rem;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            #start {
+                background-color: green;
+            }
+            #stop {
+                background-color: red;
+            }
         </style>
         <title>Teleprompter</title>
     </head>
     <body>
+        <panel-wrapper class="stick">
+            <panel-inner whitespace="20">
+                <prime-segment>
+                    <x-minor>
+                        <input type="number" name="speed" id="speed" value="25">
+                    </x-minor>
+                    <x-major>
+                        <button id="start">Start Scroll</button>
+                        <button class="hidden" id="stop">Stop Scroll</button>
+                    </x-major>
+                </prime-segment>
+            </panel-inner>
+        </panel-wrapper>
         <panel-wrapper>
             <panel-inner>
                 <div class="content"><span class="info-message">Please add text below</span></div>
@@ -218,6 +256,51 @@
                 let mdText = md.render(text);
                 _$(".content").vanilla.innerHTML = mdText;
             });
+
+            var isScrolling; 
+            var scrolldelay; 
+
+            _$('#start').click(function() {
+                _$('#start').addClass('hidden');
+                _$('#stop').removeClass('hidden');
+                var scrollSpeed = _$('#speed').vanilla.value;
+                function pageScroll() { 
+                    window.scrollBy(0,1);
+                    scrolldelay = setTimeout(function() {
+                        pageScroll();
+                    }, scrollSpeed); 
+                    isScrolling = true; 
+                } 
+                if(!isScrolling) { 
+                    pageScroll(); 
+                } else { 
+                    isScrolling = false; clearTimeout(scrolldelay);
+                }
+            });
+
+            _$('#stop').click(function() {
+                _$('#stop').addClass('hidden');
+                _$('#start').removeClass('hidden');
+                isScrolling = false; clearTimeout(scrolldelay);
+            });
+
+            
+
+
+
+
+            
+
+
+
+
+
+            
+
+
+
+
+
         </script>
     </body>
 </html>
