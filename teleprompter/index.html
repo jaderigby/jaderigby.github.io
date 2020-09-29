@@ -149,9 +149,9 @@
             }
             .content {
                 font-family: arial;
-                font-size: 400%;
+                font-size: 450%;
                 width: 100%;
-                line-height: 1.3;
+                line-height: 1.5;
             }
             textarea {
                 width: 100%;
@@ -177,7 +177,14 @@
     <body>
         <panel-wrapper>
             <panel-inner>
-                <div class="content"><span class="info-message">Please add text below</span></div>
+                <segment-elem class="fifths major-in-the-middle">
+                    <x-minor></x-minor>
+                    <x-major>
+                        <div class="content"><span class="info-message">Please add text below</span></div>
+
+                    </x-major>
+                    <x-minor></x-minor>
+                </segment-elem>
             </panel-inner>
         </panel-wrapper>
         <panel-wrapper>
