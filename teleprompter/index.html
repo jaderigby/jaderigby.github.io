@@ -122,13 +122,16 @@
                 float: right;
             }
             h1 {
-                font-size: 3.3em;
-                padding: 25px 0;
+                font-size: 1.2em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
                 line-height: 1.15;
             }
             h2 {
-                padding: 20px 0;
-                font-size: 2.5em;
+                font-size: 1.1em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
+                line-height: 1.15;
             }
             h3 {
                 padding: 15px 0;
@@ -147,18 +150,32 @@
             h5 {
                 line-height: 1.3;
             }
+            h1, h2, h3, h4, h5, h6 {
+                color: white;
+                background-color: #3c829c; /* 2cc5ff, 3c829c */
+            }
             .content {
+                color: white;
+                padding-top: 30px;
                 width: 960px;
                 margin: auto;
                 left: 0;
                 right: 0;
-                font-family: arial;
+                font-family: helvetica neue, arial;
+                font-weight: 400;
                 font-size: 435%;
                 line-height: 1.5;
+            }
+            .content p {
+                margin: 0.85em 0;
             }
             textarea {
                 width: 100%;
                 height: 300px;
+                color: white;
+                padding: 30px;
+                font-size: 2rem;
+                line-height: 1.2;
             }
             input[type="submit"] {
                 display: inline-block;
@@ -170,6 +187,7 @@
                 text-transform: uppercase;
                 padding: 8px 25px;
                 margin: 10px 0;
+                text-align: right;
             }
             .info-message {
                 color: #aaa;
@@ -177,6 +195,8 @@
             .stick {
                 padding-left: 45px;
                 position: fixed;
+                left: 0;
+                right: 0;
             }
             #speed {
                 width: 45px;
@@ -199,6 +219,12 @@
             #stop {
                 background-color: red;
             }
+            .blackout {
+                background-color: #151515;
+            }
+            textarea {
+                background-color: #444;
+            }
         </style>
         <title>Teleprompter</title>
     </head>
@@ -216,20 +242,20 @@
                 </prime-segment>
             </panel-inner>
         </panel-wrapper>
-        <panel-wrapper>
+        <panel-wrapper class="blackout">
             <panel-inner>
                 <div class="content"><span class="info-message">Please add text below</span></div>
             </panel-inner>
         </panel-wrapper>
-        <panel-wrapper>
+        <panel-wrapper class="blackout">
             <panel-inner>
-                <textarea></textarea>
                 <prime-segment>
                     <x-major></x-major>
                     <x-minor>
-                        <input type="submit" value="Add" />
+                        <input type="submit" value="Push" />
                     </x-minor>
                 </prime-segment>
+                <textarea></textarea>
             </panel-inner>
         </panel-wrapper>
         <script>
