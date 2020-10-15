@@ -98,7 +98,7 @@
             body {
                 font-family: Helvetica Neue, arial, verdana, sans-serif;
                 font-weight: 300;
-                background-color: #444;
+                background-color: #151515;
             }
             panel-wrapper {
                 background-color: #fff;
@@ -128,23 +128,34 @@
                 line-height: 1.15;
             }
             h2 {
-                font-size: 1.1em;
+                font-size: 1em;
                 margin: 0.8em 0;
                 padding: 0.3em 0.4em;
                 line-height: 1.15;
             }
             h3 {
-                padding: 15px 0;
-                font-size: 1.9em;
+                font-size: 0.8em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
+                line-height: 1.15;
             }
             h4 {
-                font-size: 1.6em;
+                font-size: 0.6em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
+                line-height: 1.15;
             }
             h5 {
-                font-size: 0.83em;
+                font-size: 0.4em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
+                line-height: 1.15;
             }
             h6 {
-                font-size: 0.67em;
+                font-size: 0.2em;
+                margin: 0.8em 0;
+                padding: 0.3em 0.4em;
+                line-height: 1.15;
             }
             h4,
             h5 {
@@ -225,6 +236,9 @@
             textarea {
                 background-color: #444;
             }
+            .update-btn {
+                margin-bottom: 20px;
+            }
         </style>
         <title>Teleprompter</title>
     </head>
@@ -233,11 +247,11 @@
             <panel-inner whitespace="20">
                 <prime-segment>
                     <x-minor>
-                        <input type="number" name="speed" id="speed" value="25">
+                        <input type="number" name="speed" id="speed" value="18">
                     </x-minor>
                     <x-major>
-                        <button id="start">Start Scroll</button>
-                        <button class="hidden" id="stop">Stop Scroll</button>
+                        <button id="start">Scroll</button>
+                        <button class="hidden" id="stop">Stop</button>
                     </x-major>
                 </prime-segment>
             </panel-inner>
@@ -252,7 +266,9 @@
                 <prime-segment>
                     <x-major></x-major>
                     <x-minor>
-                        <input type="submit" value="Push" />
+                        <div class="update-btn">
+                            <input type="submit" value="Update" />
+                        </div>
                     </x-minor>
                 </prime-segment>
                 <textarea></textarea>
