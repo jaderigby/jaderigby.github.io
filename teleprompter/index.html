@@ -166,9 +166,17 @@
                 background-color: #3c829c; /* 2cc5ff, 3c829c */
             }
             .content {
+                width: 960px;
+            }
+            @media screen and (max-width: 985px) {
+                .content {
+                    width: auto;
+                }
+            }
+            .content {
                 color: white;
                 padding-top: 30px;
-                width: 960px;
+                /* width: 960px; */
                 margin: auto;
                 left: 0;
                 right: 0;
@@ -208,7 +216,7 @@
                 position: fixed;
                 left: 0;
                 right: 0;
-                background-color: #394850;
+                background-color: #232d31;
                 box-shadow: 0 0 50px rgba(0,0,0,0.65);
             }
             #speed {
@@ -227,12 +235,12 @@
                 cursor: pointer;
                 border: none;
             }
-            #start {
+            #scrollBtn.start {
                 background: rgb(40,110,100);
 background: linear-gradient(360deg, rgba(40,110,100,1) 0%, rgba(78,149,158,1) 100%);
                 border: 1px solid #7bdccf;
             }
-            #stop {
+            #scrollBtn.stop {
                 background: rgb(110,40,70);
 background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100%);
                 border: 1px solid #ca6c97;
@@ -267,15 +275,14 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
         <title>Teleprompter</title>
     </head>
     <body>
-        <panel-wrapper class="stick">
+        <panel-wrapper id="controls" class="stick">
             <panel-inner whitespace="15">
                 <prime-segment>
                     <x-minor>
-                        <input type="text" inputMode="numeric" pattern="[0-9]*" name="speed" id="speed" value="18">
+                        <input type="text" inputMode="numeric" pattern="[0-9]*" name="speed" id="speed" value="18" />
                     </x-minor>
                     <x-major>
-                        <button id="start">Scroll</button>
-                        <button class="hidden" id="stop">Stop</button>
+                        <button id="scrollBtn" class="start">Start Scrolling</button>
                     </x-major>
                 </prime-segment>
             </panel-inner>
@@ -318,28 +325,31 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
             var isScrolling; 
             var scrolldelay; 
 
-            _$('#start').click(function() {
-                _$('#start').addClass('hidden');
-                _$('#stop').removeClass('hidden');
-                var scrollSpeed = _$('#speed').vanilla.value;
-                function pageScroll() { 
-                    window.scrollBy(0,1);
-                    scrolldelay = setTimeout(function() {
-                        pageScroll();
-                    }, scrollSpeed); 
-                    isScrolling = true; 
-                } 
-                if(!isScrolling) { 
-                    pageScroll(); 
-                } else { 
+            _$('#controls').delegate('#scrollBtn', 'click', function(e) {
+                if (_$(e.target).hasClass('start')) {
+                    _$(e.target).addClass('stop');
+                    _$(e.target).vanilla.innerHTML = "Stop";
+                    _$(e.target).removeClass('start');
+                    var scrollSpeed = _$('#speed').vanilla.value;
+                    function pageScroll() { 
+                        window.scrollBy(0,1);
+                        scrolldelay = setTimeout(function() {
+                            pageScroll();
+                        }, scrollSpeed); 
+                        isScrolling = true; 
+                    } 
+                    if(!isScrolling) { 
+                        pageScroll(); 
+                    } else { 
+                        isScrolling = false; clearTimeout(scrolldelay);
+                    }
+                }
+                else if (_$(e.target).hasClass('stop')) {
+                    _$(e.target).addClass('start');
+                    _$(e.target).vanilla.innerHTML = "Start Scrolling";
+                    _$(e.target).removeClass('stop');
                     isScrolling = false; clearTimeout(scrolldelay);
                 }
-            });
-
-            _$('#stop').click(function() {
-                _$('#stop').addClass('hidden');
-                _$('#start').removeClass('hidden');
-                isScrolling = false; clearTimeout(scrolldelay);
             });
             
             document.addEventListener("keyup", updateText);
@@ -352,24 +362,6 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                     _$(".content").vanilla.innerHTML = mdText;
                 }
             }
-
-            
-
-
-
-
-            
-
-
-
-
-
-            
-
-
-
-
-
         </script>
     </body>
 </html>
