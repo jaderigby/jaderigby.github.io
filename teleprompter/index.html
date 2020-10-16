@@ -231,10 +231,11 @@
                 display: none;
             }
             button {
-                padding: 4px 15px;
+                padding: 7px 25px 5px;
                 border-radius: 4px;
                 font-size: 1.1rem;
                 color: white;
+                background: #4a5563;
                 font-weight: 700;
                 cursor: pointer;
                 border: none;
@@ -343,6 +344,9 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
         <panel-wrapper class="blackout">
             <panel-inner>
                 <textarea></textarea>
+                <div class="clear-wrap">
+                    <button id="restoreLatest" class="primary button">Restore Latest</button>
+                </div>
             </panel-inner>
         </panel-wrapper>
         <div id="bottom-of-page"></div>
@@ -404,6 +408,10 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
             document.addEventListener("keyup", updateText);
 
             function updateText() {
+                let assignStore;
+                if (assignStore) {
+                    clearTimeout(assignStore);
+                }
                 const textBox = _$('textarea').vanilla;
                 if (textBox == document.activeElement) {
                     let text = _$('textarea').vanilla.value;
@@ -412,6 +420,9 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                         _$(".content").vanilla.innerHTML = '<p><span class="info-message">Please add text below</span></p>';
                     }
                     else {
+                        assignStore = setTimeout(function() {
+                            localStorage.setItem('latestInput', JSON.stringify(text));
+                        }, 2000);
                         _$(".content").vanilla.innerHTML = mdText;
                     }
                 }
@@ -423,6 +434,14 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
 
             _$('#bottomOfPage').click(function() {
                 _$('#bottom-of-page').vanilla.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            _$('#restoreLatest').click(function() {
+                const storedContent = JSON.parse(localStorage.latestInput);
+                _$('textarea').vanilla.value = storedContent;
+                let text = storedContent;
+                let mdText = md.render(text);
+                _$(".content").vanilla.innerHTML = mdText;
             });
         </script>
     </body>
