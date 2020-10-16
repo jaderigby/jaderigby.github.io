@@ -212,7 +212,7 @@
                 box-shadow: 0 0 50px rgba(0,0,0,0.65);
             }
             #speed {
-                width: 45px;
+                width: 25px;
                 font-size: 1.2rem;
             }
             .hidden {
@@ -271,7 +271,7 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
             <panel-inner whitespace="15">
                 <prime-segment>
                     <x-minor>
-                        <input type="number" name="speed" id="speed" value="18">
+                        <input type="text" inputMode="numeric" pattern="[0-9]*" name="speed" id="speed" value="18">
                     </x-minor>
                     <x-major>
                         <button id="start">Scroll</button>
