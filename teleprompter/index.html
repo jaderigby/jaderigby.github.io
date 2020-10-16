@@ -190,10 +190,10 @@
             }
             textarea {
                 width: calc(100% - 60px);
-                height: 300px;
+                height: 190px;
                 color: white;
                 padding: 30px;
-                font-size: 2rem;
+                font-size: 1.9rem;
                 line-height: 1.2;
             }
             input[type="submit"] {
@@ -217,7 +217,7 @@
                 left: 0;
                 right: 0;
                 background-color: #232d31;
-                box-shadow: 0 0 50px rgba(0,0,0,0.65);
+                box-shadow: 0 0 50px rgba(0,0,0,0.85);
             }
             #speed {
                 width: 25px;
@@ -236,7 +236,7 @@
                 border: none;
             }
 			#scrollBtn {
-				width: 225px;
+				width: 195px;
 			}
             #scrollBtn.start {
                 background: rgb(40,110,100);
@@ -259,6 +259,29 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
             .update-btn {
                 margin-bottom: 20px;
             }
+            .jump-links {
+                position: relative;
+                width: 40px;
+                height: 20px;
+            }
+            #topOfPage:after {
+                content: "";
+                top: 5px;
+                left: 5px;
+                position: absolute;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 20px solid skyblue;
+            }
+            #bottomOfPage:after {
+                content: "";
+                top: 5px;
+                left: 5px;
+                position: absolute;
+                border-top: 20px solid skyblue;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
             ul {
                 list-style: disc;
                 margin-left: 80px;
@@ -274,10 +297,17 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                 color: #74e5ff;
                 font-style: italic;
             }
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
+            }
         </style>
         <title>Teleprompter</title>
     </head>
     <body>
+        <div id="top-of-page"></div>
         <panel-wrapper id="controls" class="stick">
             <panel-inner whitespace="15">
                 <prime-segment>
@@ -285,14 +315,24 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                         <input type="text" inputMode="numeric" pattern="[0-9]*" name="speed" id="speed" value="18" />
                     </x-minor>
                     <x-major>
-                        <button id="scrollBtn" class="start">Start Scrolling</button>
+                        <prime-segment>
+                            <x-major>
+                                <button id="scrollBtn" class="start">Start Scrolling</button>
+                            </x-major>
+                            <x-minor>
+                                <div class="rack">
+                                    <div id="topOfPage" class="jump-links"></div>
+                                    <div id="bottomOfPage" class="jump-links"></div>
+                                </div>
+                            </x-minor>
+                        </prime-segment>
                     </x-major>
                 </prime-segment>
             </panel-inner>
         </panel-wrapper>
         <panel-wrapper class="blackout">
             <panel-inner>
-                <div class="content"><span class="info-message">Please add text below</span></div>
+                <div class="content"><p><span class="info-message">Please add text below</span></p></div>
             </panel-inner>
         </panel-wrapper>
         <panel-wrapper class="blackout">
@@ -300,6 +340,7 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                 <textarea></textarea>
             </panel-inner>
         </panel-wrapper>
+        <div id="bottom-of-page"></div>
         <script>
             /*
             jQuishy
@@ -362,9 +403,22 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                 if (textBox == document.activeElement) {
                     let text = _$('textarea').vanilla.value;
                     let mdText = md.render(text);
-                    _$(".content").vanilla.innerHTML = mdText;
+                    if (mdText == "") {
+                        _$(".content").vanilla.innerHTML = '<p><span class="info-message">Please add text below</span></p>';
+                    }
+                    else {
+                        _$(".content").vanilla.innerHTML = mdText;
+                    }
                 }
             }
+
+            _$('#topOfPage').click(function() {
+                window.scroll({top: 0, behavior: 'smooth' });
+            });
+
+            _$('#bottomOfPage').click(function() {
+                _$('#bottom-of-page').vanilla.scrollIntoView({ behavior: 'smooth' });
+            });
         </script>
     </body>
 </html>
