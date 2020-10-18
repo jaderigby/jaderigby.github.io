@@ -287,20 +287,30 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                 border-left: 15px solid transparent;
                 border-right: 15px solid transparent;
             }
+            ul li:before {
+                content: "\2022";
+                position: absolute;
+                margin-top: -45px;
+                margin-left: -0.5em;
+                display: inline-block;
+                width: 0.6em;
+                color: #74e5ff;
+                font-size: 8rem;
+            }
             ul {
-                list-style: disc;
                 margin-left: 80px;
             }
             ol {
                 list-style: decimal;
                 margin-left: 80px;
             }
+            strong, em {
+                color: #74e5ff;
+            }
             strong {
-				color: #74e5ff;
                 font-weight: 700;
             }
             em {
-                color: #74e5ff;
                 font-style: italic;
             }
             input:focus,
