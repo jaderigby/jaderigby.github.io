@@ -222,6 +222,7 @@
                 right: 0;
                 background-color: #232d31;
                 box-shadow: 0 0 50px rgba(0,0,0,0.85);
+                z-index: 900;
             }
             #speed {
                 width: 25px;
@@ -267,7 +268,8 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
             .jump-links {
                 position: relative;
                 width: 40px;
-                height: 20px;
+                height: 33px;
+                /* border: 1px solid red; */
             }
             #topOfPage:after {
                 content: "";
@@ -296,6 +298,7 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                 width: 0.6em;
                 color: #74e5ff;
                 font-size: 8rem;
+                z-index: 1;
             }
             ul {
                 margin-left: 80px;
@@ -337,8 +340,8 @@ background: linear-gradient(360deg, rgba(110,40,70,1) 0%, rgba(158,78,104,1) 100
                             </x-major>
                             <x-minor>
                                 <div class="rack">
-                                    <div id="topOfPage" class="jump-links"></div>
                                     <div id="bottomOfPage" class="jump-links"></div>
+                                    <div id="topOfPage" class="jump-links"></div>
                                 </div>
                             </x-minor>
                         </prime-segment>
