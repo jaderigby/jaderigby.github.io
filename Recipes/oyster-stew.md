@@ -11,6 +11,7 @@
 - 1/2 tsp ground black pepper
 - 6 cups whole milk, or half and half
 - 1 tsp dried parsely
+- 16 ounces fresh raw oysters, undrained
 
 ## Directions ##
 
