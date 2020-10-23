@@ -6,16 +6,17 @@
 - 1 large onion, finely diced
 - 2 garlic cloves
 - 1/4 tsp red pepper
-- 1/4 paprika
+- 1/4 tsp paprika
 - 1/4 tsp salt
 - 1/2 tsp ground black pepper
-- 6 cups whole milk, or half and half
+- 3 cups whole milk
+- 3 cups half & half (or 3 more cups whole milk)
 - 1 tsp dried parsely
 - 16 ounces fresh raw oysters, undrained
 
 ## Directions ##
 
-1. Heat butter over medium in heavy bottom 3-quart saucepan. Add diced onion and saute until tender, about 5 minutes. Grate in garlic (or mince), continue to saute for another 1 - 2 minutes, being watchful to not burn garlic.  Add red pepper, paprika, salt, black pepper, stir in toast about 1 minute.
+1. Heat butter over medium heat in heavy bottom 3-quart saucepan. Add diced onion and saute until tender, about 5 minutes. Grate in garlic (or mince), continue to saute for another 1 - 2 minutes, being watchful to not burn garlic.  Add red pepper, paprika, salt, black pepper, stir in toast about 1 minute.
 
 2. Drain oysters and reserve liquid (oyster liqueur).
 
