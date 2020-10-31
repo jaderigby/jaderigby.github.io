@@ -1,5 +1,7 @@
 # Asian Lettuce Wraps #
 
+&#9733; &#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - Romaine Lettuce leaves
