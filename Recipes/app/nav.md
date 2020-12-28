@@ -22,7 +22,7 @@
 - [Instant Pot Chili](../instant-pot-chili.md)
 - [Instant Pot Red Curry](../instant-pot-red-curry.md)
 - [Instant Pot Jambalaya](../instant-pot-jambalaya.md)
-- [Lemon Rice](../devilled-eggs.md)
+- [Lemon Rice](../lemon-rice.md)
 - [Oyster Stew](../oyster-stew.md)
 - [Restaurant Style Salsa](../restaurant-style-salsa.md)
 - [Shrimp And Spicy Cheese Sauce](../shrimp-and-spicy-cheese-sauce.md)
