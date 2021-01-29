@@ -27,6 +27,7 @@
 - [Restaurant Style Salsa](../restaurant-style-salsa.md)
 - [Shrimp And Spicy Cheese Sauce](../shrimp-and-spicy-cheese-sauce.md)
 - [Slow Cooker Texas Pulled Pork](../slow-cooker-texas-pulled-pork.md)
+- [Spaghetti With Meatballs](../spaghetti-with-meatballs.md)
 - [Stuffed Artichokes](../stuffed-artichokes.md)
 - [Taco Mix](../taco-mix.md)
 - [Taco Seasoning](../taco-seasoning.md)
