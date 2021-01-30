@@ -4,7 +4,7 @@
 
 - 2 tsp Chili Powder
 - 1-1/2 tsp Ground Cumin
-- 1 tsp sugar
+- 1/2 to 1 tsp sugar (sweetness preference)
 - 1/2 tsp Paprika
 - 1/2 tsp Crushed Red Pepper
 - 1/2 tsp Salt
