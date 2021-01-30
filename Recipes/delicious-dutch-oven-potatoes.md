@@ -16,5 +16,6 @@
 ## Directions ##
 
 1. Preheat oven to 375f.
-2. Add all ingredients into Dutch Oven
+2. Slice potatoes into thin medallions.
+2. Add all ingredients into Dutch Oven.
 3. Cook for 45 min.
