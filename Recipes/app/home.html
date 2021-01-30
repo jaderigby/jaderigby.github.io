@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="css/wc-segments.lib.min.css" />
-		<script src="js/segments.lib.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="your/filepath/here" /> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
 		<link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
 		<style type="text/css">
 		* {
@@ -211,29 +212,18 @@
 			#sidebar li a:hover {
 				background-color: #690849;
 			}
-			#sidebar li a.active {
-				/* transition: all 0.12s ease-in-out; */
-				background-color: #1f0215;
-			}
-			x-major #content {
-				padding-left: 15px;
-			}
-			x-minor {
-				width: 228px;
-				overflow-y: hidden;
-			}
 		</style>
 		<title>Recipes</title>
 	</head>
 	<body>
 		<div id="container">
 			<div class="title center-justify">Recipes</div>
-			<prime-segment>
-				<x-minor id="sidebar"></x-minor>
-				<x-major>
+			<section class="fifths">
+				<aside id="sidebar" class="single"></aside>
+				<article>
 					<div id="content"></div>
-				</x-major>
-			</prime-segment>
+				</article>
+			</section>
 		</div>
     <script src="js/remarkable.min.js"></script>
     <script src="js/jquishy+children.min.js"></script>
@@ -257,8 +247,6 @@
 
 			_$('#sidebar').delegate('a', 'click', (e) => {
 				e.preventDefault();
-				_$('#sidebar li a').removeClass('active');
-				_$(e.target).addClass('active');
 				let selectedFile = _$(e.target).attr('href');
 				fetch(selectedFile)
 				  .then(response => response.text())
@@ -270,20 +258,13 @@
 
 				/*
 				4a012f
-
 				rgb(22, 155, 255)
-
 				rgb(22, 230, 255)
-
 				rgb(22, 219, 255)
-
 				rgb(22, 208, 255)
-
 				rgb(22, 198, 255)
-
 				292929
 				272727
-
 				*/
     </script>
 	</body>
