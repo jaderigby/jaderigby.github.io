@@ -15,4 +15,4 @@
 
 ## Directions ##
 
-Mix together ingredients and store.
+Mix ingredients together and store.
