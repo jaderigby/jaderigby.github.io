@@ -4,24 +4,26 @@
 
 __Meatballs:__
 
-- Hamburger
-- Onions
+- 1 lb Hamburger
+- 1/2 Large Onion?
+- 1/2 Red Bell Pepper?
 - Garlic
-- Werchestershire
+- Werchestershire Sauce
 - Salt
 - Pepper
 
 __Sauce:__
 
-- Tomato Sauce
-- Brown Sugar
-- Peppers
-- Onion
+- 1 can Tomato Paste
+- 2 tbsp Brown Sugar
+- 1/2 Red Bell Pepper?
+- 1/2 Large Onion?
 - Garlic
-- Italian Seasoning
-- Basil
-- Salt
-- Pepper
+- 1 tsp Italian Seasoning
+- 1 tsp Basil
+- 1 tsp Salt
+- 2/3 tsp Pepper
+- 1 1/2 cans (tomato paste can) of water
 
 ## Directions ##
 
