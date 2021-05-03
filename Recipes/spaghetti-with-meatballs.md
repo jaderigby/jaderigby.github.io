@@ -14,16 +14,16 @@ __Meatballs:__
 
 __Sauce:__
 
-- 1 can Tomato Paste
-- 2 tbsp Brown Sugar
+- 2 cans Tomato Paste
+- 4 1/2 (for one can, used about 2 almost 3 tbsp) tbsp Brown Sugar
 - 1/2 Red Bell Pepper?
 - 1/2 Large Onion?
-- Garlic
-- 1 tsp Italian Seasoning
-- 1 tsp Basil
-- 1 tsp Salt
-- 2/3 tsp Pepper
-- 1 1/2 cans (tomato paste can) of water
+- 2 cloves Garlic
+- 2 tsp Italian Seasoning
+- 2 tsp Basil
+- 2 tsp Salt
+- 1 1/2 tsp Pepper
+- 3 cans (tomato paste can) of water
 
 ## Directions ##
 
