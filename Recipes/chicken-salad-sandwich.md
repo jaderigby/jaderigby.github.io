@@ -6,7 +6,7 @@
 - 1 cup sliced halves Red grapes
 - 1/2 20oz Pineapple tidbits (drained)
 - Green onions
-- Toasted, slivered almonds
+- 1 cup or more toasted, slivered almonds
 - 1/2 – 2/3 cup “Best Foods” brand real mayo
 
 ## Directions ##
