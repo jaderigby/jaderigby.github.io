@@ -11,7 +11,7 @@
 
 ## Directions ##
 
-1. Mix together, according to taste
+1. Mix together, according to taste.
 
 Can season with salt and pepper.
 
