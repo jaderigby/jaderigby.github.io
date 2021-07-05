@@ -5,7 +5,7 @@
 - 2 12.5oz Canned chicken breast
 - 1 cup sliced halves Red grapes
 - 1/2 20oz Pineapple tidbits (drained)
-- Green onions
+- 3 Green onions, diced
 - 1 cup or more toasted, slivered almonds
 - 1/2 – 2/3 cup “Best Foods” brand real mayo
 
