@@ -11,6 +11,8 @@
 
 ## Directions ##
 
-1. mix together, according to taste
-Can season with salt and pepper
-Can add apples and celery
+1. Mix together, according to taste
+
+Can season with salt and pepper.
+
+Can add apples and celery.
