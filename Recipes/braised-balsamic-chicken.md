@@ -1,15 +1,8 @@
-[center]Recipes[/center]
-========================
+# Braised Balsamic Chicken #
 
-[navigation:recipes]
+## Ingredients ##
 
-[pagination:main-dishes]
-
-## Braised Balsamic Chicken
-
-#### Ingredients
-
-###### Chicken:
+### Chicken: ###
 
 - 6 skinless, boneless chicken breast halves
 - 1 teaspoon garlic salt
@@ -23,7 +16,7 @@
 - 1 teaspoon dried rosemary
 - 1/2 teaspoon dried thyme
 
-###### Lemon Rice:
+### Lemon Rice: ###
 
 - 1 cup water
 - 1 cup chicken broth
@@ -42,9 +35,9 @@ __Cook:__ 25min
 
 __Ready in:__ 35min
 
-#### Directions
+## Directions ##
 
-###### Chicken:
+### Chicken: ###
 
 1. Season both sides of chicken breasts with garlic salt and pepper.
 
@@ -52,6 +45,6 @@ __Ready in:__ 35min
 
 3. Pour diced tomatoes and balsamic vinegar over chicken; season with basil, oregano, rosemary and thyme. Simmer until chicken is no longer pink and the juices run clear, about 15 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).
 
-###### Lemon Rice:
+### Lemon Rice: ###
 
 1. In a medium saucepan, bring water, broth, lemon juice and butter to a boil. Stir in rice, basil and lemon peel. Reduce heat; cover and simmer for 20 minutes. Let stand 5 minutes or until the water is absorbed. Before serving, sprinkle with lemon-pepper. Yield: 4 servings.
