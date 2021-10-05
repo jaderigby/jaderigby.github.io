@@ -668,12 +668,34 @@
                 border: 1px solid #5bb1b1;
                 box-shadow: 0 0 15px rgba(0,0,0,0.12);
             }
+            #savedMessage {
+                position: absolute;
+                padding: 8px 30px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 50px;
+                height: 15px;
+                transform: translateY(-80px);
+                text-align: center;
+                background-color: white;
+                box-shadow: 0 0 25px rgba(0,0,0,0.45);
+                transition: all 0.15s ease-in-out;
+                opacity: 0;
+            }
+            #savedMessage.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
         </style>
         <title>Lumafusion-title-template</title>
     </head>
     <body>
         <div id="toggleSettings"></div>
         <div id="configuration">
+            <div id="savedMessage">Saved!</div>
             <h2 class="center-justify">Configuration</h2>
             <div class="portal-content">
                 <div class="wrap">
@@ -739,6 +761,19 @@
         <script>
             const data = JSON.parse(window.localStorage.getItem('knotDetails')) || {"title": "Bowline", "cls" : "Fixed Loop", "personality" : "Solid loop knot, which reduces a rope's strength only minimally compared to other loop/hitch knots.", "usedFor" : "Attaching to a fixed point.  It is one of the few knots usable with bungie or stretchy cordage."}
 
+            function savedMessage() {
+                _$('#savedMessage').css('display', 'block');
+                _$('#savedMessage').addClass('show');
+                const showTimeout = setTimeout(function() {
+                    _$('#savedMessage').removeClass('show');
+                    const displayTimeout = setTimeout(function() {
+                        _$('#savedMessage').css('display', 'none');
+                    }, 2000);
+                }, 1500);
+
+                window.clearTimeout('showTimeout');
+            }
+
             setTimeout(function() {
 
                 _$('#titleInput').vanilla.value = data.title;
@@ -751,9 +786,8 @@
                     data.cls = _$('#classInput').vanilla.value;
                     data.personality = _$('#personalityInput').vanilla.value;
                     data.usedFor = _$('#usedForInput').vanilla.value;
-                    console.log(data);
                     window.localStorage.setItem('knotDetails', JSON.stringify(data));
-                    location.reload();
+                    savedMessage();
                 });
     
                 _$('#toggleSettings').click(function() {
@@ -776,9 +810,7 @@
                 _$('.used-for').vanilla.innerHTML = usedFor;
                 titleWidth = _$('.title-setup').vanilla.offsetWidth + 2;
                 titleBoundary = titleWidth + 156;
-    
-                console.log(titleWidth);
-    
+        
                 _$('.title-segment, .title-wrapper').css('width', titleWidth + 'px');
                 _$('.title-boundary').css('width', titleBoundary + 'px');
                 
