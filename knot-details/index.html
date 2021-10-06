@@ -205,6 +205,7 @@
                 font-family: Anton;
                 color: white;
                 font-size: 4.4rem;
+                text-transform: uppercase;
                 z-index: -1;
             }
             .title-wrapper {
@@ -237,7 +238,6 @@
             }
             .title-top.secondary {
                 height: 35px;
-                transform: translateX(-10px);
             }
             .active .title-top.secondary {
                 animation-name: top-title-secondary-animate;
@@ -666,8 +666,8 @@
                 cursor: pointer;
             }
             button:hover {
-                border: 1px solid #5bb1b1;
-                box-shadow: 0 0 15px rgba(0,0,0,0.12);
+                border: 1px solid #47b6b6;
+                box-shadow: 0 0 15px rgba(13, 53, 54, 0.25);
             }
             #savedMessage {
                 position: absolute;
@@ -775,12 +775,27 @@
                 window.clearTimeout('showTimeout');
             }
 
-            setTimeout(function() {
+            _$('#titleInput').vanilla.value = data.title;
+            _$('#classInput').vanilla.value = data.cls;
+            _$('#personalityInput').vanilla.value = data.personality;
+            _$('#usedForInput').vanilla.value = data.usedFor;
 
-                _$('#titleInput').vanilla.value = data.title;
-                _$('#classInput').vanilla.value = data.cls;
-                _$('#personalityInput').vanilla.value = data.personality;
-                _$('#usedForInput').vanilla.value = data.usedFor;
+            const title = data.title;
+            const cls = data.cls;
+            const personality = data.personality;
+            const usedFor = data.usedFor;
+            let titleWidth, titleBoundary = 0;
+
+            _$('.title-content').vanilla.forEach(function(_item_) {
+                _item_.innerHTML = title;
+            })
+            _$('.class-descriptor').vanilla.innerHTML = cls;
+            _$('.personality').vanilla.innerHTML = personality;
+            _$('.used-for').vanilla.innerHTML = usedFor;
+
+            console.log(_$('.title-setup').vanilla.offsetWidth + 2);
+
+            setTimeout(function() {
     
                 _$('button').click(function() {
                     data.title = _$('#titleInput').vanilla.value;
@@ -796,19 +811,7 @@
                 });
                 
                 _$('#mainPanel').addClass('active');
-    
-                const title = data.title;
-                const cls = data.cls;
-                const personality = data.personality;
-                const usedFor = data.usedFor;
-                let titleWidth, titleBoundary = 0;
-    
-                _$('.title-content').vanilla.forEach(function(_item_) {
-                    _item_.innerHTML = title;
-                })
-                _$('.class-descriptor').vanilla.innerHTML = cls;
-                _$('.personality').vanilla.innerHTML = personality;
-                _$('.used-for').vanilla.innerHTML = usedFor;
+
                 titleWidth = _$('.title-setup').vanilla.offsetWidth + 2;
                 titleBoundary = titleWidth + 156;
         
