@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/segments.lib.js"></script>
+        <title>Loading Animation</title>
+    </head>
+    <body>
+        <panel-wrapper>
+            <panel-inner id="container">
+                <div id="stage">
+                    <div class="vert-line line1"></div>
+                    <div class="horz-line line2"></div>
+                    <div class="vert-line line3"></div>
+                    <div class="horz-line line4"></div>
+                    <div class="horz-line line5"></div>
+                    <div class="vert-line line6"></div>
+                    <div class="vert-line line7"></div>
+                    <div class="horz-line line8"></div>
+                    <div class="vert-line line9"></div>
+                    <div class="coo-brick brick1"></div>
+                    <div class="coo-brick brick2"></div>
+                    <div class="coo-brick alt brick3"></div>
+                    <div class="coo-brick alt brick4"></div>
+                    <div class="coo-brick brick5"></div>
+                    <div class="coo-brick alt brick6"></div>
+                    <div class="coo-brick alt brick7"></div>
+                    <div class="coo-brick alt brick8"></div>
+                    <div class="coo-brick brick9"></div>
+                    <div class="coo-brick brick10"></div>
+                    <div class="coo-brick alt brick11"></div>
+                    <div class="coo-brick alt brick12"></div>
+                </div>
+            </panel-inner>
+        </panel-wrapper>
+        <panel-wrapper>
+            <panel-inner style="padding-top: 110px">
+                <div id="interfaceWrapper">
+                    <prime-segment class="vertical-stretch">
+                        <x-major class="interface-border">
+                            <div class="aligner">
+                                <h1 class="pulse center-justify">Initializing Environment</h1>
+                            </div>
+                        </x-major>
+                        <x-minor id="restartDemoBtn" class="demo-btn">
+                            <div>Restart Demo</div>
+                        </x-minor>
+                    </prime-segment>
+                </div>
+            </panel-inner>
+        </panel-wrapper>
+        <script>
+            const baseTime = 100;
+            
+            setTimeout(function() {
+                const interfaceWrapper = document.getElementById('interfaceWrapper');
+                interfaceWrapper.classList.add('active');
+            }, baseTime);
+            setTimeout(function() {
+                const container = document.getElementById('container');
+                container.classList.add('active');
+            }, baseTime + 300);
+
+            document.getElementById('restartDemoBtn').addEventListener('click', function() {
+                window.location.reload();
+            });
+        </script>
+    </body>
+</html>
