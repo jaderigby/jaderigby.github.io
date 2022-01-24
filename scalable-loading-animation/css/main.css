@@ -16,12 +16,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
     line-height: 1;
     background: #383838 url('../images/dotted-grid-tile3.png');
+    overflow: hidden;
 }
 panel-wrapper panel-inner {
     display: block;
     margin: 0 auto;
     padding: 60px 0;
-    width: 1200px;
+    width: 1080px;
 }
 prime-segment {
     display: flex;
