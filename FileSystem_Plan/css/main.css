@@ -36,19 +36,6 @@ cite {
 	/* overflow-y: scroll; */
 }
 
-/* #first.active + #slides .panel .panel-inner {
-	opacity: 0.88;
-}
-
-.panel-inner {
-	transition: 1s all ease-in-out;
-	opacity: 0.55;
-}
-
-.panel.active .panel-inner {
-	opacity: 1;
-} */
-
 #sourceBar {
 	position: fixed;
 	top: 40px;
@@ -88,6 +75,11 @@ cite {
 
 #sourceBar ul li a:hover {
 	background-color: rgba(255,255,255,0.55);
+}
+
+blockquote {
+	padding-left: 28px;
+	border-left: 12px solid rgba(0, 69, 87, 0.27);
 }
 
 .desc {
