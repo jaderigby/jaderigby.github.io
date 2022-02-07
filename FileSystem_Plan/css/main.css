@@ -619,7 +619,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 #touchControls {
 	position: absolute;
 	width: 250px;
-	height: 100px;
+	height: 140px;
 	bottom: 0;
 	right: 0;
 }
@@ -704,11 +704,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 #revealBack {
 	position:fixed;
 	z-index:999;
-	top: 17px;
-	left: 80px;
-	border-right: 28px solid rgba(255, 255, 255, 0.5);
-	border-top: 17px solid transparent;
-	border-bottom: 17px solid transparent;
+	bottom: 75px;
+	right: 86.6px;
+	width: 44px;
+	height: 44px;
+	/* border: 1px solid red; */
+}
+
+#revealBack:before {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 4px; 
+	width: 34px;
+	height: 34px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 100px;
+}
+
+#revealBack:after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: 13px;
+	width: 18px;
+	height: 4px;
+	background-color: rgba(59, 115, 112, 0.53);
+	border-radius: 10px;
 }
 
 .swap-dots {
