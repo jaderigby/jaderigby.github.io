@@ -1,0 +1,21 @@
+{
+  "name": "presentation-template",
+  "authors": [
+    "Jade Rigby <contact@jaderigby.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "remarkable": "^1.7.1"
+  }
+}

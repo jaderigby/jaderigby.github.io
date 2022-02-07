@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+			}
+			h1 {
+				font-size: 3.2rem;
+			}
+			h2 {
+				font-size: 2.8rem;
+			}
+			h3 {
+				font-size: 2.4rem;
+			}
+			h4 {
+				font-size: 2rem
+			}
+			h5 {
+				font-size: 1.6rem;
+			}
+			h6 {
+				font-size: 1.2rem;
+			}
+			body {
+				background-color: #444;
+			}
+			#container {
+        position: relative;
+				margin: 0 auto 30px;
+				padding: 30px;
+				width: 960px;
+				min-height: 500px;
+				background-color: #fff;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 0 35px rgba(0,0,0,0.5);
+				font-family: arial, verdana, sans-serif;
+			}
+			.centerize {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0
+			}
+			.cf:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+      button {
+        padding: 5px 25px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        background-color: rgb(107, 107, 107);
+      }
+      button:hover {
+        cursor: pointer;
+        color: rgb(132, 241, 255);
+        background-color: rgb(34, 34, 34);
+      }
+      #outputContent {
+        padding: 30px;
+        height: 500px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      p {
+        margin: 15px 0;
+      }
+      .half, .thirds, .fifths, .sevenths {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: stretch;
+			}
+			.half > article {
+				width: calc(50% - 12.5px);
+        margin-right: 25px;
+			}
+      .half > article:last-child {
+        margin-right: 0;
+			}
+			.thirds > aside {
+				width: calc(33.5% - 12.5px);
+			}
+			.thirds > article {
+				width: calc(66.5% - 12.5px);
+			}
+			.thirds > aside + article {
+				margin-left: 25px;
+			}
+			.thirds > article + aside {
+				margin-right: 25px;
+			}
+			.thirds, .fifths, .sevenths {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: stretch;
+			}
+			.fifths > aside {
+				width: calc(40% - 12.5px);
+			}
+			.fifths > article {
+				width: calc(60% - 12.5px);
+			}
+			.fifths > aside + article {
+				margin-left: 25px;
+			}
+			.fifths > article + aside {
+				margin-right: 25px;
+			}
+			.sevenths > aside {
+				width: calc(28% - 12.5px);
+			}
+			.sevenths > article {
+				width: calc(72% - 12.5px);
+			}
+			.sevenths > aside + article {
+				margin-left: 25px;
+			}
+			.sevenths > article + aside {
+				margin-right: 25px;
+			}
+			.thirds aside.single {
+				width: calc(17% - 12.5px);
+			}
+			.thirds aside.single + article {
+				width: calc(83% - 12.5px);
+			}
+			.fifths aside.single {
+				width: calc(20% - 12.5px);
+			}
+			.fifths aside.single + article {
+				width: calc(80% - 12.5px);
+			}
+			.sevenths aside.single {
+				width: calc(14% - 12.5px);
+			}
+			.sevenths aside.single + article {
+				width: calc(86% - 12.5px);
+			}
+		</style>
+		<title>My Blog</title>
+	</head>
+	<body>
+		<div id="container">
+      <section class="half">
+        <article>
+          <textarea id="outputContent"></textarea>
+        </article>
+        <article>
+          <p>
+            <button id="textCopier" type="button" name="button">Copy to Clipboard</button>
+          </p>
+          <p>
+            <button id="download" type="button" name="button">Download File</button>
+          </p>
+					<p>
+            <button id="viewFile" type="button" name="button">View File</button>
+          </p>
+        </article>
+      </section>
+		</div>
+    <script src="Slides/slides.js"></script>
+    <script src="bower_components/remarkable/dist/remarkable.min.js"></script>
+    <script>
+      const prefix = `<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+			}
+			.main-title {
+				text-align: center;
+				font-size: 2.8rem;
+				border-bottom: 1px solid #e0e0e0;
+				font-weight: bold;
+        font-family: Helvetica, arial, verdana, sans-serif;
+			}
+      h1, h2, h3 {
+        font-family: Helvetica, arial, verdana, sans-serif;
+      }
+      h1 {
+        font-size: 2.1rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      h2, h3, h4, h5, h6 {
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+      h1 {
+        margin: 40px 0 25px;
+      }
+      h2 {
+        margin-top: 30px;
+      }
+			body {
+        font-size: 1.1rem;
+				background-color: #444;
+			}
+			#container {
+				margin: 0 auto 30px;
+				padding: 20px 30px 30px;
+				width: 960px;
+				min-height: 500px;
+				background-color: #fff;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 0 35px rgba(0,0,0,0.5);
+				font-family: arial, verdana, sans-serif;
+			}
+			blockquote {
+				margin-left: 25px;
+				margin-right: 35px;
+				border-left: 6px solid #b1b1b1;
+				padding-left: 15px;
+			}
+			cite {
+				// margin-right: 35px;
+				display: block;
+				text-align: right;
+			}
+			.centerize {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0
+			}
+			.cf:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+			ul, ol {
+        line-height: 1.5;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				margin-left: 25px;
+			}
+			p {
+				margin-top: 25px;
+				margin-bottom: 25px;
+			}
+			.title {
+				margin: 0 -30px 60px;
+				padding: 30px;
+				/* text-align: center; */
+				font-size: 3rem;
+				background-color: #b5d0c4;
+			}
+      .thirds, .fifths, .sevenths {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: stretch;
+			}
+			.thirds > aside img, .fifths > aside img, .sevenths > aside img {
+				width: 100%;
+				height: auto;
+			}
+			.thirds > aside {
+				width: calc(33.5% - 12.5px);
+			}
+			.thirds > article {
+				width: calc(66.5% - 12.5px);
+			}
+			.thirds > aside + article {
+				margin-left: 25px;
+			}
+			.thirds > article + aside {
+				margin-right: 25px;
+			}
+			.fifths > aside {
+				width: calc(40% - 12.5px);
+			}
+			.fifths > article {
+				width: calc(60% - 12.5px);
+			}
+			.fifths > aside + article {
+				margin-left: 25px;
+			}
+			.fifths > article + aside {
+				margin-right: 25px;
+			}
+			.sevenths > aside {
+				width: calc(28% - 12.5px);
+			}
+			.sevenths > article {
+				width: calc(72% - 12.5px);
+			}
+			.sevenths > aside + article {
+				margin-left: 25px;
+			}
+			.sevenths > article + aside {
+				margin-right: 25px;
+			}
+			.thirds aside.single {
+				width: calc(17% - 12.5px);
+			}
+			.thirds aside.single + article {
+				width: calc(83% - 12.5px);
+			}
+			.fifths aside.single {
+				width: calc(20% - 12.5px);
+			}
+			.fifths aside.single + article {
+				width: calc(80% - 12.5px);
+			}
+			.sevenths aside.single {
+				width: calc(14% - 12.5px);
+			}
+			.sevenths aside.single + article {
+				width: calc(86% - 12.5px);
+			}
+			aside img {
+				margin-top: 25px;
+				padding: 5px;
+				box-shadow: 0 0 20px rgba(0,0,0,0.3);
+			}
+			hr {
+				border: 1px solid #bfbfbf;
+			}
+			section {
+				margin-bottom: 40px;
+			}
+			img {
+				width: 100%;
+				max-width: 800px;
+			}
+		</style>
+		<title>My Blog</title>
+	</head>
+	<body>
+		<div id="container">`
+
+      const suffix = `</div>
+	</body>
+</html>`;
+
+			const mainTitle = `<div class="main-title">${title}</div>`;
+			const dateLine = `<p><strong>${date}</strong></p>`;
+
+      var doc = "";
+
+      slides.forEach(function(_item_) {
+        doc += _item_.content + "\n";
+      });
+
+      let md = new Remarkable();
+  		md.set({
+  			html: true
+  		});
+  		let mdText = md.render(doc);
+
+			let filename = title.replace(/\s+/g, '-').toLowerCase();
+			filename = filename.replace(':', '');
+			filename = filename.replace('.', '');
+
+      const finalText = prefix + dateLine + mainTitle + mdText + suffix;
+
+      document.getElementById('outputContent').value = finalText;
+
+      document.getElementById('textCopier').onclick = () => {
+        var textToCopy = document.getElementById("outputContent");
+        textToCopy.select();
+        document.execCommand("copy");
+      };
+
+      document.getElementById('download').onclick = () => {
+        filename = filename + "-notes.html";
+
+        download(filename, finalText);
+      };
+
+			document.getElementById('viewFile').onclick = () => {
+				var wnd = window.open("about:blank", "", "_blank");
+				wnd.document.write(finalText);
+			};
+
+      function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
+    </script>
+	</body>
+</html>
