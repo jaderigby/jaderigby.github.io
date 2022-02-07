@@ -29,11 +29,13 @@ In short, it is data about a file regarding its author, date, and other useful i
   </div>
 
   <div class="swap switch">
+    <div style="padding: 0 35px">
 
-> Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  
+Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  
 
-> But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
+But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
 
+    </div>
   </div>
   <div class="swap switch">
 
