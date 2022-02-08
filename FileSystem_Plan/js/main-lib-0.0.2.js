@@ -261,6 +261,7 @@ const n_key = 'n';
 const d_key = 'd';
 const l_key = 'l';
 const x_key = 'x';
+const r_key = 'r';
 // const tab_key = 9;
 
 _$('#reveal').click((e) => {
@@ -388,6 +389,9 @@ window.addEventListener('keydown', (e) => {
 	if (e.key === x_key) {
 		_$('#touchControls').toggleClass('hide');
 		_$('#Navigation').toggleClass('hide');
+	}
+	if (e.key === r_key) {
+		window.location.replace(window.location.href);
 	}
 	else {
 		if (e.shiftKey) {
