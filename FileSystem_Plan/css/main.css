@@ -564,6 +564,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 #touchControls.hide {
 	display: none;
 }
+#Navigation.hide {
+	display: none;
+}
 #sidebarTrigger {
 	position: fixed;
 	width: 80px;

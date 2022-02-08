@@ -387,6 +387,7 @@ window.addEventListener('keydown', (e) => {
 	}
 	if (e.key === x_key) {
 		_$('#touchControls').toggleClass('hide');
+		_$('#Navigation').toggleClass('hide');
 	}
 	else {
 		if (e.shiftKey) {
