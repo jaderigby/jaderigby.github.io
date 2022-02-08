@@ -677,6 +677,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	border-radius: 10px;
 }
 
+#sourceBarTrigger,
+#sidebarTrigger {
+	display: none;
+}
+
 .swap-dots {
 	bottom: 25px;
 	right: 10px;
