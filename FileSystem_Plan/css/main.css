@@ -258,6 +258,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f51f3147', e
 	line-height: 1.4;
 }
 .main-image {
+	margin-top: -60px !important;
 	text-align: center;
 }
 .main-image img {
@@ -532,61 +533,6 @@ textarea.demo {
 
 /* Responsive */
 
-.thirds > aside img, .fifths > aside img, .sevenths > aside img {
-	width: 100%;
-	height: auto;
-}
-.half, .thirds, .fifths, .sevenths {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: stretch;
-}
-.thirds > aside {
-	width: calc(33.5% - 12.5px);
-}
-.thirds > article {
-	width: calc(66.5% - 12.5px);
-}
-.thirds > aside + article {
-	margin-left: 25px;
-}
-.thirds > article + aside {
-	margin-right: 25px;
-}
-.fifths > aside {
-	width: calc(40% - 12.5px);
-}
-.fifths > article {
-	width: calc(60% - 12.5px);
-}
-.fifths > aside + article {
-	margin-left: 25px;
-}
-.fifths > article + aside {
-	margin-right: 25px;
-}
-.sevenths > aside {
-	width: calc(28% - 12.5px);
-}
-.sevenths > article {
-	width: calc(72% - 12.5px);
-}
-.sevenths > aside + article {
-	margin-left: 25px;
-}
-.sevenths > article + aside {
-	margin-right: 25px;
-}
-.thirds article p:first-child, .fifths article p:first-child, .sevenths article p:first-child, .thirds article ul:first-child, .fifths article ul:first-child, .sevenths article ul:first-child, .thirds article ol:first-child, .fifths article ol:first-child, .sevenths article ol:first-child {
-	margin-top: 0;
-}
-.half article {
-	width: calc(50% - 12.5px);
-}
-.half article:first-child {
-	margin-right: 25px;
-}
 .split-line {
 	display: block;
 }
@@ -750,4 +696,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 
 .swap-dots div:last-child {
 	margin-right: 5px;
+}
+
+.list-folder-image {
+	width: 100px; 
+	margin-top: -10px; 
+	margin-bottom: -20px; 
+	margin-right: 10px;
 }

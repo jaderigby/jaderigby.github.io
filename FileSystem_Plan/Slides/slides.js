@@ -37,15 +37,64 @@ const slides = [
   </div>
   <div class="swap switch">
 
-<h3 class="center-justify"><strong>Unreliable!</strong></h3>
+<h3 class="center-justify"><strong>Unreliable Patterns!</strong></h3>
 
   </div>
   <div class="swap switch">
-
-![](../img/file-example.jpg)
-
+    <h3 style="margin-top: 60px;" class="center-justify">Besides reliability, there is another problem!</div>
   </div>
 </div>
+
+`
+}
+,{
+  "set" : 1,
+  "idLabel" : "Filing-Example",
+  "deck" : 2,
+  "content" : `
+  ## Filing Example ##
+
+<div class="segment half">
+  <div class="cell">
+    <ul style="font-size: 2.8rem;">
+      <li class="fade">Angel = <strong>UX</strong></li>
+      <li class="fade">Jon = <strong>Web</strong></li>
+      <li class="fade">Oliver = <strong>Booth</strong></li>
+    </ul>
+  </div>
+  <div class="cell">
+    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-example-blue.svg" />
+  </div>
+</div>
+  `
+}
+,{
+  "set" : 1,
+  "idLabel" : "Filing-Example-Dilema",
+  "deck" : 3,
+  "content" : `
+## Filing Dilema ##
+
+<div class="segment half">
+  <div class="cell">
+    <ul style="font-size: 2.7rem;">
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>PL - UI/UX</strong></li>
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>Copy to Web</strong></li>
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></li>
+    </ul>  
+  </div>
+  <div class="cell">
+    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-example-blue.svg" />
+  </div>
+</div>
+`}
+,{
+"set" : 1,
+"idLabel" : "What-about-metadata",
+"content" : `
+## ... Question? ##
+
+<h3 class="center-justify fade"><strong>What about Metadata?</strong></h3>
 
 `
 }
