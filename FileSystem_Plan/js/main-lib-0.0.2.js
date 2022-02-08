@@ -259,6 +259,7 @@ window.addEventListener('hashchange', (e) => {
 // var downArrow = 40;
 const n_key = 'n';
 const d_key = 'd';
+const l_key = 'l';
 // const tab_key = 9;
 
 _$('#reveal').click((e) => {
@@ -419,6 +420,57 @@ window.addEventListener('keydown', (e) => {
 			}
 		}
 		else {
+			if ((e.key === l_key)) {
+				if (currFrame !== 'first') {
+					if (_$("#" + currFrame + ' .fade').items.length !== 0) {
+						let items = _$("#" + currFrame + ' .show').items;
+						let latest = 0;
+						if (items.length > 0) {
+							latest = items.length - 1;
+						}
+						let showList = _$('#' + currFrame + ' .fade').items;
+						let currShow = showList[latest];
+						hide(currShow);
+					}
+					else if (_$("#" + currFrame + ' .swap').items.length !== 0) {
+						let latestSwap = 0;
+						let latestSwapReverse = 0;
+						let showList = _$('#' + currFrame + ' .swap').items;
+						for (let i = 0; i < showList.length; i++) {
+							if (showList[i].classList.contains('show')) {
+								latestSwap++;
+								break;
+							}
+							else {
+								latestSwap++;
+							}
+						}
+			
+						latestSwapReverse = ((latestSwap - 2) < 0) ? (showList.length - 1) : (latestSwap - 2);
+			
+						(showList).forEach( (_item_) => {
+							hide(_item_);
+						});
+						show(showList[latestSwapReverse]);
+						handleSwapDots(currFrame);
+					}
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			if ((e.key === d_key) && _$("#" + currFrame + ' .fade').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
