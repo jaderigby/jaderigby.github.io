@@ -143,16 +143,6 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 }
 ,{
 "set" : 2,
-"idLabel" : "Just-one-problem",
-"content" : `
-## Metadata: Just One Problem! ##
-
-- Metadata is not handled the same way by all files.
-- Nor is it indexed for search &ndash; for all file types &ndash; on Macs.
-`
-}
-,{
-"set" : 2,
 "idLabel" : "Metadata-Our-Main-Focus",
 "content" : `
 ## Metadata: Our Main Focus ##
@@ -373,6 +363,24 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
   </div>
 
 </div>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Just-one-problem",
+"content" : `
+## Metadata: Just One Problem! ##
+
+- Metadata is not handled the same way by all file types.
+- Nor is it indexed for search &ndash; for all file types &ndash; on Macs.
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Tags",
+"type" : "section",
+"content" : `
+# Tagalicious #
 `
 }
 ]
