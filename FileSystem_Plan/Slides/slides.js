@@ -368,6 +368,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 ,{
 "set" : 2,
 "idLabel" : "Just-one-problem",
+"deck" : 4,
 "content" : `
 ## Metadata: Just One Problem! ##
 
