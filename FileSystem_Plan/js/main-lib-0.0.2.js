@@ -391,7 +391,7 @@ window.addEventListener('keydown', (e) => {
 		_$('#Navigation').toggleClass('hide');
 	}
 	if (e.key === r_key) {
-		window.location.replace(window.location.href);
+		window.location.reload(window.location.href);
 	}
 	else {
 		if (e.shiftKey) {
