@@ -395,4 +395,63 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 # Tagalicious #
 `
 }
+,{
+"set" : 3,
+"idLabel" : "Tags-use-them",
+"content" : `
+## Tag: You're It! ##
+
+<div class="swap-wrap">
+  <div class="swap switch">
+  
+<h3 class="center-justify">Reiterate: Apple wants you to use Tags</h3>
+  
+  </div>
+  <div class="swap switch">
+
+<img src="images/tags-on-desktop.svg" />
+  
+  </div>
+  <div class="swap switch">
+  
+<img src="images/tags-on-ipad.svg" />
+
+  </div>
+</div>
+
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Tags-metadata",
+"content" : `
+## Tags: They Are Metadata ##
+
+<div class="swap-wrap">
+  <div class="swap switch">
+  
+<h3 class="center-justify">Extended Attributes, or "xattr"</h3>
+  
+  </div>
+  <div class="swap switch"> 
+
+<h3 class="center-justify">Better Support</h3>
+
+<ul>
+  <li class="fade">iCloud</li>
+  <li class="fade">Mobile</li>
+</ul>
+  
+  </div>
+</div>
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Conclusion",
+"type" : "section",
+"content" : `
+# Conclusion #
+`
+}
 ]
