@@ -145,10 +145,10 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 "set" : 2,
 "idLabel" : "Just-one-problem",
 "content" : `
-## Metadata: Just One Problem? ##
+## Metadata: Just One Problem! ##
 
-- Metadata is not handled the same way by all file.
-- Nor is it indexed for search &ndash; for all file types &ndash; on Macs
+- Metadata is not handled the same way by all files.
+- Nor is it indexed for search &ndash; for all file types &ndash; on Macs.
 `
 }
 ,{
