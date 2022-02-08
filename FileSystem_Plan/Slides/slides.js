@@ -5,6 +5,52 @@ const date = "2/7/2022";
 const slides = [
 {
 "set" : 1,
+"idLabel" : "Structures",
+"type" : "section",
+"content" : `
+# Structures #
+`
+}
+,{
+"set" : 1,
+"idLabel" : "Folder-Grouping",
+"content" : `
+## Folder Grouping ##
+
+<div class="swap-wrap">
+  <div class="swap switch show">
+
+<div class="center-justify">
+  <h4><strong>Problem:</strong>  We Need Organization To Help Us Find Files!</h4>
+</div>
+
+  </div>
+  <div class="swap switch">
+
+#### __Proposed Solution:__ Organize it into folders based on: ####
+
+1. Group
+2. I &gt; Product
+3. II &gt; Project/Bucket
+4. III &gt; File Collection
+
+  </div>
+  <div class="swap switch">
+
+<h3 class="center-justify"><strong>Unreliable!</strong></h3>
+
+  </div>
+  <div class="swap switch">
+
+![](../img/file-example.jpg)
+
+  </div>
+</div>
+
+`
+}
+,{
+"set" : 2,
 "idLabel" : "Metadata",
 "type" : "section",
 "content" : `
@@ -12,13 +58,12 @@ const slides = [
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Intro",
 "content" : `
 ## Metadata: What Is It? ##
 
 <div class="swap-wrap">
-
   <div class="swap switch">
 
 > Structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage an information resource.
@@ -27,15 +72,14 @@ const slides = [
 In short, it is data about a file regarding its author, date, and other useful information.
 
   </div>
-
   <div class="swap switch">
-    <div style="padding: 0 35px">
+<div style="padding: 0 35px">
 
 Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  
 
 But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
 
-    </div>
+</div>
   </div>
   <div class="swap switch">
 
@@ -45,12 +89,11 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 - Word docs do, as well
 
   </div>
-
 </div>
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Where",
 "content" : `
 ## Metadata: Where? ##
@@ -60,7 +103,7 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Our-Main-Focus",
 "content" : `
 ## Metadata: Our Main Focus ##
@@ -113,7 +156,7 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Kewords",
 "content" : `
 ## Metadata: Keywords ##
@@ -165,7 +208,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Then-What",
 "deck" : 2,
 "content" : `
@@ -209,7 +252,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 `
 }
 ,{
-"set" : 1,
+"set" : 2,
 "idLabel" : "Metadata-Search-Demonstration",
 "deck" : 3,
 "content" : `
