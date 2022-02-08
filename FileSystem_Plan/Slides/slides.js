@@ -372,8 +372,19 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "content" : `
 ## Metadata: Just One Problem! ##
 
+<div class="swap-wrap">
+  <div class="swap switch show">
+
 - Metadata is not handled the same way by all file types.
 - Nor is it indexed for search &ndash; for all file types &ndash; on Macs.
+
+  </div>
+  <div class="swap switch">
+
+<h3 class="center-justify">Apple wants you to use <strong>TAGS</strong></h3>
+
+  </div>
+</div>
 `
 }
 ,{
