@@ -260,6 +260,7 @@ window.addEventListener('hashchange', (e) => {
 const n_key = 'n';
 const d_key = 'd';
 const l_key = 'l';
+const x_key = 'x';
 // const tab_key = 9;
 
 _$('#reveal').click((e) => {
@@ -383,6 +384,9 @@ function handleSwapDots(par) {
 
 window.addEventListener('keydown', (e) => {
 	if (currFrame === 'first') {
+	}
+	if (e.key === x_key) {
+		_$('#touchControls').toggleClass('hide');
 	}
 	else {
 		if (e.shiftKey) {
