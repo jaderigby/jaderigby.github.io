@@ -143,12 +143,12 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 }
 ,{
 "set" : 2,
-"idLabel" : "Metadata-Where",
+"idLabel" : "Just-one-problem",
 "content" : `
-## Metadata: Where? ##
+## Metadata: Just One Problem? ##
 
-- Metadata is usually listed under "File > Properties" on Macs.
-- In Photoshop, it is found under "File > File Info"
+- Metadata is not handled the same way by all file.
+- Nor is it indexed for search &ndash; for all file types &ndash; on Macs
 `
 }
 ,{
