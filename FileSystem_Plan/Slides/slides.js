@@ -187,7 +187,7 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 - __Creation Date__ &mdash; Gives us the first view into the creation timeline
 - __Modified Date__ &mdash; Gives a sense of relevancy
 - __Author__ &mdash; Ownership: Who to ask questions
-- __*Keywords__ &mdash; For intelligent searches and linking different assets to the same project (will be covered coming up)
+- __*Keywords__ &mdash; Useful for "more" intelligent searches; unlike folders, files can be shared across multiple domains, besides just it's location
 
   </div>
 
@@ -204,25 +204,14 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 
   <div class="swap">
 
-- Kewords serve as a robust indexing feature
+- A more robust indexing system
+- Better reflection of reality
 - Like categories, only better!
-- Start from general and go to specific, leaving out the generic, such as "file type" &mdash; These are already part of the file's definition.
-- Keep specific and succinct, but use as many as seem logical
+- General to Specific
+- Keep specific and succinct, but use as many as are helpful
+- Convention (more on that later)
 
   </div>
-
-  <div class="swap">
-
-#### Example: ####
-
-- SeroVital
-- Neck Cream
-- New Years
-- Sale
-- Landing Page
-
-  </div>
-
   <div class="swap">
 
 1. __Brand__ &mdash; SeroVital, GF-9, etc
@@ -230,8 +219,6 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 3. __Campaign__ &mdash; Memorial Day, etc
 	- __Subcategory__ &mdash; a) Sale, b) Special, c) Limited Time
 4. __Classification__ &mdash; a) Landing Page, b) Microsite, c) Full site, d) Kyno site, e) Email
-
-__Note:__ Reserve Multiple authors for comments section.
 
   </div>
 
@@ -248,127 +235,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 }
 ,{
 "set" : 2,
-"idLabel" : "Metadata-Then-What",
-"deck" : 2,
-"content" : `
-## Metadata: Then What? ##
-
-<div class="swap-wrap">
-
-  <div class="swap">
-
-### How To Search: ###
-
-- Keyword Combinations
-  - "this __AND__ that"
-  - "SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email"
-- File type
-  - "__kind__:word"
-
-  </div>
-
-  <div class="swap">
-
-#### Other Possible Kinds: ####
-
-- word
-- psd
-- pdf
-- image
-- movie
-
-  </div>
-
-  <div class="swap">
-
-### All Together: ###
-
-"SeroVital __AND__ Memorial Day __AND__ Sale __AND__ Email __kind__:word"
-
-  </div>
-
-</div>
-`
-}
-,{
-"set" : 2,
-"idLabel" : "Metadata-Search-Demonstration",
-"deck" : 3,
-"content" : `
-## Metadata: Search Demo ##
-
-<div class="swap-wrap">
-
-  <div class="swap switch show">
-    <h3 class="center-justify">Goal:</h3>
-    <h4 class="center-justify">Find original document for = SeroVital Neck Cream Content, Memorial Day Sale Email</h4>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/files2.png" />
-    </div>
-  </div>
-
-  <div class="swap switch">
-    <h4 class="center-justify">Search by title: <span class="red"><strong>SeroVital</strong></span></h4>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/title2.png" />
-    </div>
-  </div>
-
-  <div class="swap switch">
-    <h4 class="center-justify">Search by title and doctype: <span class="red"><strong>SeroVital.doc</strong></span></h4>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/title-and-doctype2.png" />
-    </div>
-  </div>
-
-  <div class="swap switch">
-    <h4 class="center-justify">Let's use keywords!</h4>
-    <p class="center-justify">Search: <span class="red"><strong>SeroVital AND Memorial Day kind:doc</strong></span></p>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/keywords2.png" />
-    </div>
-  </div>
-
-  <div class="swap switch">
-    <p class="center-justify">Refined: <strong>SeroVital AND Memorial Day <span class="red">AND email</span> kind:doc</strong></p>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/keywords-refined2.png" />
-    </div>
-  </div>
-
-  <div class="swap switch">
-    <h4 class="center-justify">Now just give me the word document!</h4>
-    <p class="center-justify">Only Word Doc: <strong>SeroVital AND Memorial Day AND email <span class="red">kind:word</span></strong></p>
-  </div>
-
-  <div class="swap switch">
-    <div class="main-image large">
-      <img src="images/just-word-doc2.png" />
-    </div>
-  </div>
-
-</div>
-`
-}
-,{
-"set" : 2,
 "idLabel" : "Just-one-problem",
-"deck" : 4,
+"deck" : 2,
 "content" : `
 ## Metadata: Just One Problem! ##
 
@@ -409,12 +277,14 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
   </div>
   <div class="swap switch">
 
-<img src="images/tags-on-desktop.svg" />
+<img style="width: 530px; margin-top: -70px;" class="image-sample" src="images/tags-on-desktop.svg" />
+<h3 class="center-justify tags-title"><strong>Desktop</strong></h3>
   
   </div>
   <div class="swap switch">
   
-<img src="images/tags-on-ipad.svg" />
+<img class="image-sample" src="images/tags-on-ipad.svg" />
+<h3 style="margin-top: 30px;" class="center-justify tags-title"><strong>Mobile</strong></h3>
 
   </div>
 </div>
@@ -427,21 +297,53 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "content" : `
 ## Tags: They Are Metadata ##
 
-<div class="swap-wrap">
-  <div class="swap switch">
-  
-<h3 class="center-justify">Extended Attributes, or "xattr"</h3>
-  
-  </div>
-  <div class="swap switch"> 
-
-<h3 class="center-justify">Better Support</h3>
+<h3 class="center-justify fade">Metadata With Better Support!</h3>
 
 <ul>
-  <li class="fade">iCloud</li>
+  <li class="fade">Desktop</li>
   <li class="fade">Mobile</li>
+  <li class="fade">Portable across iCloud</li>
+  <li class="fade"><strong>? = </strong> Indexing search with other's tags</li>
+  <li class="fade"><strong>? = </strong> Works as long as integrity maintained</li>
 </ul>
-  
+`
+}
+,{
+  "set" : 3,
+  "deck" : 2,
+  "idLabel" : "Tags-replace-metadata",
+  "content" : `
+## Tags As Metadata ##
+
+<div class="swap-wrap">
+  <div class="swap">
+
+- Creator
+- Author (Contributor)
+- Creation Date
+- Modified Date
+- Keywords
+
+  </div>
+  <div class="swap">
+
+- creator:Name
+- author:Name
+- [Creation Date]
+- [Modified Date]
+- keywords = other tags
+
+  </div>
+  <div class="swap switch">
+
+### Mobile ###
+
+- creator/Jade
+- author/Angel
+- [Creation Date]
+- [Modified Date]
+- AHR, QC, QE, Marketing, etc
+
   </div>
 </div>
 `
@@ -452,6 +354,59 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "type" : "section",
 "content" : `
 # Conclusion #
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Organize-Folders",
+"content" : `
+# Organize Folders #
+
+Organize folders as we see fit: General to Specific
+
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Utilize-Tags",
+"content" : `
+# Utilize Tags #
+
+Similar method with folders, keywords can be a reflection of folders, but also usage.
+
+<div class="fade">
+
+__Example:__ email, web, ahr ...
+
+</div>
+
+`
+}
+,{
+"set" : 4,
+"idLabel" : "To-do",
+"content" : `
+# ToDo #
+
+<div class="swap-wrap">
+  <div class="swap switch">
+
+- Explore Folder conventions
+  - continue discussion
+
+</div>
+<div class="swap switch">
+
+- Establish keyword conventions
+- Utilize Creators/Authors
+
+</div>
+<div class="swap switch">
+
+### Finally, let's demo ... ###
+
+</div>
+</div>
 `
 }
 ]

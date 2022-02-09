@@ -715,3 +715,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 	margin-bottom: -20px; 
 	margin-right: 10px;
 }
+
+.image-sample {
+	left: 0;
+	right: 0;
+	width: 430px;
+	margin: -50px auto 0;
+	display: block;
+}
+
+h3.tags-title {
+	margin-top: -50px;
+}
