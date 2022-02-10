@@ -542,9 +542,9 @@ function show(myItem) {
 }
 
 function hide(myItem) {
-	// if (_$(myItem).hasClass('show') {
-	// 	_$(myItem).removeClass('start');
-	// }
+	if (_$(myItem).classList.contains('show') {
+		_$(myItem).removeClass('start');
+	}
 	_$(myItem).removeClass('show');
 	_$(myItem).css('height', '0');
 }
