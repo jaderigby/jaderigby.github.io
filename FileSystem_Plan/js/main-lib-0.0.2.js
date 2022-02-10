@@ -542,8 +542,11 @@ function show(myItem) {
 }
 
 function hide(myItem) {
-	if (_$(myItem).classList.contains('show') {
+	if (_$(myItem).item.classList.contains('show')) {
 		_$(myItem).removeClass('start');
+		setTimeout(function() {
+			_$(myItem).addClass('start');
+		}, 500);
 	}
 	_$(myItem).removeClass('show');
 	_$(myItem).css('height', '0');

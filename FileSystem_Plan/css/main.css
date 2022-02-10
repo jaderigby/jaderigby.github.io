@@ -421,12 +421,12 @@ ul.swap, ol.swap {
 	transform: scale(1);
 }
 .swap.wipe.start {
-	transform: translateY(-150px);
+	transform: translateY(-200px);
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 }
 .swap.wipe {
-	transform: translateY(150px);
+	transform: translateY(200px);
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 }
