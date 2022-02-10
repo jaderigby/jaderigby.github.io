@@ -420,6 +420,20 @@ ul.swap, ol.swap {
 .swap.switch.show {
 	transform: scale(1);
 }
+.swap.wipe.start {
+	transform: translateY(-150px);
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+.swap.wipe {
+	transform: translateY(150px);
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+.swap.wipe.show {
+	transform: translateY(0);
+	opacity: 1;
+}
 pre.reduced {
 	font-size: 1.2rem;
 }
@@ -726,4 +740,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2c4c', e
 
 h3.tags-title {
 	margin-top: -50px;
+}
+
+h3.aspect {
+	margin-top: 90px;
+	font-weight: 600;
 }

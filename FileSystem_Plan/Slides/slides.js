@@ -349,6 +349,43 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 `
 }
 ,{
+"set" : 3,
+"idLabel" : "Tag-techniques",
+"deck" : 3,
+"content" : `
+## Techniques ##
+
+<div class="swap-wrap">
+  <div class="swap wipe start">
+
+<h3 class="aspect center-justify">Ctrl + Numkey</h3>
+
+  </div>
+  <div class="swap wipe start">
+
+<h3 class="aspect center-justify">Set Hotkey</h3>
+
+  </div>
+  <div class="swap wipe start">
+
+<h3 class="aspect center-justify">Top-Right</h3>
+
+  </div>
+  <div class="swap wipe start">
+
+<h3 class="aspect center-justify">Save As</h3>
+
+  </div>
+  <div class="swap wipe start">
+
+<h3 class="aspect center-justify">Details View</h3>
+
+  </div>
+</div>
+
+`
+}
+,{
 "set" : 4,
 "idLabel" : "Conclusion",
 "type" : "section",
