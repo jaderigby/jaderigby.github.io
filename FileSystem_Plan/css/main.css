@@ -375,6 +375,15 @@ h2.primary img {
 	/* transform: translateZ(200px); */
 	background-image: url(../img/perpetual-arrows.svg);
 }
+.next-arrows.after-the-fact {
+	position: absolute;
+	top: 223px;
+	left: -462px;
+	width: 390px;
+	height: 170px;
+	/* transform: translateZ(200px); */
+	background-image: url(../img/perpetual-arrows.svg);
+}
 .fade {
 	height: 0;
 	opacity: 0;
@@ -745,4 +754,15 @@ h3.tags-title {
 h3.aspect {
 	margin-top: 90px;
 	font-weight: 600;
+}
+
+h3.aspect-high {
+	margin-top: 0px;
+	font-weight: 600;
+}
+
+.key-combo-add {
+	font-size: 6.5rem;
+	display: inline-block;
+	vertical-align: 40px;
 }
