@@ -29,6 +29,8 @@ function slidesLayout() {
 
 	each(slides).dothis(function(_slide_) {
 
+		// console.log(_slide_);
+
 		let md = new Remarkable();
 		md.set({
 			html: true
@@ -42,17 +44,17 @@ function slidesLayout() {
 			if (_slide_.deck) {
 				currZAsInt = zDiff * (_slide_.deck - 1);
 			}
-			else if (_slide_.flow && _slide_.flow === 'z') {
-				if (trackZFlow === 0) {
-					currXRotationAsInt = xRotate;
-					currYAsInt = zFlowYDiff + currYAsInt;
-					currZAsInt = zFlowFirstZDiff + currZAsInt;
-				}
-				else {
-					currZAsInt = zFlowZDiff + currZAsInt;
-				}
-				trackZFlow++;
-			}
+			// else if (_slide_.flow && _slide_.flow === 'z') {
+			// 	if (trackZFlow === 0) {
+			// 		currXRotationAsInt = xRotate;
+			// 		currYAsInt = zFlowYDiff + currYAsInt;
+			// 		currZAsInt = zFlowFirstZDiff + currZAsInt;
+			// 	}
+			// 	else {
+			// 		currZAsInt = zFlowZDiff + currZAsInt;
+			// 	}
+			// 	trackZFlow++;
+			// }
 			else if (_slide_.prev.set === _slide_.set) {
 				currXAsInt = xDiff + currXAsInt;
 			}
@@ -64,6 +66,9 @@ function slidesLayout() {
 
 		// Calculate for Y
 		if (_slide_.i !== 0) {
+			console.log(_slide_);
+			console.log(currYAsInt);
+			console.log
 			if (_slide_.prev.set !== _slide_.set) {
 				currYAsInt = currYAsInt + yDiff;
 			}
@@ -72,6 +77,7 @@ function slidesLayout() {
 		var siblingClass = '';
 		var nextArrows = '';
 		var arrows = '<div class="next-arrows"></div>';
+		var arrowsAfterTheFact = '<div class="next-arrows after-the-fact"></div>';
 		if (_slide_.next !== null) {
 			if (_slide_.set === _slide_.next.set) {
 				if (_slide_.next.deck && !("deck" in _slide_)) {
@@ -80,41 +86,45 @@ function slidesLayout() {
 						iter++;
 					}
 					if (_slide_.up(iter + 1) && _slide_.set === _slide_.up(iter + 1).set) {
-					  siblingClass = 'sibling-right';
+						siblingClass = 'sibling-right';
 						nextArrows = arrows;
 					}
 					else if (_slide_.up(iter + 1) && _slide_.up(iter).set !== _slide_.up(iter + 1).set) {
-					  siblingClass = '';
-						currYAsInt = baseYVal;
+						siblingClass = '';
+						// currYAsInt = baseYVal;
 					}
 				}
-				else if (_slide_.next.flow && !("flow" in _slide_)) {
-					let iter = 1;
-					while (_slide_.up(iter) && "flow" in _slide_.up(iter) && _slide_.next.flow) {
-						iter++;
-					}
-					if (_slide_.up(iter + 1) && _slide_.set === _slide_.up(iter + 1).set) {
-					  siblingClass = 'sibling-right';
-						nextArrows = arrows;
-					}
-					else if (_slide_.up(iter + 1) && _slide_.up(iter).set !== _slide_.up(iter + 1).set) {
-					  siblingClass = '';
-					}
-				}
+				// else if (_slide_.next.flow && !("flow" in _slide_)) {
+				// 	let iter = 1;
+				// 	while (_slide_.up(iter) && "flow" in _slide_.up(iter) && _slide_.next.flow) {
+				// 		iter++;
+				// 	}
+				// 	if (_slide_.up(iter + 1) && _slide_.set === _slide_.up(iter + 1).set) {
+				// 	  siblingClass = 'sibling-right';
+				// 		nextArrows = arrows;
+				// 	}
+				// 	else if (_slide_.up(iter + 1) && _slide_.up(iter).set !== _slide_.up(iter + 1).set) {
+				// 	  siblingClass = '';
+				// 	}
+				// }
 				else if (_slide_.deck || _slide_.flow) {
 					siblingClass = '';
 					nextArrows = '';
 				}
 				else {
-					siblingClass = 'sibling-right';
+					// siblingClass = 'sibling-right';
 					nextArrows = arrows;
 				}
+			}
+			else if (!_slide_.deck && _slide_.prev && _slide_.prev.deck) {
+				console.log("=============== got there");
+				// currYAsInt = baseYVal;
+				nextArrows = arrowsAfterTheFact;
 			}
 		}
 
 		let template;
 		if ("type" in _slide_) {
-			console.log("this one!");
 			template = `<div
 	 id="${_slide_.idLabel}"
 	 class="step panel ${_slide_.type} ${siblingClass}"
@@ -158,15 +168,15 @@ function slidesLayout() {
 		}
 
 		// reset for y,z, if no more in flow
-		if (_slide_.flow) {
-			if (_slide_.next) {
-				if (!(_slide_.next.flow)) {
-					currZAsInt = baseZVal;
-					currXRotationAsInt = 0;
-					currYAsInt = baseYVal;
-				}
-			}
-		}
+		// if (_slide_.flow) {
+		// 	if (_slide_.next) {
+		// 		if (!(_slide_.next.flow)) {
+		// 			currZAsInt = baseZVal;
+		// 			currXRotationAsInt = 0;
+		// 			currYAsInt = baseYVal;
+		// 		}
+		// 	}
+		// }
 
 	});
 }
@@ -196,37 +206,6 @@ slidesLayout();
 		_$('#sourceBar').toggleClass('active');
 	};
 
-	// const bar = _$('#sourceBar').item;
-	// _$(bar).delegate('mouseenter', 'li', () => {
-	// 	_$(this).next('.desc').css({
-	// 		display: 'block'
-	// 	});
-	// });
-	//
-	//
-	//
-	//
-	//
-	//
-	// $('#sourceBar').delegate('li', {
-	// 	// var myMarker = $(this).next('.desc');
-	// 	mouseenter: function() {
-	// 		$(this).next('.desc').css({
-	// 			display: 'block'
-	// 		});
-	// 		$(this).next('.desc').animate({
-	// 			opacity: 0.52,
-	// 			marginLeft: '65px'
-	// 		}, 250)
-	// 	}, mouseleave: function() {
-	// 		$(this).next('.desc').animate({
-	// 			opacity: 0,
-	// 			marginLeft: '45px'
-	// 		}, 250, function() {
-	// 			$(this).next('.desc').css('display', 'none')
-	// 		})
-	// 	}
-	// });
 }());
 
 impress().init();
@@ -253,16 +232,11 @@ window.addEventListener('hashchange', (e) => {
 	assignVal('first', '#title', 'show');
 });
 
-// var rightArrow = 39;
-// var leftArrow = 37;
-// var upArrow = 38;
-// var downArrow = 40;
 const n_key = 'n';
 const d_key = 'd';
 const l_key = 'l';
 const x_key = 'x';
 const r_key = 'r';
-// const tab_key = 9;
 
 _$('#reveal').click((e) => {
 	if (currFrame === 'first') {
