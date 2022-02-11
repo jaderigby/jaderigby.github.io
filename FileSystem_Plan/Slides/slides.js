@@ -370,9 +370,9 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 <h3 class="center-justify aspect-high">Set Hotkey</h3>
 <div class="center-justify">
-<img width="200" src="images/cmd-key.svg" />
+<img width="200" src="images/opt-key.svg" />
 <strong class="key-combo-add">+</strong>
-<img width="200" src="images/num-1-key.svg" />
+<img width="200" src="images/cmd-key.svg" />
 <strong class="key-combo-add">+</strong>
 <img width="200" src="images/t-key.svg" />
 </div>
