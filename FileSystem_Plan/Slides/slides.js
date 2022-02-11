@@ -358,7 +358,12 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <div class="swap-wrap">
   <div class="swap wipe start">
 
-<h3 class="aspect center-justify">Ctrl + Numkey</h3>
+<h3 class="center-justify aspect-high">Ctrl + Numkey</h3>
+<div class="center-justify">
+<img width="200" src="images/ctrl-key.svg" />
+<strong class="key-combo-add">+</strong>
+<img width="200" src="images/num-1-key.svg" />
+</div>
 
   </div>
   <div class="swap wipe start">
