@@ -386,13 +386,6 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 `
 }
 ,{
-"set" : 3,
-"idLabel" : "Test",
-"content" : `
-## Test ##
-`
-}
-,{
 "set" : 4,
 "idLabel" : "Conclusion",
 "type" : "section",
