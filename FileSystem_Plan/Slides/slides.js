@@ -78,9 +78,9 @@ const slides = [
 <div class="segment half">
   <div class="cell">
     <ul style="font-size: 2.7rem;">
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>PL - UI/UX</strong></li>
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>Copy to Web</strong></li>
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></li>
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>PL - UI/UX</strong></li>
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Copy to Web</strong></li>
+      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></li>
     </ul>  
   </div>
   <div class="cell">
