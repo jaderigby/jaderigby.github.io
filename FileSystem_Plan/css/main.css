@@ -762,7 +762,8 @@ h3.aspect-high {
 }
 
 h3.aspect-up-high {
-	margin-top: -50px;
+	margin-top: -35px;
+	margin-bottom: -15px;
 	font-weight: 600;
 }
 
