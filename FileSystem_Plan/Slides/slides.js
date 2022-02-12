@@ -380,7 +380,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
   </div>
   <div class="swap wipe start">
 
-<h3 class="aspect-high center-justify">Finder Bar</h3>
+<h3 class="aspect-up-high center-justify">Finder Bar</h3>
 <div class="center-justify">
 <img width="580" src="images/tags-in-finder-bar.png" />
 </div>

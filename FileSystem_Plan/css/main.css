@@ -761,6 +761,11 @@ h3.aspect-high {
 	font-weight: 600;
 }
 
+h3.aspect-up-high {
+	margin-top: -25px;
+	font-weight: 600;
+}
+
 .key-combo-add {
 	font-size: 6.5rem;
 	display: inline-block;
