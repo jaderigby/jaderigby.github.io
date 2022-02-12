@@ -237,7 +237,7 @@ const d_key = 'd';
 const l_key = 'l';
 const x_key = 'x';
 const r_key = 'r';
-const enter_key = 'enter';
+const enter_key = 'Enter';
 
 _$('#reveal').click((e) => {
 	if (currFrame === 'first') {
