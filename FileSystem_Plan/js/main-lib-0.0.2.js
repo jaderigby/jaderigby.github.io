@@ -380,7 +380,7 @@ window.addEventListener('keydown', (e) => {
 				let currShow = showList[latest];
 				hide(currShow);
 			}
-			else if (e.key === d_key && _$("#" + currFrame + ' .swap').items.length !== 0) {
+			else if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' .swap').items.length !== 0) {
 				let latestSwap = 0;
 				let latestSwapReverse = 0;
 				let showList = _$('#' + currFrame + ' .swap').items;
@@ -455,7 +455,7 @@ window.addEventListener('keydown', (e) => {
 
 
 
-			if ((e.key === d_key) && _$("#" + currFrame + ' .fade').items.length !== 0) {
+			if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' .fade').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
@@ -467,7 +467,7 @@ window.addEventListener('keydown', (e) => {
 					show(currShow);
 				}
 			}
-			else if (e.key === d_key && _$("#" + currFrame + ' .swap').items.length !== 0) {
+			else if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' .swap').items.length !== 0) {
 				let latestSwap = 0;
 				let showList = _$('#' + currFrame + ' .swap').items;
 				for (let i = 0; i < showList.length; i++) {
