@@ -237,6 +237,7 @@ const d_key = 'd';
 const l_key = 'l';
 const x_key = 'x';
 const r_key = 'r';
+const enter_key = 'enter';
 
 _$('#reveal').click((e) => {
 	if (currFrame === 'first') {
@@ -369,7 +370,7 @@ window.addEventListener('keydown', (e) => {
 	}
 	else {
 		if (e.shiftKey) {
-			if (e.key === d_key && _$("#" + currFrame + ' .fade').items.length !== 0) {
+			if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' .fade').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
