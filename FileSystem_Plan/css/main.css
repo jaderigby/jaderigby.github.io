@@ -224,7 +224,8 @@ h1 {
 .section h1 {
 	/* background: url(../img/Main_Slide_H1_BG_Revamped.afphoto2.jpg); */
 	background: url(../img/Main_Slide_BG_New.jpg);
-	background-position: 0 35%;
+	/* background-position: 0 35%; */
+	background-position: 0 60%;
 	background-size: 100%;
 	border-top: 1px solid rgb(40, 92, 119);
 	border-bottom: 1px solid rgb(40, 92, 119);
