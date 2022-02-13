@@ -1,5 +1,5 @@
-class keyGroup extends HTMLElement {}
-window.customElements.define('key-group', keyGroup);
+class slideGroup extends HTMLElement {}
+window.customElements.define('slide-group', slideGroup);
 
-class keyItem extends HTMLElement {}
-window.customElements.define('key-Item', keyItem);
+class revealItem extends HTMLElement {}
+window.customElements.define('key-item', revealItem);

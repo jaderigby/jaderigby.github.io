@@ -35,18 +35,28 @@ function slidesLayout() {
 		md.set({
 			html: true
 		});
-		// str = str.replace(/cat|dog|goat/gi, function(matched){
-		// 	return mapObj[matched];
-		//   });
+
 		function processCenterMarkup(STRING) {
 			const str = STRING.replace(/>>.*<</g, function(matched) {
 				return matched.replace('>>', '<span class="markdown-center-justify">').replace('<<', '</span>');
-			})
+			});
 			return str;
 		}
 
+		function processSlideGroups(STRING) {
+			const str = STRING.replace(/<key-slot>/g, '<div class="swap">').replace(/(<\/key-slot>|<\/key-group>)/g, '</div>').replace(/<key-slot show>/g, '<div class="swap show">')
+			const groupFormattedStr = str.replace(/<(key-group|key-group [a-z\-]*)>/g, function(_match_) {
+				const capturedType = _match_.replace('<key-group','').replace(' ', '').replace('>', '');
+				// const finalStr = if 
+				return _match_.replace(/<(key-group|key-group [a-z\-]*)>/g, '<div class="swap-wrap '+ capturedType +'">');
+			});
+			return groupFormattedStr;
+		}
+
 		const contentCenterProcessed = processCenterMarkup(_slide_.content);
-		let mdText = md.render(contentCenterProcessed);
+		const contentSlideGroupProcessed = processSlideGroups(contentCenterProcessed);
+
+		let mdText = md.render(contentSlideGroupProcessed);
 
 		// Calculate for X
 		if (_slide_.i !== 0) {
@@ -77,9 +87,9 @@ function slidesLayout() {
 
 		// Calculate for Y
 		if (_slide_.i !== 0) {
-			console.log(_slide_);
-			console.log(currYAsInt);
-			console.log
+			// console.log(_slide_);
+			// console.log(currYAsInt);
+			// console.log
 			if (_slide_.prev.set !== _slide_.set) {
 				currYAsInt = currYAsInt + yDiff;
 			}

@@ -425,25 +425,25 @@ ul.swap, ol.swap {
 .swap.show {
 	opacity: 1;
 }
-.swap.switch {
+.swap-wrap.switch .swap {
 	transform-origin: 460px 200px;
 	transform: scale(0.75);
 	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.swap.switch.show {
+.swap-wrap.switch .swap.show {
 	transform: scale(1);
 }
-.swap.wipe.start {
+.swap-wrap.wipe .swap.start {
 	transform: translateY(-200px);
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 }
-.swap.wipe {
+.swap-wrap.wipe .swap {
 	transform: translateY(200px);
 	transition: all 0.35s cubic-bezier(.68,0,.32,1);
 	opacity: 0;
 }
-.swap.wipe.show {
+.swap-wrap.wipe .swap.show {
 	transform: translateY(0);
 	opacity: 1;
 }

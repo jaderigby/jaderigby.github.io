@@ -17,13 +17,13 @@ const slides = [
 "content" : `
 ## Folder Grouping ##
 
-<div class="swap-wrap">
-  <div class="swap switch show">
+<key-group switch>
+<key-slot show>
 
 #### >>__Problem:__  We Need Organization To Help Us Find Files!<< ####
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 #### __Proposed Solution:__ Organize it into folders based on: ####
 
@@ -32,16 +32,18 @@ const slides = [
 3. II &gt; Project/Bucket
 4. III &gt; File Collection
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 ### >>__Unreliable Patterns!__<< ###
 
-  </div>
-  <div class="swap switch">
-    <h3 style="margin-top: 60px;" class="center-justify">Besides reliability, there is another problem!</div>
-  </div>
-</div>
+</key-slot>
+<key-slot>
+
+  <h3 style="margin-top: 60px;" class="center-justify">Besides reliability, there is another problem!</h3>
+
+</key-slot>
+</key-group>
 
 `
 }
@@ -110,16 +112,16 @@ const slides = [
 "content" : `
 ## Metadata: What Is It? ##
 
-<div class="swap-wrap">
-  <div class="swap switch">
+<key-group switch>
+<key-slot>
 
 > Structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use or manage an information resource.
 <cite>&mdash; Wikipedia</cite>
 
 In short, it is data about a file regarding its author, date, and other useful information.
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 <div class="key-features">
 
@@ -129,16 +131,16 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 
 </div>
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 - Most files contain metadata
 - Metadata varies from file type to file type
 - PSDs contain metadata
 - Word docs do, as well
 
-  </div>
-</div>
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -147,9 +149,8 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 "content" : `
 ## Metadata: Our Main Focus ##
 
-<div class="swap-wrap">
-
-  <div class="swap">
+<key-group switch>
+<key-slot>
 
 #### Though metadata varies from file type to file type, they typically include the following: ####
 
@@ -169,10 +170,10 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
     </ul>
   </article>
 
-  </div>
+</key-slot>
+<key-slot>
 
-  <div class="swap">
-    <div class="key-premise center-justify">4</div>
+<div class="key-premise center-justify">4</div>
     
 #### >>Most Important Metadata To Us:<< ####
 
@@ -185,18 +186,16 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 
 </div>
 
-  </div>
-
-  <div class="swap">
+</key-slot>
+<key-slot>
 
 - __Creation Date__ &mdash; Gives us the first view into the creation timeline
 - __Modified Date__ &mdash; Gives a sense of relevancy
 - __Author__ &mdash; Ownership: Who to ask questions
 - __*Keywords__ &mdash; Useful for "more" intelligent searches; unlike folders, files can be shared across multiple domains, besides just it's location
 
-  </div>
-
-</div>
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -205,9 +204,8 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 "content" : `
 ## Metadata: Keywords ##
 
-<div class="swap-wrap">
-
-  <div class="swap">
+<key-group>
+<key-slot>
 
 - A more robust indexing system
 - Better reflection of reality
@@ -216,8 +214,8 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 - Keep specific and succinct, but use as many as are helpful
 - Convention (more on that later)
 
-  </div>
-  <div class="swap">
+</key-slot>
+<key-slot>
 
 1. __Brand__ &mdash; SeroVital, GF-9, etc
 2. __Product__ &mdash; Neck Cream, etc
@@ -225,17 +223,15 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 	- __Subcategory__ &mdash; a) Sale, b) Special, c) Limited Time
 4. __Classification__ &mdash; a) Landing Page, b) Microsite, c) Full site, d) Kyno site, e) Email
 
-  </div>
-
-  <div class="swap">
+</key-slot>
+<key-slot>
 
 We can continue to refine our conventions, as we see fit.
 
 __Our main goal is retrieving assets without any wasted time whatsoever: To be able to get what we want, and go to work!__
 
-  </div>
-
-</div>
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -245,19 +241,19 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "content" : `
 ## Metadata: Just One Problem! ##
 
-<div class="swap-wrap">
-  <div class="swap switch show">
+<key-group switch>
+<key-slot show>
 
 - Metadata is not handled the same way by all file types.
 - Nor is it indexed for search &ndash; for all file types &ndash; on Macs.
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 ### >>Apple wants you to use __TAGS__<< ###
 
-  </div>
-</div>
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -274,26 +270,25 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "content" : `
 ## Tag: You're It! ##
 
-<div class="swap-wrap">
-  <div class="swap switch">
+<key-group switch>
+<key-slot>
   
 ### >>Reiterate: Apple wants you to use Tags<< ###
   
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 <img style="width: 530px; margin-top: -70px;" class="image-sample" src="images/tags-on-desktop.svg" />
 <h3 class="center-justify tags-title"><strong>Desktop</strong></h3>
   
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
   
 <img class="image-sample" src="images/tags-on-ipad.svg" />
 <h3 style="margin-top: 30px;" class="center-justify tags-title"><strong>Mobile</strong></h3>
 
-  </div>
-</div>
-
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -320,8 +315,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
   "content" : `
 ## Tags As Metadata ##
 
-<div class="swap-wrap">
-  <div class="swap">
+<key-group>
+<key-slot>
 
 - Creator
 - Author (Contributor)
@@ -329,8 +324,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 - Modified Date
 - Keywords
 
-  </div>
-  <div class="swap">
+</key-slot>
+<key-slot>
 
 - creator:Name
 - author:Name
@@ -338,8 +333,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 - [Modified Date]
 - keywords = other tags
 
-  </div>
-  <div class="swap switch">
+</key-slot>
+<key-slot>
 
 ### Mobile ###
 
@@ -349,8 +344,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 - [Modified Date]
 - AHR, QC, QE, Marketing, etc
 
-  </div>
-</div>
+</key-slot>
+</key-group>
 `
 }
 ,{
@@ -360,8 +355,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 "content" : `
 ## Techniques ##
 
-<div class="swap-wrap">
-  <div class="swap wipe start">
+<key-group wipe>
+<key-slot show>
 
 <h3 class="center-justify aspect-high">Ctrl + Numkey</h3>
 <div class="center-justify">
@@ -370,8 +365,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <img width="200" src="images/num-1-key.svg" />
 </div>
 
-  </div>
-  <div class="swap wipe start">
+</key-slot>
+<key-slot>
 
 <h3 class="center-justify aspect-high">Set Hotkey</h3>
 <div class="center-justify">
@@ -382,16 +377,16 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <img width="200" src="images/t-key.svg" />
 </div>
 
-  </div>
-  <div class="swap wipe start">
+</key-slot>
+<key-slot>
 
 <h3 class="aspect-up-high center-justify">Finder Bar</h3>
 <div class="center-justify">
 <img width="580" src="images/tags-in-finder-bar.png" />
 </div>
 
-  </div>
-  <div class="swap wipe start">
+</key-slot>
+<key-slot>
 
 <h3 class="aspect center-justify">Save As</h3>
 
@@ -400,8 +395,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 <h3 class="aspect center-justify">Details View</h3>
 
-  </div>
-</div>
+</key-slot>
+</key-group>
 
 `
 }
@@ -445,8 +440,8 @@ Similar method with folders, keywords can be a reflection of folders, but also u
 "content" : `
 # ToDo #
 
-<div class="swap-wrap">
-  <div class="swap switch">
+<key-group switch>
+<key-slot>
 
 <div class="key-features">
 
@@ -455,8 +450,8 @@ Similar method with folders, keywords can be a reflection of folders, but also u
 
 </div>
 
-</div>
-<div class="swap switch">
+</key-slot>
+<key-slot>
 
 <div class="key-features">
 
@@ -465,8 +460,8 @@ Similar method with folders, keywords can be a reflection of folders, but also u
 
 </div>
 
-</div>
-<div class="swap switch">
+</key-slot>
+<key-slot>
 
 <div class="key-features">
 
@@ -474,8 +469,8 @@ Similar method with folders, keywords can be a reflection of folders, but also u
 
 </div>
 
-</div>
-</div>
+</key-slot>
+</key-group>
 `
 }
 ]
