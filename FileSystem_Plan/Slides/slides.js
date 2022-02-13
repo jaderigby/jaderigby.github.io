@@ -56,11 +56,13 @@ const slides = [
 
 <div class="segment half">
   <div class="cell">
-    <ul style="font-size: 2.8rem;">
-      <li class="fade">Angel = <strong>UX</strong></li>
-      <li class="fade">Jon = <strong>Web</strong></li>
-      <li class="fade">Oliver = <strong>Booth</strong></li>
-    </ul>
+    <div class="folder-quandry">
+      <ul style="font-size: 2.8rem;">
+        <li class="fade">Angel = <strong>UX</strong></li>
+        <li class="fade">Jon = <strong>Web</strong></li>
+        <li class="fade">Oliver = <strong>Booth</strong></li>
+      </ul>
+    </div>
   </div>
   <div class="cell">
     <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />

@@ -800,3 +800,11 @@ h3.aspect-up-high {
 	/* box-shadow: 0 12px 25px rgba(20, 56, 98, 0.16); */
 	box-shadow: 0 12px 21px rgba(9, 40, 101, 0.16);
 }
+
+.folder-quandry {
+	margin-top: -10px;
+	padding-top: 50px;
+	height: 420px;
+	background: url(../images/file-folder-ghost.svg) no-repeat;
+	background-size: contain;
+}
