@@ -35,7 +35,18 @@ function slidesLayout() {
 		md.set({
 			html: true
 		});
-		let mdText = md.render(_slide_.content);
+		// str = str.replace(/cat|dog|goat/gi, function(matched){
+		// 	return mapObj[matched];
+		//   });
+		function processCenterMarkup(STRING) {
+			const str = STRING.replace(/>>.*<</g, function(matched) {
+				return matched.replace('>>', '<span class="markdown-center-justify">').replace('<<', '</span>');
+			})
+			return str;
+		}
+
+		const contentCenterProcessed = processCenterMarkup(_slide_.content);
+		let mdText = md.render(contentCenterProcessed);
 
 		// Calculate for X
 		if (_slide_.i !== 0) {
@@ -117,7 +128,6 @@ function slidesLayout() {
 				}
 			}
 			else if (!_slide_.deck && _slide_.prev && _slide_.prev.deck) {
-				console.log("=============== got there");
 				// currYAsInt = baseYVal;
 				nextArrows = arrowsAfterTheFact;
 			}

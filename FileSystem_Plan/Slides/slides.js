@@ -20,9 +20,7 @@ const slides = [
 <div class="swap-wrap">
   <div class="swap switch show">
 
-<div class="center-justify">
-  <h4><strong>Problem:</strong>  We Need Organization To Help Us Find Files!</h4>
-</div>
+#### >>__Problem:__  We Need Organization To Help Us Find Files!<< ####
 
   </div>
   <div class="swap switch">
@@ -37,7 +35,7 @@ const slides = [
   </div>
   <div class="swap switch">
 
-<h3 class="center-justify"><strong>Unreliable Patterns!</strong></h3>
+### >>__Unreliable Patterns!__<< ###
 
   </div>
   <div class="swap switch">
@@ -122,13 +120,15 @@ In short, it is data about a file regarding its author, date, and other useful i
 
   </div>
   <div class="swap switch">
-<div style="padding: 0 35px">
+
+<div class="key-features">
 
 Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  
 
 But in reality, metadata can be even more valuable in maintaining and retrieving files than the folder structure that we contain them in.
 
 </div>
+
   </div>
   <div class="swap switch">
 
@@ -172,13 +172,18 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
   </div>
 
   <div class="swap">
+    <div class="key-premise center-justify">4</div>
+    
+#### >>Most Important Metadata To Us:<< ####
 
-#### __4__ Most Important Metadata Elements To Us: ####
+<div class="key-features">
 
 1. Creation Date
 2. Modified Date
 3. Author
 4. Keywords
+
+</div>
 
   </div>
 
@@ -249,7 +254,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
   </div>
   <div class="swap switch">
 
-<h3 class="center-justify">Apple wants you to use <strong>TAGS</strong></h3>
+### >>Apple wants you to use __TAGS__<< ###
 
   </div>
 </div>
@@ -272,7 +277,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <div class="swap-wrap">
   <div class="swap switch">
   
-<h3 class="center-justify">Reiterate: Apple wants you to use Tags</h3>
+### >>Reiterate: Apple wants you to use Tags<< ###
   
   </div>
   <div class="swap switch">
@@ -428,7 +433,7 @@ Similar method with folders, keywords can be a reflection of folders, but also u
 
 <div class="fade">
 
-__Example:__ email, web, ahr ...
+>>__&mdash; Example:__ email, web, ahr ...<<
 
 </div>
 
@@ -443,19 +448,31 @@ __Example:__ email, web, ahr ...
 <div class="swap-wrap">
   <div class="swap switch">
 
+<div class="key-features">
+
 - Explore Folder conventions
   - continue discussion
 
 </div>
+
+</div>
 <div class="swap switch">
+
+<div class="key-features">
 
 - Establish keyword conventions
 - Utilize Creators/Authors
 
 </div>
+
+</div>
 <div class="swap switch">
 
+<div class="key-features">
+
 ### Finally, let's demo ... ###
+
+</div>
 
 </div>
 </div>
