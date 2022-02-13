@@ -84,7 +84,7 @@ const slides = [
     </ul>  
   </div>
   <div class="cell">
-    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-example-blue.svg" />
+    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
   </div>
 </div>
 `}
