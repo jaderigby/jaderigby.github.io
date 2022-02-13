@@ -211,6 +211,11 @@ slidesLayout();
 		let slideTitle = slide.replace(/-/g, ' ');
 		_$('#sourceBar ul').append('<li><a href="#'+ slide +'">'+ (num === 0 ? '*' : num) +'</a></li><div class="desc"><div class="pointer"></div>'+ slideTitle +'</div>');
 		num++;
+		
+		// normalize wipe slides
+		_$('.swap-wrap.wipe').items.forEach(function(_group_) {
+			_$(_group_.children).addClass('start');
+		}
 	});
 
 	const trigger = _$('#sourceBarTrigger').item;
