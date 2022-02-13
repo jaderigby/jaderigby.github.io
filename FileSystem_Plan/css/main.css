@@ -209,8 +209,8 @@ h1 {
 	margin-right: -52px;
 	/* border-top: 2px solid rgb(6, 39, 56);
 	border-bottom: 2px solid rgb(6, 39, 56); */
-	/* text-shadow: 0 0 9px rgba(207, 96, 96, 0.65), 0 0 22px rgba(255, 255, 255, 0.88); */
-	text-shadow: 0 0 9px rgba(207, 96, 96, 0.83), 0 0 22px rgba(0, 0, 0, 0.6);
+	text-shadow: 0 0 9px rgba(207, 96, 96, 0.65), 0 0 22px rgba(255, 255, 255, 0.88);
+	/* text-shadow: 0 0 9px rgba(207, 96, 96, 0.83), 0 0 22px rgba(0, 0, 0, 0.6); */
 	font-family: "Julius Sans One";
 	font-size: 4.4rem;
 	text-align: center;
