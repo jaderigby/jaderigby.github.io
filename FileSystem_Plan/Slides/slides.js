@@ -94,7 +94,13 @@ const slides = [
 "content" : `
 ## ... Question? ##
 
-<h3 class="center-justify fade"><strong>What about Metadata?</strong></h3>
+<key-group switch>
+<key-slot>
+
+### >>__What about Metadata?__<< ###
+
+</key-slot>
+</key-group>
 
 `
 }
