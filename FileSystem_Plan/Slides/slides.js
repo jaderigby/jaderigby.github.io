@@ -364,7 +364,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 ## Techniques ##
 
 <key-group wipe>
-<key-slot show>
+<key-slot>
 
 <h3 class="center-justify aspect-high">Ctrl + Numkey</h3>
 <div class="center-justify">
