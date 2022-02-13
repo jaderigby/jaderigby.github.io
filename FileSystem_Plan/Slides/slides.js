@@ -123,7 +123,7 @@ In short, it is data about a file regarding its author, date, and other useful i
 </key-slot>
 <key-slot>
 
-<div class="key-features">
+<div class="wrap">
 
 Often times, we rely on file names and folder structure to organize our files, and consider metadata "extra work".  
 
@@ -149,10 +149,10 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 "content" : `
 ## Metadata: Our Main Focus ##
 
-<key-group switch>
+<key-group>
 <key-slot>
 
-#### Though metadata varies from file type to file type, they typically include the following: ####
+Though metadata varies from file type to file type, they typically <br />include the following:
 
 <section class="half">
   <article>

@@ -794,6 +794,9 @@ h3.aspect-up-high {
 	box-shadow: 0 0 45px rgba(36, 121, 173, 0.3) inset, 0 0 9px rgba(41, 99, 120, 0.4) inset;
 	background-color: #cdeaf6; /* c2e8fa, c4e3f1, c3e4f2, ccebf9, c1e2f0, cdeaf6  */
 }
-
-key-group
-key-point
+.wrap {
+	padding: 15px 50px;
+	background: white;
+	/* box-shadow: 0 12px 25px rgba(20, 56, 98, 0.16); */
+	box-shadow: 0 12px 21px rgba(9, 40, 101, 0.16);
+}
