@@ -398,8 +398,8 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 <h3 class="aspect center-justify">Save As</h3>
 
-  </div>
-  <div class="swap wipe start">
+</key-slot>
+<key-slot>
 
 <h3 class="aspect center-justify">Details View</h3>
 

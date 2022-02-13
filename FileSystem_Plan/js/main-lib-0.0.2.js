@@ -215,7 +215,7 @@ slidesLayout();
 		// normalize wipe slides
 		_$('.swap-wrap.wipe').items.forEach(function(_group_) {
 			_$(_group_.children).addClass('start');
-		}
+		});
 	});
 
 	const trigger = _$('#sourceBarTrigger').item;
