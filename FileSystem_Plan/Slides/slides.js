@@ -164,22 +164,22 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 
 Though metadata varies from file type to file type, they typically <br />include the following:
 
-<section class="half">
-  <article>
-    <ul>
-      <li>Creation Date</li>
-      <li>Modified Date</li>
-      <li>Author</li>
-    </ul>
-  </article>
-  <article>
-    <ul>
-      <li>Subject</li>
-      <li>Keywords</li>
-      <li>Comments</li>
-    </ul>
-  </article>
+<div class="segment half">
+  <div class="cell">
 
+- Creation Date
+- Modified Date
+- Author
+
+  </div>
+  <div class="cell">
+
+- Subject
+- Keywords
+- Comments
+
+  </div>
+</div>
 </key-slot>
 <key-slot>
 

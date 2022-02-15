@@ -829,3 +829,7 @@ h3.aspect-up-high {
 	margin-bottom: -20px; 
 	margin-right: 10px;
 }
+
+li p {
+	margin: 0;
+}
