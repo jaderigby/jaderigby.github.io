@@ -346,13 +346,20 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 </key-slot>
 <key-slot>
 
-### Mobile ###
+<div class="segment half">
+  <div class="cell">
 
 - creator/Jade
 - author/Angel
 - [Creation Date]
 - [Modified Date]
 - AHR, QC, QE, Marketing, etc
+
+  </div>
+  <div class="cell">
+    <img src="images/ipad.svg" />
+  </div>
+</div>
 
 </key-slot>
 </key-group>
