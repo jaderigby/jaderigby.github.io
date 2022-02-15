@@ -40,7 +40,7 @@ const slides = [
 </key-slot>
 <key-slot>
 
-  <h3 style="margin-top: 60px;" class="center-justify">Besides reliability, there is another problem!</h3>
+<h3 style="margin-top: 60px;" class="center-justify">Besides reliability, there is another problem!</h3>
 
 </key-slot>
 </key-group>
@@ -55,18 +55,18 @@ const slides = [
   ## Filing Example ##
 
 <div class="segment half">
-  <div class="cell">
-    <div class="folder-quandry folder-list fade-set" style="font-size: 2.8rem;">
+<div class="cell">
+<div class="folder-quandry folder-list fade-set" style="font-size: 2.8rem;">
 
 - Angel = __UX__
 - Jon = __Web__
 - Oliver = __Booth__
 
-    </div>
-  </div>
-  <div class="cell">
-    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
-  </div>
+</div>
+</div>
+<div class="cell">
+<img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
+</div>
 </div>
   `
 }
@@ -78,7 +78,7 @@ const slides = [
 ## Filing Dilema ##
 
 <div class="segment half">
-  <div class="cell folder-list fade-set">
+<div class="cell folder-list fade-set">
 
 ![](images/file-folder-filled-blue-thumb.svg)__PL - UI/UX__
 
@@ -87,9 +87,9 @@ const slides = [
 ![](images/file-folder-filled-blue-thumb.svg)__Oliver__ &mdash; __Jon's__
 
   </div>
-  <div class="cell">
-    <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
-  </div>
+<div class="cell">
+<img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
+</div>
 </div>
 `}
 ,{
@@ -165,20 +165,20 @@ But in reality, metadata can be even more valuable in maintaining and retrieving
 Though metadata varies from file type to file type, they typically <br />include the following:
 
 <div class="segment half">
-  <div class="cell">
+<div class="cell">
 
 - Creation Date
 - Modified Date
 - Author
 
-  </div>
-  <div class="cell">
+</div>
+<div class="cell">
 
 - Subject
 - Keywords
 - Comments
 
-  </div>
+</div>
 </div>
 </key-slot>
 <key-slot>
@@ -347,7 +347,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <key-slot>
 
 <div class="segment half">
-  <div class="cell">
+<div class="cell">
 
 - creator/Jade
 - author/Angel
@@ -355,10 +355,10 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 - [Modified Date]
 - AHR, QC, QE, Marketing, etc
 
-  </div>
-  <div class="cell">
-    <img src="images/iPad.svg" />
-  </div>
+</div>
+<div class="cell">
+<img src="images/iPad.svg" />
+</div>
 </div>
 
 </key-slot>
@@ -405,7 +405,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 </key-slot>
 <key-slot>
 
-<h3 class="aspect center-justify">Save As</h3>
+<h3 class="aspect-up-high center-justify">Save As</h3>
 <div class="center-justify">
 <img width="580" src="images/tags-in-save-as.png" />
 </div>
@@ -413,8 +413,9 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 </key-slot>
 <key-slot>
 
-<h3 class="aspect center-justify">Finder Details</h3>
+<h3 class="aspect-up-high center-justify">Finder Details</h3>
 
+>><img width="300" src="images/tags-in-details.png" /><<
 
 </key-slot>
 </key-group>
