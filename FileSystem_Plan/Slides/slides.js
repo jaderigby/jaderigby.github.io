@@ -357,7 +357,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
   </div>
   <div class="cell">
-    <img src="images/ipad.svg" />
+    <img src="images/iPad.svg" />
   </div>
 </div>
 
