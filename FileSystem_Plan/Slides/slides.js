@@ -364,7 +364,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 ## Techniques ##
 
 <key-group wipe>
-<key-slot show>
+<key-slot>
 
 <h3 class="center-justify aspect-high">Ctrl + Numkey</h3>
 <div class="center-justify">
@@ -397,15 +397,18 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <key-slot>
 
 <h3 class="aspect center-justify">Save As</h3>
+<div class="center-justify">
+<img width="580" src="images/tags-in-save-as.png" />
+</div>
 
 </key-slot>
 <key-slot>
 
-<h3 class="aspect center-justify">Details View</h3>
+<h3 class="aspect center-justify">Finder Details</h3>
+
 
 </key-slot>
 </key-group>
-
 `
 }
 ,{
