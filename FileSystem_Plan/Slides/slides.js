@@ -56,12 +56,12 @@ const slides = [
 
 <div class="segment half">
   <div class="cell">
-    <div class="folder-quandry">
-      <ul style="font-size: 2.8rem;">
-        <li class="fade">Angel = <strong>UX</strong></li>
-        <li class="fade">Jon = <strong>Web</strong></li>
-        <li class="fade">Oliver = <strong>Booth</strong></li>
-      </ul>
+    <div class="folder-quandry folder-list fade-set" style="font-size: 2.8rem;">
+
+- Angel = __UX__
+- Jon = __Web__
+- Oliver = __Booth__
+
     </div>
   </div>
   <div class="cell">
@@ -78,12 +78,14 @@ const slides = [
 ## Filing Dilema ##
 
 <div class="segment half">
-  <div class="cell">
-    <div style="font-size: 2.7rem;">
-      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>PL - UI/UX</strong></p>
-      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Copy to Web</strong></p>
-      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></p>
-    </div>  
+  <div class="cell folder-list fade-set">
+
+![](images/file-folder-filled-blue-thumb.svg)__PL - UI/UX__
+
+![](images/file-folder-filled-blue-thumb.svg)__Copy to Web__
+
+![](images/file-folder-filled-blue-thumb.svg)__Oliver__ &mdash; __Jon's__
+
   </div>
   <div class="cell">
     <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />

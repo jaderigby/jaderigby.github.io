@@ -388,13 +388,17 @@ h2.primary img {
 	/* transform: translateZ(200px); */
 	background-image: url(../img/perpetual-arrows.svg);
 }
-.fade {
+.fade,
+.fade-set > p,
+.fade-set li {
 	height: 0;
 	opacity: 0;
 	/* transition: all 0.41s ease-out; */
 	transition: all 0.5s ease-out;
 }
-.fade.show {
+.fade.show
+, .fade-set p.show
+, .fade-set li.show {
 	opacity: 1;
 }
 /* .swap-wrap {
@@ -803,8 +807,25 @@ h3.aspect-up-high {
 
 .folder-quandry {
 	margin-top: -10px;
-	padding-top: 50px;
+	padding-top: 75px;
 	height: 420px;
 	background: url(../images/file-folder-ghost.svg) no-repeat;
 	background-size: contain;
+}
+
+.panel .folder-list,
+.panel .folder-list p,
+.panel .folder-list li {
+	font-size: 2.7rem;
+}
+
+.panel .folder-list li p {
+	margin: 0;
+}
+
+.folder-list img {
+	width: 100px;
+	margin-top: -10px; 
+	margin-bottom: -20px; 
+	margin-right: 10px;
 }
