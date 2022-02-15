@@ -280,7 +280,7 @@ _$('#reveal').click((e) => {
 					show(currShow);
 				}
 			}
-			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' .fade-set li').items.length !== 0) {
+			else if (_$('#' + currFrame + ' .fade-set li').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
@@ -292,7 +292,7 @@ _$('#reveal').click((e) => {
 					show(currShow);
 				}
 			}
-			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' .fade-set p').items.length !== 0) {
+			else if (_$('#' + currFrame + ' .fade-set p').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
