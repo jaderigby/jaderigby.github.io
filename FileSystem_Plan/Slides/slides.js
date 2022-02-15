@@ -79,11 +79,11 @@ const slides = [
 
 <div class="segment half">
   <div class="cell">
-    <ul style="font-size: 2.7rem;">
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>PL - UI/UX</strong></li>
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Copy to Web</strong></li>
-      <li class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></li>
-    </ul>  
+    <div style="font-size: 2.7rem;">
+      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>PL - UI/UX</strong></p>
+      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Copy to Web</strong></p>
+      <p class="fade"><img class="list-folder-image" src="images/file-folder-filled-blue-2.svg" /><strong>Oliver</strong> &mdash; <strong>Jon's</strong></p>
+    </div>  
   </div>
   <div class="cell">
     <img style="left: 0; right: 0; width: 430px; margin: -50px auto 0; display: block" src="images/file-blue-gradient.svg" />
