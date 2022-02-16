@@ -868,6 +868,37 @@ h3.aspect-up-high {
 	margin-top: -50px;
 	margin-left: -70px;
 }
+
+.group-folder-container {
+	padding-top: 80px;
+	height: 300px;
+	background: url(../images/file-folder-ghost.svg) no-repeat center;
+	background-size: contain;
+}
+
+.group-folder-container h4 {
+	margin-top: 60px;
+}
+
+.classification-folder-structure {
+	margin-top: -30px;
+	margin-bottom: -10px;
+}
+
+.folders-inside {
+	margin: -30px auto 0;
+	width: 330px;
+}
+
+.panel .folders-inside p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 1.2rem;
+}
+
+.markdown-center-justify {
+	margin-top: -20px;
+}
 /* .vertical-center {
 	display: flex;
 	flex-flow: row nowrap;
