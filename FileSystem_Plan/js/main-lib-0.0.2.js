@@ -280,25 +280,25 @@ _$('#reveal').click((e) => {
 					show(currShow);
 				}
 			}
-			else if (_$('#' + currFrame + ' .fade-set li').items.length !== 0) {
+			else if (_$('#' + currFrame + ' [class$=-sequence] li').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length;
 				}
-				let showList = _$('#' + currFrame + ' .fade-set li').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] li').items;
 				let currShow = showList[latest];
 				if (showList.length !== items.length) {
 					show(currShow);
 				}
 			}
-			else if (_$('#' + currFrame + ' .fade-set p').items.length !== 0) {
+			else if (_$('#' + currFrame + ' [class$=-sequence] p').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length;
 				}
-				let showList = _$('#' + currFrame + ' .fade-set p').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] p').items;
 				let currShow = showList[latest];
 				if (showList.length !== items.length) {
 					show(currShow);
@@ -342,24 +342,24 @@ _$('#revealBack').click((e) => {
 			let currShow = showList[latest];
 			hide(currShow);
 		}
-		else if (_$('#' + currFrame + ' .fade-set li').items.length !== 0) {
+		else if (_$('#' + currFrame + ' [class$=-sequence] li').items.length !== 0) {
 			let items = _$("#" + currFrame + ' .show').items;
 			let latest = 0;
 			if (items.length > 0) {
 				latest = items.length - 1;
 			}
-			let showList = _$('#' + currFrame + ' .fade-set li').items;
+			let showList = _$('#' + currFrame + ' [class$=-sequence] li').items;
 			console.log(showList);
 			let currShow = showList[latest];
 			hide(currShow);
 		}
-		else if (_$('#' + currFrame + ' .fade-set p').items.length !== 0) {
+		else if (_$('#' + currFrame + ' [class$=-sequence] p').items.length !== 0) {
 			let items = _$("#" + currFrame + ' .show').items;
 			let latest = 0;
 			if (items.length > 0) {
 				latest = items.length - 1;
 			}
-			let showList = _$('#' + currFrame + ' .fade-set > p').items;
+			let showList = _$('#' + currFrame + ' [class$=-sequence] > p').items;
 			console.log(showList);
 			let currShow = showList[latest];
 			hide(currShow);
@@ -451,14 +451,14 @@ window.addEventListener('keydown', (e) => {
 				let currShow = showList[latest];
 				hide(currShow);
 			}
-			else if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' .fade-set p, #' + currFrame + ' .fade-set li').items.length !== 0) {
-				
+			else if ((e.key === d_key || e.key === enter_key) && _$("#" + currFrame + ' [class$=-sequence] p, #' + currFrame + ' [class$=-sequence] li').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length - 1;
 				}
-				let showList = _$('#' + currFrame + ' .fade-set p, #' + currFrame + ' .fade-set li').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] p, #' + currFrame + ' [class$=-sequence] li').items;
+				console.log(showList);
 				let currShow = showList[latest];
 				hide(currShow);
 			}
@@ -498,25 +498,23 @@ window.addEventListener('keydown', (e) => {
 						let currShow = showList[latest];
 						hide(currShow);
 					}
-					else if (_$('#' + currFrame + ' .fade-set li').items.length !== 0) {
+					else if (_$('#' + currFrame + ' [class$=-sequence] li').items.length !== 0) {
 						let items = _$("#" + currFrame + ' .show').items;
 						let latest = 0;
 						if (items.length > 0) {
 							latest = items.length - 1;
 						}
-						let showList = _$('#' + currFrame + ' .fade-set li').items;
-						console.log(showList);
+						let showList = _$('#' + currFrame + ' [class$=-sequence] li').items;
 						let currShow = showList[latest];
 						hide(currShow);
 					}
-					else if (_$('#' + currFrame + ' .fade-set p').items.length !== 0) {
+					else if (_$('#' + currFrame + ' [class$=-sequence] p').items.length !== 0) {
 						let items = _$("#" + currFrame + ' .show').items;
 						let latest = 0;
 						if (items.length > 0) {
 							latest = items.length - 1;
 						}
-						let showList = _$('#' + currFrame + ' .fade-set > p').items;
-						console.log(showList);
+						let showList = _$('#' + currFrame + ' [class$=-sequence] > p').items;
 						let currShow = showList[latest];
 						hide(currShow);
 					}
@@ -571,25 +569,25 @@ window.addEventListener('keydown', (e) => {
 					show(currShow);
 				}
 			}
-			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' .fade-set li').items.length !== 0) {
+			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' [class$=-sequence] li').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length;
 				}
-				let showList = _$('#' + currFrame + ' .fade-set li').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] li').items;
 				let currShow = showList[latest];
 				if (showList.length !== items.length) {
 					show(currShow);
 				}
 			}
-			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' .fade-set p').items.length !== 0) {
+			else if ((e.key === d_key || e.key === enter_key) && _$('#' + currFrame + ' [class$=-sequence] p').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length;
 				}
-				let showList = _$('#' + currFrame + ' .fade-set p').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] p').items;
 				let currShow = showList[latest];
 				if (showList.length !== items.length) {
 					show(currShow);

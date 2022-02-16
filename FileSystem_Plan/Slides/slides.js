@@ -25,7 +25,7 @@ const slides = [
 </key-slot>
 <key-slot>
 
-#### __Proposed Solution:__ Organize it into folders based on: ####
+#### __Proposed Solution:__ Organize it into folders based on ... ####
 
 1. Group
 2. I &gt; Product
@@ -56,7 +56,7 @@ const slides = [
 
 <div class="segment half">
 <div class="cell">
-<div class="folder-quandry folder-list fade-set" style="font-size: 2.8rem;">
+<div class="folder-quandry folder-list slide-sequence" style="font-size: 2.8rem;">
 
 - Angel = __UX__
 - Jon = __Web__
@@ -78,7 +78,7 @@ const slides = [
 ## Filing Dilema ##
 
 <div class="segment half">
-<div class="cell folder-list fade-set">
+<div class="cell folder-list fade-sequence">
 
 ![](images/file-folder-filled-blue-thumb.svg)__PL - UI/UX__
 
@@ -357,7 +357,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 
 </div>
 <div class="cell">
-<img src="images/iPad.svg" />
+<img class="mobile-tags-image" src="images/iPad.svg" />
 </div>
 </div>
 
@@ -447,7 +447,7 @@ Organize folders as we see fit: General to Specific
 
 Similar method with folders, keywords can be a reflection of folders, but also usage.
 
-<div class="fade">
+<div class="slide-sequence">
 
 >>__&mdash; Example:__ email, web, ahr ...<<
 
