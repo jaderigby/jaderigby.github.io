@@ -52,30 +52,6 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 </code>
 </pre>
 
-
-- Install
-  - Documents folder
-  - Zip/Clone
-  - Setup Command
-  - Verify
-
-- Use
-  - \`bacon new\`
-  - open file
-  - add an action
-  - do your edits
-  - helpers
-    - run_command
-    - user_input
-    - user_selection
-    - and More!
-    - add your own
-  - demo: qit all
-  - utility commands:
-    - triggerWord -action
-    - triggerWord -profile
-    - triggerWord -helpers
-
 - Settings
   - default settings
   - Profile settings
