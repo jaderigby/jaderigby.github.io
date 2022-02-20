@@ -958,6 +958,42 @@ pre code {
 	margin-top: -80px;
 }
 
+.medium img {
+	width: 300px;
+}
+
+.small img {
+	width: 180px;
+}
+
 pre[class*="language-"].push-up {
 	margin-top: -30px;
+}
+
+.examples-placement h3 {
+	margin-top: -80px;
+}
+
+.examples-placement .key-features {
+	margin-top: -110px;
+}
+
+.examples-placement .key-features p {
+	font-size: 1.5rem;
+}
+
+.examples-placement {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 420px;
+	/* border: 1px solid red; */
+}
+
+.examples-placement pre[class*="language-"].push-up {
+	margin-top: -245px;
+}
+
+.key-features.up-high {
+	margin-top: -220px;
 }

@@ -389,6 +389,7 @@ def execute():
 "content" : `
 ## Examples ##
 
+<div class="examples-placement">
 <key-group wipe>
 <key-slot>
 
@@ -398,14 +399,15 @@ def execute():
 <key-slot>
 <div class="key-features">
 
-helpers.run_command('cd ~/Documents/mkdir Example')
+helpers.run_command('cd ~/Documents && mkdir Example')
 
 </div>
 </key-slot>
 <key-slot>
-<div class="key-features medium">
+<div class="key-features up-high medium">
 
-![](images/file-folder-filled-blue.svg) __Example__
+>>![](images/file-folder-filled-blue.svg)<<
+#### >>__Example__<< ####
 
 </div>
 </key-slot>
@@ -415,29 +417,43 @@ helpers.run_command('cd ~/Documents/mkdir Example')
 
 </key-slot>
 <key-slot>
+<div class="key-features">
 
 compName = helpers.user_input('Name your component: ')
 
+</div>
 </key-slot>
 <key-slot>
-<pre>
+
+### >>helpers.user_selection()<< ###
+
+</key-slot>
+<key-slot>
+<div class="key-features">
+
+selection = helpers.user_selection("Selection: ", branchList)
+
+</div>
+</key-slot>
+<key-slot>
+<pre class="push-up">
 <code class="language-markup">
 
-
-
+[1] feature/sidebar
+[2] feature/breadcrumbs
+[3] feature/navigation
+[4] feature/modals
+[5] feature/buttons
+<br />
+Selection: 
 </code>
 </pre>
 </key-slot>
 <key-slot>
 
 </key-slot>
-<key-slot>
-
-</key-slot>
-<key-slot>
-
-</key-slot>
 </key-group>
+</div>
 `
 }
 ]
