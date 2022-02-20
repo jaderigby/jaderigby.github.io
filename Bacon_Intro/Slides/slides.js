@@ -484,7 +484,7 @@ Selection:
 <key-group wipe>
 <key-slot>
 
-### >>-action<< ###
+### >>__-action__<< ###
 
 </key-slot>
 <key-slot>
@@ -496,7 +496,7 @@ This adds a new action to your utility.  Doing <code>triggerWord -action args:tr
 </key-slot>
 <key-slot>
 
-### >>-profile<< ###
+### >>__-profile__<< ###
 
 </key-slot>
 <key-slot>
@@ -508,7 +508,7 @@ This adds a profile file to your utility.  More specifically, it first creates a
 </key-slot>
 <key-slot>
 
-### >>-helpers<< ###
+### >>__-helpers__<< ###
 
 </key-slot>
 <key-slot>
@@ -520,6 +520,32 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </key-slot>
 </key-group>
 </div>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Settings",
+"type" : "section",
+"content" : `
+# Settings #
+
+
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Default-Settings",
+"content" : `
+## Default Settings ##
+
+<div class="examples-placement">
+<div class="wipe-sequence">
+
+__settings.py__
+
+</div>
+</div>
+
 `
 }
 ]

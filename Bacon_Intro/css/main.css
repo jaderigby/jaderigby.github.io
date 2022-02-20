@@ -426,6 +426,19 @@ h2.primary img {
 	transform: translateX(0);
 	opacity: 1;
 }
+.wipe-sequence > p
+, .wipe-sequence li
+, .wipe-sequence > div {
+	transform: translateY(-200px);
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+.wipe-sequence p.show
+, .wipe-sequence li.show
+, .wipe-sequence > div.show {
+	transform: translateY(0);
+	opacity: 1;
+}
 /* .swap-wrap {
 	position: relative;
 } */
