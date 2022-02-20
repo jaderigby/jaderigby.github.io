@@ -159,6 +159,14 @@ bacon
 <code class="language-markup">
 
 Give your tool a name [Eg: BaconUtil]: QuickGit
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+Give your tool a name [Eg: BaconUtil]: QuickGit
 <br />
 What would you like the alias to be? qit
 </code>
@@ -284,6 +292,29 @@ process working!
 "deck" : 2,
 "content" : `
 ## Adding Stuff ##
+
+<key-group>
+<key-slot>
+<div class="demo-action-file">
+
+CommitAll.py
+
+</div>
+
+<pre>
+<code class="language-markup">
+
+import messages as msg
+import helpers
+<br />
+&#35; settings = helpers.get_settings()
+
+def execute():
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
+</code>
+</pre>
+</key-slot>
+</key-group>
 `
 }
 ]
