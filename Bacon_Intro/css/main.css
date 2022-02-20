@@ -957,3 +957,7 @@ pre code {
 .demo-action-file {
 	margin-top: -80px;
 }
+
+pre[class*="language-"].push-up {
+	margin-top: -30px;
+}

@@ -102,31 +102,26 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 
 <key-group>
 <key-slot>
-
-<div class="key-features">
 <pre>
 <code class="language-markup">
 
-bacon
-
+... Documents % bacon
 </code>
 </pre>
-</div>
-
 </key-slot>
 <key-slot>
-<div class="key-features">
-
-<pre>
+<pre class="push-up">
 <code class="language-markup">
 
-[ bacon new]
-[ bacon set ]
-
+[ bacon new]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new item
+[ bacon alias ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds aliases to .baconrc file
+[ bacon perks ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds to the goto and showme ...
+[ bacon set ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Re-sources .baconrc file, making ...
+<br />
+Features Available Within Each Utility:
+...
 </code>
 </pre>
-
-</div>
 </key-slot>
 </key-group>
 `
