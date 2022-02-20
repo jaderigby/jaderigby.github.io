@@ -516,9 +516,9 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 
 <div class="wipe-sequence">
 
-__settings.py__
+>>__settings.py__<<
 
-__profile.py__
+>>__profile.py__<<
 
 </div>
 
