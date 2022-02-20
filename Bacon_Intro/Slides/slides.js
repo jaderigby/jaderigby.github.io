@@ -62,6 +62,7 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 - Use
   - \`bacon new\`
   - open file
+  - add an action
   - do your edits
   - helpers
     - run_command
@@ -110,7 +111,7 @@ bacon
 
 </code>
 </pre>
-</div>m
+</div>
 
 </key-slot>
 <key-slot>
@@ -149,12 +150,140 @@ bacon
 <pre>
 <code class="language-markup">
 
-bacon new
+... Documents % bacon new
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
 
+Give your tool a name [Eg: BaconUtil]: QuickGit
+<br />
+What would you like the alias to be? qit
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+NAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QuickGit
+ALIAS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qit
+LOCATION:&nbsp;&nbsp;&nbsp;&nbsp;.../Documents/bacon-bits/QuickGit
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % bacon set
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % qit
+<br />
+QuickGit is working successfully!
+<br />
+... Documents % 
 </code>
 </pre>
 </key-slot>
 </key-group>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Adding-an-action",
+"content" : `
+## Adding Actions ##
+
+<key-group>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % qit -action
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+-- New Action --
+Please give your new action a name [Eg: OpenFile]: CommitAll
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+-- New Action --
+Please give your new action a name [Eg: OpenFile]: CommitAll
+
+What would you like to call the action? all
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+NAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QuickGit
+NEW MODULE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CommitAll
+NEW ACTION:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all
+LOCATION:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.../Documents/bacon-bits/Test2/CommitAll.py
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<div class="demo-action-file">
+
+CommitAll.py
+
+</div>
+
+<pre>
+<code class="language-markup">
+
+import messages as msg
+import helpers
+<br />
+&#35; settings = helpers.get_settings()
+
+def execute():
+&nbsp;&nbsp;&nbsp;&nbsp;msg.example()
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % qit all
+<br />
+process working!
+<br />
+... Documents % 
+</code>
+</pre>
+</key-slot>
+</key-group>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Editing",
+"deck" : 2,
+"content" : `
+## Adding Stuff ##
 `
 }
 ]

@@ -949,3 +949,11 @@ h3.aspect-up-high {
 .fade-sequence {
 	position: relative;
 }
+
+pre code {
+	font-size: 1.5rem;
+}
+
+.demo-action-file {
+	margin-top: -80px;
+}
