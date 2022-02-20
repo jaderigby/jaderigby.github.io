@@ -32,7 +32,7 @@ const slides = [
 </div>
 <div class="repo">
 
-![](images/repo-blue.svg)
+![](images/repo-file-blue.svg)
 
 </div>
 </div>
