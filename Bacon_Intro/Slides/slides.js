@@ -97,12 +97,22 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 "content" : `
 ## Verify ##
 
+<key-group>
+<key-slot>
+
 <div class="lang-html">
 
 bacon
 
 </div>
 
+</key-slot>
+<key-slot>
+
+
+
+</key-slot>
+</key-group>
 `
 }
 ]
