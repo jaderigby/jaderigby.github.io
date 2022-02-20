@@ -292,13 +292,13 @@ _$('#reveal').click((e) => {
 					show(currShow);
 				}
 			}
-			else if (_$('#' + currFrame + ' [class$=-sequence] p').items.length !== 0) {
+			else if (_$('#' + currFrame + ' [class$=-sequence] > p').items.length !== 0) {
 				let items = _$("#" + currFrame + ' .show').items;
 				let latest = 0;
 				if (items.length > 0) {
 					latest = items.length;
 				}
-				let showList = _$('#' + currFrame + ' [class$=-sequence] p').items;
+				let showList = _$('#' + currFrame + ' [class$=-sequence] > p').items;
 				let currShow = showList[latest];
 				if (showList.length !== items.length) {
 					show(currShow);
