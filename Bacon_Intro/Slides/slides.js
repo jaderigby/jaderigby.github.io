@@ -526,7 +526,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 }
 ,{
 "set" : 3,
-"idLabel" : "General-setting",
+"idLabel" : "General-Settings",
 "deck" : 2,
 "content" : `
 ## General Settings ##
@@ -557,8 +557,6 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </div>
 </key-slot>
 </key-group>
-</div>
-</div>
 `
 }
 ,{
@@ -574,7 +572,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 
 {
 &nbsp;&nbsp;&nbsp;&nbsp;"settings" : {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"perks" : "True"
+
 &nbsp;&nbsp;&nbsp;&nbsp;{
 }
 </code>
@@ -586,7 +584,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 
 {
 &nbsp;&nbsp;&nbsp;&nbsp;"settings" : {
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"perks" : "True"
 &nbsp;&nbsp;&nbsp;&nbsp;{
 }
 </code>
