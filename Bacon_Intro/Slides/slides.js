@@ -44,11 +44,13 @@ const slides = [
 "content" : `
 ## Setup ##
 
-<div class="lang-html">
+<pre class="language-html">
+<code>
 
 python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && source ~/.zshrc
 
-</div>
+</code>
+</pre>
 
 
 - Install
