@@ -499,7 +499,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 `
 }
 ,{
-"set" : 2,
+"set" : 3,
 "idLabel" : "Settings",
 "type" : "section",
 "content" : `
@@ -509,7 +509,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 `
 }
 ,{
-"set" : 2,
+"set" : 3,
 "idLabel" : "Default-Settings",
 "content" : `
 ## Default Settings ##
