@@ -44,7 +44,7 @@ const slides = [
 "content" : `
 ## Setup ##
 
-<pre class="language-html">
+<pre class="language-markup">
 <code>
 
 python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && source ~/.zshrc
