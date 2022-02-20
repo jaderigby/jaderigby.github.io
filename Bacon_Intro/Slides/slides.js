@@ -51,23 +51,6 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 
 </code>
 </pre>
-
-- Settings
-  - default settings
-  - Profile settings
-  - bacon -profile
-
-- Perks
-  - goto and showme
-  - goto bacon
-  - goto qit
-  - showme bits
-
-- Speed!
-  - demo qit, all the way through
-  - adding a bacon utility
-    - add the alias
-    - add the perks
 `
 }
 ,{
