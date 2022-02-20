@@ -108,9 +108,11 @@ bacon
 
 </key-slot>
 <key-slot>
+<div class="features">
 
 
 
+</div>
 </key-slot>
 </key-group>
 `
