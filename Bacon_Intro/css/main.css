@@ -997,3 +997,7 @@ pre[class*="language-"].push-up {
 .key-features.up-high {
 	margin-top: -220px;
 }
+
+.key-features.bigger p {
+	font-size: 2rem;
+}

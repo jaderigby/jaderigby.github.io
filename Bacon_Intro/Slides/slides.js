@@ -462,12 +462,16 @@ Selection:
 "content" : `
 ## Utility Commands ##
 
+<div class="key-features bigger">
 <div class="slide-sequence">
 
-- triggerWord -action
-- triggerWord -profile
-- triggerWord -helpers
+triggerWord -action
 
+triggerWord -profile
+
+triggerWord -helpers
+
+</div>
 </div>
 
 `
