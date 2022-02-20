@@ -44,7 +44,44 @@ const slides = [
 "content" : `
 ## Run ##
 
+- Install
+  - Documents folder
+  - Zip/Clone
+  - Setup Command
+  - Verify
 
+- Use
+  - \`bacon new\`
+  - open file
+  - do your edits
+  - helpers
+    - run_command
+    - user_input
+    - user_selection
+    - and More!
+    - add your own
+  - demo: qit all
+  - utility commands:
+    - triggerWord -action
+    - triggerWord -profile
+    - triggerWord -helpers
+
+- Settings
+  - default settings
+  - Profile settings
+  - bacon -profile
+
+- Perks
+  - goto and showme
+  - goto bacon
+  - goto qit
+  - showme bits
+
+- Speed!
+  - demo qit, all the way through
+  - adding a bacon utility
+    - add the alias
+    - add the perks
 `
 }
 ]
