@@ -505,7 +505,6 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 "content" : `
 # Settings #
 
-
 `
 }
 ,{
@@ -560,6 +559,40 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </key-group>
 </div>
 </div>
+`
+}
+,{
+"set" : 3,
+"idLabel" : "Settings-Configuration",
+"content" : `
+## Configuration ##
+
+<key-group>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+{
+&nbsp;&nbsp;&nbsp;&nbsp;"settings" : {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"perks" : "True"
+&nbsp;&nbsp;&nbsp;&nbsp;{
+}
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+{
+&nbsp;&nbsp;&nbsp;&nbsp;"settings" : {
+
+&nbsp;&nbsp;&nbsp;&nbsp;{
+}
+</code>
+</pre>
+</key-slot>
+<key-group>
 `
 }
 ]
