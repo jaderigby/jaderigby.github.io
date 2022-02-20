@@ -500,7 +500,7 @@ This adds a new action to your utility.  Doing <code>triggerWord -action args:tr
 
 </key-slot>
 <key-slot>
-<div class="key-features">
+<div class="key-features up-high">
 
 This adds a profile file to your utility.  More specifically, it first creates a profiles folder, then adds a profile file to it.  This gives the ability to set local settings.  More on this later.
 
@@ -512,7 +512,7 @@ This adds a profile file to your utility.  More specifically, it first creates a
 
 </key-slot>
 <key-slot>
-<div class="key-features">
+<div class="key-features up-high">
 
 Refreshes your default helpers with the latest pulled from the __bacon__ repo. Requires the __bacon__ repo be up to date. This is an added reason to clone the __bacon__ repo, rather than download the zip file.
 
