@@ -392,7 +392,7 @@ def execute():
 <key-group wipe>
 <key-slot>
 
-### run_command() ###
+### >>helpers.run_command()<< ###
 
 </key-slot>
 <key-slot>
@@ -401,6 +401,32 @@ def execute():
 helpers.run_command('cd ~/Documents/mkdir Example')
 
 </div>
+</key-slot>
+<key-slot>
+<div class="key-features medium">
+
+![](images/file-folder-filled-blue.svg) __Example__
+
+</div>
+</key-slot>
+<key-slot>
+
+### >>helpers.user_input()<< ###
+
+</key-slot>
+<key-slot>
+
+compName = helpers.user_input('Name your component: ')
+
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+
+
+</code>
+</pre>
 </key-slot>
 <key-slot>
 
