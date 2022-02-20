@@ -593,4 +593,87 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </key-group>
 `
 }
+,{
+"set" : 4,
+"idLabel" : "Perks",
+"type" : "section",
+"content" : `
+# Perks #
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Two-Handy-Additions",
+"content" : `
+## Two Handy Additions ##
+
+<key-group>
+<key-slot>
+
+- goto
+- showme
+
+</key-slot>
+<key-slot>
+
+- goto bacon
+- goto qit
+- showme bits
+
+</key-slot>
+</key-group>
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Speed",
+"type" : "section",
+"content" : `
+# Speed! #
+
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Speed",
+"content" : `
+## Demo ##
+
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Adding-bacon-utilities",
+"content" : `
+## Adding A Utility ##
+
+<key-group>
+<key-slot show>
+
+![](images/repo-file-blue.svg) ======> ![](images/file-folder-blue.svg)
+
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % bacon alias
+
+alias qit added!
+
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % bacon set
+</code>
+</pre>
+</key-slot>
+</key-group>
+
+`
+}
 ]
