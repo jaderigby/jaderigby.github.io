@@ -40,9 +40,16 @@ const slides = [
 }
 ,{
 "set" : 1,
-"idLabel" : "Run_Command",
+"idLabel" : "Setup_Command",
 "content" : `
-## Run ##
+## Setup ##
+
+<div class="lang-html">
+
+python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && source ~/.zshrc
+
+</div>
+
 
 - Install
   - Documents folder
@@ -82,6 +89,20 @@ const slides = [
   - adding a bacon utility
     - add the alias
     - add the perks
+`
+}
+,{
+"set" : 1,
+"idLabel" : "Verify",
+"content" : `
+## Verify ##
+
+<div class="lang-html">
+
+bacon
+
+</div>
+
 `
 }
 ]
