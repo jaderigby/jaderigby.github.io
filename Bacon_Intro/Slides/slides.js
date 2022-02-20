@@ -590,7 +590,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </code>
 </pre>
 </key-slot>
-<key-group>
+</key-group>
 `
 }
 ]
