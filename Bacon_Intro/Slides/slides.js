@@ -514,12 +514,12 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 "content" : `
 ## Default Settings ##
 
-<div class="examples-placement">
 <div class="wipe-sequence">
 
 __settings.py__
 
-</div>
+__profile.py__
+
 </div>
 
 `
