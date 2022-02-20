@@ -290,6 +290,13 @@ process working!
 
 <key-group>
 <key-slot>
+
+- stage all
+- commit w/ message
+- push
+
+</key-slot>
+<key-slot>
 <div class="demo-action-file">
 
 CommitAll.py
@@ -306,6 +313,9 @@ import helpers
 
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
+&nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.user_input('Commit Message: ')
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git commit -m {}'.format(commitMessage))
+&nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.run_command('git push')
 </code>
 </pre>
 </key-slot>
