@@ -27,12 +27,12 @@ const slides = [
 </div>
 <div class="zip-file">
 
-![](images/file-blue.svg)
+![](images/zip-file-blue.svg)
 
 </div>
 <div class="repo">
 
-![](images/file-blue.svg)
+![](images/repo-blue.svg)
 
 </div>
 </div>
