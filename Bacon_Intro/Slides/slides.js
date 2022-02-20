@@ -110,7 +110,7 @@ bacon
 
 </code>
 </pre>
-</div>
+</div>m
 
 </key-slot>
 <key-slot>
@@ -144,7 +144,17 @@ bacon
 "content" : `
 ## How To Use It ##
 
+<key-group>
+<key-slot>
+<pre>
+<code class="language-markup">
 
+bacon new
+
+</code>
+</pre>
+</key-slot>
+</key-group>
 `
 }
 ]
