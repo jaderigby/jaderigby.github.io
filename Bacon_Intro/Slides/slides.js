@@ -102,17 +102,26 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 <key-group>
 <key-slot>
 
-<div class="lang-html">
+<pre>
+<code class="language-markup">
 
 bacon
 
-</div>
+</code>
+</pre>
 
 </key-slot>
 <key-slot>
 <div class="key-features">
 
+<pre>
+<code class="language-markup">
 
+[ bacon new]
+[ bacon set ]
+
+</code>
+</pre>
 
 </div>
 </key-slot>
