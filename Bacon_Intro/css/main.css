@@ -1019,3 +1019,7 @@ pre[class*="language-"].push-up {
 .push-down {
 	margin-top: 150px;
 }
+
+.larger-text p {
+	font-size: 1.8em;
+}

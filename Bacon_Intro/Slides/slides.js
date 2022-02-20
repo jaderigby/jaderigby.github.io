@@ -514,14 +514,52 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 "content" : `
 ## Default Settings ##
 
-<div class="wipe-sequence bigger">
+<div class="push-down larger-text">
+<div class="wipe-sequence">
 
 >>__settings.py__<<
 
 >>__profile.py__<<
 
 </div>
+</div>
+`
+}
+,{
+"set" : 3,
+"idLabel" : "General-setting",
+"deck" : 2,
+"content" : `
+## General Settings ##
 
+<key-group wipe>
+<key-slot>
+
+### >>__settings.py__<< ###
+
+<div class="key-features">
+
+- general settings
+- shared universally
+- generally untouched
+
+</div>
+</key-slot>
+<key-slot>
+
+### >>__profile.py__<< ###
+
+<div class="key-features">
+
+- located at <code>profiles/profile.py</code>
+- overrides <code>settings.py</code>
+- generally used the most
+
+</div>
+</key-slot>
+</key-group>
+</div>
+</div>
 `
 }
 ]
