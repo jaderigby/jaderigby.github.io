@@ -479,6 +479,7 @@ Selection:
 "content" : `
 ## Commands In Detail ##
 
+<div class="examples-placement">
 <key-group>
 <key-slot>
 
@@ -486,9 +487,9 @@ Selection:
 
 </key-slot>
 <key-slot>
-<div class="key-features">
+<div class="key-features up-high">
 
-This adds a new action to your utility.  Doing <code>triggerWord -action args:true</code> adds an action that will accept key:value pairs as additiona arguments, such as <code>qit branch goto:6</code>
+This adds a new action to your utility.  Doing <code>triggerWord -action args:true</code> adds an action that will accept key:value pairs as additional arguments, such as <code>qit branch goto:6</code>
 
 </div>
 </key-slot>
@@ -503,15 +504,7 @@ This adds a new action to your utility.  Doing <code>triggerWord -action args:tr
 
 </key-slot>
 </key-group>
-
-<div class="slide-sequence">
-
-- triggerWord -action
-- triggerWord -profile
-- triggerWord -helpers
-
 </div>
-
 `
 }
 ]
