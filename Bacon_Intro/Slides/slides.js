@@ -313,11 +313,123 @@ import helpers
 
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<div class="demo-action-file">
+
+CommitAll.py
+
+</div>
+
+<pre>
+<code class="language-markup">
+
+import messages as msg
+import helpers
+<br />
+&#35; settings = helpers.get_settings()
+
+def execute():
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
+&nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.user_input('Commit Message: ')
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<div class="demo-action-file">
+
+CommitAll.py
+
+</div>
+
+<pre>
+<code class="language-markup">
+
+import messages as msg
+import helpers
+<br />
+&#35; settings = helpers.get_settings()
+
+def execute():
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
+&nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.user_input('Commit Message: ')
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git commit -m {}'.format(commitMessage))
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<div class="demo-action-file">
+
+CommitAll.py
+
+</div>
+
+<pre>
+<code class="language-markup">
+
+import messages as msg
+import helpers
+<br />
+&#35; settings = helpers.get_settings()
+
+def execute():
+&nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
 &nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.user_input('Commit Message: ')
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git commit -m {}'.format(commitMessage))
 &nbsp;&nbsp;&nbsp;&nbsp;commitMessage = helpers.run_command('git push')
 </code>
 </pre>
+</key-slot>
+</key-group>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Helpers",
+"content" : `
+## Helpers ##
+
+<div class="slide-sequence">
+
+- run_command()
+- run_command_output()
+- user_input()
+- user_selection()
+- and More!
+- Add your own
+
+</div>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Helpers-Examples",
+"content" : `
+## Examples ##
+
+<key-group wipe>
+<key-slot>
+
+### run_command() ###
+
+</key-slot>
+<key-slot>
+<div class="key-features">
+
+helpers.run_command('cd ~/Documents/mkdir Example')
+
+</div>
+</key-slot>
+<key-slot>
+
+</key-slot>
+<key-slot>
+
+</key-slot>
+<key-slot>
+
 </key-slot>
 </key-group>
 `
