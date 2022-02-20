@@ -456,4 +456,62 @@ Selection:
 </div>
 `
 }
+,{
+"set" : 2,
+"idLabel" : "Utility-Commands",
+"content" : `
+## Utility Commands ##
+
+<div class="slide-sequence">
+
+- triggerWord -action
+- triggerWord -profile
+- triggerWord -helpers
+
+</div>
+
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Commands-In-Detail",
+"deck" : 2,
+"content" : `
+## Commands In Detail ##
+
+<key-group>
+<key-slot>
+
+### >>-action<< ###
+
+</key-slot>
+<key-slot>
+<div class="key-features">
+
+This adds a new action to your utility.  Doing <code>triggerWord -action args:true</code> adds an action that will accept key:value pairs as additiona arguments, such as <code>qit branch goto:6</code>
+
+</div>
+</key-slot>
+<key-slot>
+
+### >>-action<< ###
+
+</key-slot>
+<key-slot>
+
+### >>-action<< ###
+
+</key-slot>
+</key-group>
+
+<div class="slide-sequence">
+
+- triggerWord -action
+- triggerWord -profile
+- triggerWord -helpers
+
+</div>
+
+`
+}
 ]
