@@ -102,6 +102,7 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 <key-group>
 <key-slot>
 
+<div class="key-features">
 <pre>
 <code class="language-markup">
 
@@ -109,6 +110,7 @@ bacon
 
 </code>
 </pre>
+</div>
 
 </key-slot>
 <key-slot>
