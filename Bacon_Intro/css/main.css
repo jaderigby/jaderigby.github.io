@@ -1011,6 +1011,11 @@ pre[class*="language-"].push-up {
 	margin-top: -220px;
 }
 
-.key-features.bigger p {
+.key-features.bigger p,
+.wipe-sequence.bigger p {
 	font-size: 2rem;
+}
+
+.push-down {
+	margin-top: 150px;
 }

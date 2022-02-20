@@ -514,7 +514,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 "content" : `
 ## Default Settings ##
 
-<div class="wipe-sequence">
+<div class="wipe-sequence bigger">
 
 >>__settings.py__<<
 
