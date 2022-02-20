@@ -618,7 +618,7 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 }
 ,{
 "set" : 5,
-"idLabel" : "Speed",
+"idLabel" : "Demo",
 "content" : `
 ## Demo ##
 
