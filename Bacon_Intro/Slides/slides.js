@@ -108,13 +108,30 @@ bacon
 
 </key-slot>
 <key-slot>
-<div class="features">
+<div class="key-features">
 
 
 
 </div>
 </key-slot>
 </key-group>
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Usage",
+"type" : "section",
+"content" : `
+# Bacon: Using It! #
+`
+}
+,{
+"set" : 2,
+"idLabel" : "Using-It",
+"content" : `
+## How To Use It ##
+
+
 `
 }
 ]
