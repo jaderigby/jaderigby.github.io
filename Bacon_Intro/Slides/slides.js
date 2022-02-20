@@ -38,4 +38,13 @@ const slides = [
 </div>
 `
 }
+,{
+"set" : 1,
+"idLabel" : "Run_Command",
+"content" : `
+## Run ##
+
+
+`
+}
 ]
