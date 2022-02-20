@@ -306,11 +306,6 @@ CommitAll.py
 <pre>
 <code class="language-markup">
 
-import messages as msg
-import helpers
-<br />
-&#35; settings = helpers.get_settings()
-
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
 </code>
@@ -325,11 +320,6 @@ CommitAll.py
 
 <pre>
 <code class="language-markup">
-
-import messages as msg
-import helpers
-<br />
-&#35; settings = helpers.get_settings()
 
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
@@ -346,11 +336,6 @@ CommitAll.py
 
 <pre>
 <code class="language-markup">
-
-import messages as msg
-import helpers
-<br />
-&#35; settings = helpers.get_settings()
 
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
@@ -368,11 +353,6 @@ CommitAll.py
 
 <pre>
 <code class="language-markup">
-
-import messages as msg
-import helpers
-<br />
-&#35; settings = helpers.get_settings()
 
 def execute():
 &nbsp;&nbsp;&nbsp;&nbsp;helpers.run_command('git add -A')
