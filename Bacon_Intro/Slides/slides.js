@@ -449,9 +449,6 @@ Selection:
 </code>
 </pre>
 </key-slot>
-<key-slot>
-
-</key-slot>
 </key-group>
 </div>
 `
@@ -465,11 +462,11 @@ Selection:
 <div class="key-features bigger">
 <div class="slide-sequence">
 
-triggerWord -action
+-action
 
-triggerWord -profile
+-profile
 
-triggerWord -helpers
+-helpers
 
 </div>
 </div>
