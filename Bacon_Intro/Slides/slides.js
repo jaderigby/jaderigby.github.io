@@ -27,12 +27,12 @@ const slides = [
 </div>
 <div class="zip-file">
 
-![](images/file-blue.svg)
+![](images/zip-file-blue.svg)
 
 </div>
 <div class="repo">
 
-![](images/file-blue.svg)
+![](images/repo-file-blue.svg)
 
 </div>
 </div>
@@ -51,23 +51,6 @@ python ~/Documents/bacon/setup.py --exec && cd ~/Documents/bacon && setup.py && 
 
 </code>
 </pre>
-
-- Settings
-  - default settings
-  - Profile settings
-  - bacon -profile
-
-- Perks
-  - goto and showme
-  - goto bacon
-  - goto qit
-  - showme bits
-
-- Speed!
-  - demo qit, all the way through
-  - adding a bacon utility
-    - add the alias
-    - add the perks
 `
 }
 ,{
@@ -591,6 +574,89 @@ Refreshes your default helpers with the latest pulled from the __bacon__ repo. R
 </pre>
 </key-slot>
 </key-group>
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Perks",
+"type" : "section",
+"content" : `
+# Perks #
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Two-Handy-Additions",
+"content" : `
+## Two Handy Additions ##
+
+<key-group>
+<key-slot>
+
+- goto
+- showme
+
+</key-slot>
+<key-slot>
+
+- goto bacon
+- goto qit
+- showme bits
+
+</key-slot>
+</key-group>
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Speed",
+"type" : "section",
+"content" : `
+# Speed! #
+
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Demo",
+"content" : `
+## Demo ##
+
+`
+}
+,{
+"set" : 5,
+"idLabel" : "Adding-bacon-utilities",
+"content" : `
+## Adding A Utility ##
+
+<key-group>
+<key-slot show>
+
+![](images/repo-file-blue.svg) ======> ![](images/file-folder-blue.svg)
+
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % bacon alias
+
+alias qit added!
+
+</code>
+</pre>
+</key-slot>
+<key-slot>
+<pre>
+<code class="language-markup">
+
+... Documents % bacon set
+</code>
+</pre>
+</key-slot>
+</key-group>
+
 `
 }
 ]
