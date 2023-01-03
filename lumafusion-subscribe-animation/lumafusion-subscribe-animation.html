@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="segments/css/wc-segments.lib.min.css" />
+        <script src="segments/js/segments.lib.js"></script>
+        <script src="js/jquishy.min.js"></script>
+        <style>
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-family: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            body {
+                line-height: 1;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            table {
+                border-collapse: separate;
+                border-spacing: 0;
+                vertical-align: middle;
+            }
+            caption,
+            th,
+            td {
+                text-align: left;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+            a img {
+                border: none;
+            }
+            body {
+                font-family: Helvetica Neue, arial, verdana, sans-serif;
+                font-weight: 300;
+                background-color: #444;
+            }
+            panel-wrapper {
+                background-color: #fff;
+            }
+            .left-justify {
+                text-align: left !important;
+            }
+            .center-justify {
+                text-align: center !important;
+            }
+            .right-justify {
+                text-align: right !important;
+            }
+            .center {
+                margin: 0 auto;
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+            h1 {
+                font-size: 3.3rem;
+                padding: 25px 0;
+                line-height: 1.15;
+            }
+            h2 {
+                padding: 20px 0;
+                font-size: 2.5rem;
+            }
+            h3 {
+                padding: 15px 0;
+                font-size: 1.9rem;
+            }
+            h4 {
+                font-size: 1.6rem;
+            }
+            h5 {
+                font-size: 0.83rem;
+            }
+            h6 {
+                font-size: 0.67rem;
+            }
+            h4,
+            h5 {
+                line-height: 1.3;
+            }
+            .dark-grey {
+                background-color: #444;
+            }
+            .green {
+                background-color: #00ff00;
+            }
+            .aspect-ratio-16-9 {
+                margin-top: 15px;
+                height: 720px;
+                position: relative;
+            }
+            
+            .sideline-wrapper {
+                position: absolute;
+                bottom: 160px;
+                margin-left: 60px;
+                height: 110px;
+                width: 820px;
+                overflow: hidden;
+                /* border: 1px solid red; */
+            }
+            .sideline {
+                position: absolute;
+                margin-left: 0;
+                height: 110px;
+                transform: scaleY(0);
+                border-right: 3px solid white;
+                animation-name: sideline-animate;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation-fill-mode: forwards;
+                z-index: 3;
+            }
+            .sideline.secondary {
+                animation: sideline-hide-animate 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation-fill-mode: forwards;
+            }
+            @keyframes sideline-hide-animate {
+                from {
+                    transform: scaleY(1);
+                }
+                to {
+                    transform: scaleY(0)
+                }
+            }
+            .sideline-reveal {
+                position: absolute;
+                left: 3px;
+                top: 20px; /* 19px */
+                bottom: 0;
+                transform: translateX(calc(-100% - 3px));
+                margin: auto;
+                color: white;
+                font-family: Norwester;
+                font-size: 2.5rem;
+                letter-spacing: 0.1rem;
+                font-weight: 300;
+                text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+                overflow: hidden;
+                z-index: 2;
+            }
+            .sideline-reveal {
+                /* width: 0; */
+                white-space: nowrap;
+                animation-name: sideline-reveal-animate;
+                animation-duration: 0.7s;
+                animation-delay: 0.6s;
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation-fill-mode: forwards;
+            }
+            @keyframes sideline-animate {
+                0% {
+                    transform: scaleY(0);
+                }
+                100% {
+                    transform: scaleY(1);
+                }
+            }
+            @keyframes sideline-reveal-animate {
+                0% {
+                    transform: translateX(calc(-100% - 3px));
+                }
+                100% {
+                    transform: translateX(20px);
+                }
+            }
+            .youtube-badge {
+                position: relative;
+                display: inline-block;
+                background-color: white;
+                border-radius: 7px;
+                height: 40px;
+                width: 50px;
+                box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+            }
+            .youtube-badge:after {
+                content: "";
+                position: absolute;
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+                border-left: 21px solid #d7261c;
+                left: 16px;
+                top: 8px;
+            }
+            .youtube-badge-wrapper {
+                padding: 0 5px;
+            }
+            /* .sideline-reveal-outer {
+                padding: 1px;
+                background: rgb(61,63,66);
+background: linear-gradient(360deg, rgba(61,63,66,1) 0%, rgba(121,134,153,1) 100%);
+                border-radius: 9px;
+            } */
+            .sideline-reveal-inner {
+                margin: 2px;
+                padding: 13px 18px;
+                height: 40px;
+                width: 275px;
+                border-radius: 6px;
+                /* border: 2px solid #b10000;
+                border-top-color: #fd5858; */
+            }
+            .cursor-arrow-img {
+                position: absolute;
+            }
+            .cursor-arrow-img {
+                width: 530px;
+                top: 370px;
+                left: 330px;
+                display: none;
+            }
+            .cursor-arrow-bounds {
+                position: absolute;
+                transform: rotate(-25deg);
+                z-index: 10;
+                opacity: 0;
+                z-index: 1;
+            }
+            .arrow-top {
+                position: relative;
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+                border-bottom: 30px solid black;
+                z-index: 2;
+            }
+            .arrow-top-backing {
+                position: absolute;
+                top: -6px;
+                left: -3px;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-bottom: 36px solid white;
+                z-index: 1;
+            }
+            .left-side {
+                border-top: 11px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid black;
+                transform: rotate(-72deg);
+                top: 16px;
+                left: 15px;
+                position: absolute;
+                z-index: 2;
+            }
+            .left-side-backing {
+                border-top: 16px solid transparent;
+                border-bottom: 24px solid transparent;
+                border-left: 24px solid white;
+                transform: rotate(-72deg);
+                top: 12px;
+                left: 14px;
+                position: absolute;
+                z-index: 1;
+            }
+            .right-side {
+                border-top: 20px solid transparent;
+                border-bottom: 11px solid transparent;
+                border-left: 20px solid black;
+                transform: rotate(-109deg);
+                top: 15px;
+                left: -6px;
+                position: absolute;
+                z-index: 2;
+            }
+            .right-side-backing {
+                border-top: 24px solid transparent;
+                border-bottom: 17px solid transparent;
+                border-left: 24px solid white;
+                transform: rotate(-109deg);
+                top: 11px;
+                left: -9px;
+                position: absolute;
+                z-index: 1;
+            }
+            .stem {
+                position: absolute;
+                left: 9px;
+                top: 30px;
+                width: 10px;
+                height: 37px;
+                background-color: black;
+                z-index: 2;
+                border-radius: 3px;
+            }
+            .stem-backing {
+                position: absolute;
+                left: 6px;
+                top: 30px;
+                width: 16px;
+                height: 40px;
+                background-color: white;
+                z-index: 1;
+                border-radius: 3px;
+            }
+            .arrow-top, .left-side, .right-side, .stem {
+                opacity: 1;
+            }
+            .cursor-arrow-bounds.animate {
+                bottom: 361px;
+                margin-left: 8px;
+                transform: scale(0.45) rotate(-26deg);
+                offset-path: path("M126,180 C161,308 286,306 282,202");
+                animation: move 1.05s forwards;
+                offset-rotate: 0deg;
+                opacity: 1;
+            }
+            @keyframes move {
+                50% {
+                    z-index: 3;
+                }
+                100% {
+                    offset-distance: 100%;
+                    transform: scale(1) rotate(-25deg);
+                    z-index: 3;
+                }
+            }
+            .cursor-arrow-bounds.clicker {
+                animation: clicker-animation 0.15s forwards;
+            }
+            @keyframes clicker-animation {
+                0% {
+                    offset-distance: 100%;
+                    transform: scale(1) rotate(-25deg);
+                    z-index: 3;
+                }
+                3% {
+                    offset-distance: 100%;
+                    transform: scale(0.84) rotate(-25deg);
+                    z-index: 3;
+                }
+                97% {
+                    offset-distance: 100%;
+                    transform: scale(0.84) rotate(-25deg);
+                    z-index: 3;
+                }
+                100% {
+                    offset-distance: 100%;
+                    transform: scale(1) rotate(-25deg);
+                    z-index: 3;
+                }
+            }
+            .sideline-reveal-inner {
+                background-color: #5f5d5d;
+                /* background-color: #d7261c; */
+                box-shadow: inset 0 0 0 40px #d7261c;
+            }
+            .sideline-reveal-inner.clicked {
+                animation: button-click-animation 0.15s ease forwards;
+            }
+            .sideline-reveal-inner.clicked .youtube-badge:after {
+                animation: button-click-badge-animation 0.15s forwards;
+            }
+
+
+
+
+
+
+            /* .icon-expand{
+                &::after{
+                    box-shadow: inset 0 0 0 1px $red;
+                }
+                &::before{
+                    background: $red;
+                    box-shadow: inset 0 0 0 $icon-size $background;
+                }
+                &:hover::before{
+                    box-shadow: inset 0 0 0 1px $background;
+                }
+            } */
+
+
+
+
+
+
+
+            @keyframes button-click-animation {
+                0% {
+                    box-shadow: inset 0 0 0 0 #d7261c;
+                }
+                3% {
+                    box-shadow: inset 0 0 0 0 #5f5d5d;
+                    transform: scale(0.96);
+                }
+                97% {
+                    box-shadow: inset 0 0 0 0 #5f5d5d;
+                    transform: scale(0.96);
+                }
+                100% {
+                    box-shadow: inset 0 0 0 0 #5f5d5d;
+                }
+            }
+            @keyframes button-click-badge-animation {
+                0% {
+                    border-left-color: red;
+                }
+                50% {
+                    border-left-color: #5f5d5d;
+                }
+                100% {
+                    border-left-color: #5f5d5d;
+                }
+            }
+            .cursor-arrow-bounds.animate.dismiss {
+                animation: cursor-arrow-dismiss 1s forwards;
+            }
+            @keyframes cursor-arrow-dismiss {
+                0% {
+                    offset-distance: 100%;
+                    transform: scale(1) rotate(-25deg);
+                    z-index: 3;
+                }
+                100% {
+                    offset-distance: 100%;
+                    transform: scale(0) rotate(-25deg);
+                    z-index: 3;
+                }
+            }
+            .notification-bell {
+                position: absolute;
+                width: 40px;
+                top: 37px;
+                left: 287px;
+                z-index: 1;
+                opacity: 0;
+            }
+            .notification-bell .all {
+                display: none;
+            }
+            .notification-bell .simple {
+                position: absolute;
+                width: 35px;
+                height: 50px;
+                top: -7px;
+                left: 2px;
+                opacity: 1;
+            }
+            .notification-bell.animate {
+                animation: notification-bell-animate 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+                /* animation-delay: 0.2s; */
+                opacity: 1;
+            }
+            @keyframes notification-bell-animate {
+                to {
+                    transform: translateX(65px);
+                }
+            }
+            .notification-bell.clicked .simple {
+                transition: all 1s 0.15s ease;
+                opacity: 0;
+            }
+            .notification-bell.clicked .all {
+                transition: all 1s 0.15s ease;
+                display: block;
+            }
+            .cursor-arrow-bounds.move-to-notification-bell {
+                animation: move-to-notification-bell-animate 1s cubic-bezier(.29,-0.03,.165,1) forwards;
+                offset-path: none;
+                top: 517px;
+                left: 268px;
+                z-index: 5;
+                transform: scale(1) rotate(-25deg);
+            }
+            @keyframes move-to-notification-bell-animate {
+                to {
+                    offset-distance: 100%;
+                    transform: scale(1) rotate(-25deg);
+                    left: 410px;
+                }
+            }
+            .cursor-arrow-bounds.click-bell {
+                animation: clicker-animation 0.15s forwards;
+                left: 410px;
+            }
+            .notification-bell.clicked {
+                transform: translateX(65px);
+                animation: notification-bell-clicked 0.15s forwards;
+                /* animation-delay: 0.1s; */
+            }
+            @keyframes notification-bell-clicked {
+                0% {
+                    transform: scale(1) translateX(65px);
+                }
+                3% {
+                    transform: scale(0.9) translateX(72px);
+                }
+                97% {
+                    transform: scale(0.9) translateX(72px);
+                }
+                100% {
+                    transform: scale(1) translateX(65px);
+                }
+            }
+            .notification-bell.dismiss {
+                animation: notification-bell-dismiss-animate 0.8s cubic-bezier(.07,.03,1,-1) forwards;
+            }
+            @keyframes notification-bell-dismiss-animate {
+                0% {
+                    transform: scale(1) translateX(65px);
+                }
+                28% {
+                    transform: scale(1) translateX(90px);
+                }
+                100% {
+                    transform: scale(1) translateX(0px);
+                }
+            }
+
+            .sideline-reveal-inner .label {
+                /* content: "subscribe"; */
+                /* position: absolute; */
+                /* left: 95px;
+                top: 15px; */
+                display: inline-block;
+                width: 200px;
+                height: 40px;
+            }
+            .sideline-reveal-inner .label2 {
+                display: inline-block;
+                position: absolute;
+                left: 95px;
+                width: 200px;
+                height: 40px;
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            .sideline-reveal-inner.clicked .label {
+                animation: animate-label-out 0.5s ease forwards;
+            }
+            .sideline-reveal-inner.clicked .label2 {
+                animation: animate-label2-in 0.5s ease forwards;
+            }
+            @keyframes animate-label-out {
+                to {
+                    opacity: 0;
+                    transform: translateX(20px);
+                }
+            }
+            @keyframes animate-label2-in {
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+            .notification-bell:after {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: 19px;
+                width: 2px;
+                height: 2px;
+                background-color: white;
+                border-radius: 100%;
+                z-index: -1;
+            }
+            .notification-bell.clicked:after {
+                display: none;
+                animation: notification-bell-pulse 1s cubic-bezier(.29,-0.03,.165,1);
+            }
+            @keyframes notification-bell-pulse {
+                to {
+                    transform: scale(55);
+                    border-radius: 100%;
+                }
+            }
+        </style>
+        <title>Lumafusion-title-template</title>
+    </head>
+    <body>
+        <img class="cursor-arrow-img" src="img/cursor-arrow-blueprint.jpg" />
+        <panel-wrapper class="dark-grey">
+            <panel-inner class="aspect-ratio-16-9 green" whitespace="0">
+                <div class="cursor-arrow-bounds">
+                    <div class="arrow-top"></div>
+                    <div class="arrow-top-backing"></div>
+                    <div class="left-side"></div>
+                    <div class="left-side-backing"></div>
+                    <div class="right-side"></div>
+                    <div class="right-side-backing"></div>
+                    <div class="stem"></div>
+                    <div class="stem-backing"></div>
+                </div>
+                <div class="sideline-wrapper">
+                    <div class="notification-bell">
+                        <svg class="all" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 333333 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M68874 6187l23904 23904C58677 54330 35942 93113 33434 137413H1C2341 83919 28753 36778 68874 6187zm195585 0c39953 30591 66365 77732 68873 131226h-33433c-2508-44299-25409-83082-59177-107322l23737-23904zm-72717 22568l-1 11367c47811 11367 75226 54330 75226 105649v83583l33433 33434v16716l-267467 1v-16717l33433-33433v-83583c0-51488 27248-94283 75225-105650V28755c0-13876 11201-25076 25076-25076 13874 0 25075 11201 25075 25076zm-58676 267467h66867c0 4681-836 9027-2507 13039-4347 10030-13206 17385-24072 19726-2173 501-4346 668-6687 669-18556 0-33433-15046-33601-33433z" fill="#5f5d5d"/></svg>
+                        <svg class="simple" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 333333 333333" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <path d="m195447 32460-1.14 13046c54875 13046 86341 62357 86341 121259v95933l38373 38374v19186l-306986 1.15v-19187l38373-38373v-95933c0-59095 31274-108213 86340-121260v-13046c0-15926 12856-28781 28781-28781 15924 0 28780 12856 28780 28781zm-67345 306986h76747c0 5372.6-959.52 10361-2877.4 14966-4989.3 11512-15157 19954-27629 22641-2494.1 575.03-4988.1 766.71-7675 767.86-21298 0-38373-17269-38566-38373z" fill="#5f5d5d" stroke-width="1.1478"/>
+                        </svg>
+                    </div>
+                    <div class="sideline"></div>
+                    <div class="sideline-reveal">
+                        <div class="sideline-reveal-outer">
+                            <prime-segment class="sideline-reveal-inner">
+                                <x-minor>
+                                    <div class="youtube-badge-wrapper">
+                                        <div class="youtube-badge"></div>
+                                    </div>
+                                </x-minor>
+                                <x-major>
+                                    <div class="label">
+                                        subscribe
+                                    </div>
+                                    <div class="label2">
+                                        subscribed
+                                    </div>
+                                </x-major>
+                            </prime-segment>
+                        </div>
+                    </div>
+                </div>
+            </panel-inner>
+        </panel-wrapper>
+        <script>
+            setTimeout(function() {
+                _$('.sideline').addClass('secondary');
+                _$('.cursor-arrow-bounds').addClass('animate');
+            }, 1200);
+            setTimeout(function() {
+                _$('.cursor-arrow-bounds').addClass('clicker');
+                _$('.sideline-reveal-inner').addClass('clicked');
+                _$('.notification-bell').addClass('animate');
+                setTimeout(function() {
+                }, 200);
+            }, 2550);
+            setTimeout(function() {
+                _$('.cursor-arrow-bounds').addClass('move-to-notification-bell');
+            }, 3250);
+            setTimeout(function() {
+                _$('.cursor-arrow-bounds').addClass('click-bell');
+                _$('.notification-bell').addClass('clicked');
+            }, 4450);
+            setTimeout(function() {
+                _$('.cursor-arrow-bounds').addClass('dismiss');
+            }, 5750); // 3850
+            setTimeout(function () {
+                _$('.notification-bell').addClass('dismiss');
+            }, 6450);
+        </script>
+    </body>
+</html>
