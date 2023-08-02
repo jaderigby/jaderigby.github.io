@@ -1,5 +1,7 @@
 # Steak Seasoning #
 
+&#9733; &#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - 1 tablespoon sea salt or kosher salt
