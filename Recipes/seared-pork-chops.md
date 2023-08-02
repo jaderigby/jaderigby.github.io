@@ -1,5 +1,7 @@
 # Seared Pork Chops #
 
+&#9733; &#9733; &#9733; &#9733; &#9733;
+
 ## Ingredients ##
 
 - 4 pork chops, about 1-inch thick and 6 to 7 ounces each, see notes
