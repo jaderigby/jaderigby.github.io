@@ -17,6 +17,7 @@
 - [Creamy Sriracha Sauce](../creamy-sriracha-sauce.md)
 - [Delicious Dutch Oven Potatoes](../delicious-dutch-oven-potatoes.md)
 - [Devilled Eggs](../devilled-eggs.md)
+- [Glazed Chicken](../glazed-chicken.md)
 - [Grilled Chicken With Cheese Sauce](../grilled-chicken-with-cheese-sauce.md)
 - [Grilled Pork Loin Chops](../grilled-pork-loin-chops.md)
 - [Hawaiian Haystacks](../hawaiian-haystacks.md)
