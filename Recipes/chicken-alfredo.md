@@ -9,6 +9,7 @@
 - 3/4 cup half and half
 - 2 7.5oz Classico Brand Creamy Alfredo Sauce
 - Bella Sun Luci Sun Dried Tomato Halves (diced)
+- 6-7 oz jar of Artichoke hearts
 
 ## Directions ##
 
@@ -16,6 +17,6 @@
 
 2. Cut Chicken Breasts into bite-sized cubes
 
-3. Heat on medium heat until cooked through
+3. Heat Chicken on medium heat until cooked through
 
 4. Remove Chicken.  Pour contents of artichoke hearts into skillet, including liquid, cooking for 6 – 8 min.  Remove.  Melt  the butter into the pan.  Add the chicken, diced sun-dried tomatoes, alfredo sauce, cheese blend, and cream.  Season to taste with salt and pepper.  Simmer for about 15min until cheese has melted and cream has thoroughly melded with sauce.  Serve over bow tie pasta.

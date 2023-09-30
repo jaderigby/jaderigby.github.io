@@ -464,7 +464,7 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 <div class="cell">
 
 ![](images/file-folder-blue.svg)
->>__Passive Logic__<<
+>>__PassiveLogic__<<
 
 </div>
 <div class="cell">
@@ -504,12 +504,6 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 >>__Branding__<<
 
 </div>
-<div class="cell">
-
-![](images/file-folder-blue.svg)
->>Website<<
-
-</div>
 </div>
 </div>
 </key-slot>
@@ -533,6 +527,143 @@ __Our main goal is retrieving assets without any wasted time whatsoever: To be a
 </div>
 </key-slot>
 </key-group>
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Secondary-Technique",
+"content" : `
+## Secondary Technique ##
+
+<key-group>
+<key-slot>
+
+### >>Categorize By Criteria<< ###
+
+</key-slot>
+<key-slot>
+
+### >>Using Aliases<< ###
+
+</key-slot>
+<key-slot>
+
+### >>Utilize Automation<< ###
+
+</key-slot>
+</key-group>
+
+`
+}
+,{
+"set" : 4,
+"idLabel" : "Yearly",
+"deck" : 2,
+"content" : `
+## Example: By Year ##
+
+<key-group switch>
+<key-slot>
+
+<div class="classification-folder-structure">
+
+### &nbsp; ###
+
+</div>
+
+<div class="group-folder-container">
+<div class="segment half folders-inside">
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>Standard<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>__By Year__<<
+
+</div>
+</div>
+</div>
+</key-slot>
+<key-slot>
+
+<div class="classification-folder-structure">
+
+### &nbsp; ###
+
+</div>
+
+<div class="group-folder-container">
+<div class="segment half folders-inside">
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2022<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2021<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2019<<
+
+</div>
+<div class="">
+
+![](images/file-folder-blue.svg)
+>>2018<<
+
+</div>
+</div>
+</div>
+</key-slot>
+<key-slot>
+
+<div class="classification-folder-structure">
+
+### &nbsp; ###
+
+</div>
+
+<div class="group-folder-container">
+<div class="segment half folders-inside">
+<div class="cell">
+
+![](images/file-blue.svg)
+>>Info/Index<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2022<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2021<<
+
+</div>
+<div class="cell">
+
+![](images/file-folder-blue.svg)
+>>2019<<
+
+</div>
+</div>
+</div>
+</key-slot>
+</key-group>
+
 `
 }
 ,{
