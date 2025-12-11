@@ -5,10 +5,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Animated Lyrics">
-        <link rel="manifest" href="/manifest.json">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Cal+Sans&family=Fascinate&family=Luckiest+Guy&family=New+Rocker&family=Pirata+One&family=Uncial+Antiqua&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
         <script>
             class PanelWrapper extends HTMLElement {}
@@ -327,8 +326,8 @@
             .current.line {
                 font-size: 2.2rem;
                 color: #fff;
-                -webkit-text-stroke-width: 2px; /* Stroke thickness */
-                -webkit-text-stroke-color: black; /* Stroke color */
+                /* -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black; */
                 transform: translateY(0em);
                 opacity: 1;
             }
@@ -430,8 +429,31 @@
                 font-family: UnifrakturCook;
             }
 
-            .LukiestGuy {
+            .LuckiestGuy {
                 font-family: "Luckiest Guy";
+            }
+            .PirataOne {
+                font-family: "Pirata One";
+            }
+            .Fascinate {
+                font-family: "Fascinate";
+            }
+            .NewRocker {
+                font-family: "New Rocker";
+            }
+            .Arbutus {
+                font-family: "Arbutus";
+            }
+            .CalSans {
+                font-family: "Cal Sans";
+            }
+            .UncialAntiqua {
+                font-family: "Uncial Antiqua";
+            }
+            h4 {
+                margin-top: 20px;
+                font-family: verdana, sans-serif;
+                font-weight: 700;
             }
 
         </style>
@@ -459,9 +481,22 @@
                         <label for="16-9">16:9</label>
                     </div>
                 </div>
+                <h4>Font:</h4>
+                <select id="fontSelector">
+                    <option value="font-none">Impact</option>
+                    <option value="UnifrakturCook">UnifrakturCook</option>
+                    <option value="LuckiestGuy">Lukiest Guy</option>
+                    <option value="PirataOne">Pirata One</option>
+                    <option value="Fascinate">Fascinate</option>
+                    <option value="NewRocker">New Rocker</option>
+                    <option value="Arbutus">Arbutus</option>
+                    <option value="CalSans">Cal Sans</option>
+                    <option value="UncialAntiqua">Uncial Antiqua</option>
+                </select>
             </div>
+            
             <div class="aspect-ratio-frame" id="nine-sixteen"></div>
-            <div class="LuckiestGuy" id="lyrics"></div>
+            <div class="NewRocker" id="lyrics"></div>
         </div>
         <script>
             /*
@@ -725,6 +760,40 @@
                     // If "none", do nothing (all remain hidden)
                 });
             });
+
+
+
+
+
+
+
+
+
+            const fontSelector = document.getElementById('fontSelector');
+            const lyricEl = document.getElementById('lyrics');
+
+            const FONT_CLASSES = [
+                'font-none',
+                'UnifrakturCook',
+                'LuckiestGuy',
+                'PirataOne',
+                'Fascinate',
+                'NewRocker',
+                'Arbutus',
+                'CalSans',
+                'UncialAntiqua'
+            ];
+
+            fontSelector.addEventListener('change', () => {
+                FONT_CLASSES.forEach(cls => lyricEl.classList.remove(cls));
+                lyricEl.classList.add(fontSelector.value);
+            });
+
+
+
+
+
+
 
 
 
