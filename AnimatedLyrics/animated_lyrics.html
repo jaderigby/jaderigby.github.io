@@ -312,7 +312,7 @@
                 left: 0;
                 text-align: center;
                 margin: 30px 0;
-                font-size: 2.3rem;
+                font-size: 1.5rem;
                 line-height: 1.5;
                 color: #fff;
                 opacity: 0.6;
@@ -322,7 +322,7 @@
                 top: 0;
             }
             .current.line {
-                font-size: 3rem;
+                font-size: 2.2rem;
                 color: #fff;
                 -webkit-text-stroke-width: 2px; /* Stroke thickness */
                 -webkit-text-stroke-color: black; /* Stroke color */
@@ -333,19 +333,19 @@
                 background-color: #1BED00;
             }
             .one-before {
-                font-size: 2.3rem;
+                font-size: 1.8rem;
             }
             .one-after {
-                font-size: 2.3rem;
+                font-size: 1.8rem;
             }
             .two-before {
-                transform: translateY(-11.8em);
-                font-size: 1rem;
+                transform: translateY(-17.4em);
+                font-size: 0.5rem;
                 opacity: 0;
             }
             .two-after {
-                transform: translateY(18.2em);
-                font-size: 1rem;
+                transform: translateY(28.6em);
+                font-size: 0.5rem;
                 opacity: 0;
 
             }
@@ -374,7 +374,7 @@
                 transform: translateY(-3.8em);
             }
             .one-after {
-                transform: translateY(4.8em);
+                transform: translateY(4.5em);
             }
             #container {
                 position: fixed;
@@ -388,17 +388,34 @@
             #lyrics {
                 transform: translateY(270px);
             }
-            #four-three {
+            #nine-sixteen {
                 position: fixed;
                 margin: auto;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
-                height: calc(175px * 4);
-                width: calc(175px * 3);
+                height: calc(46px * 16);
+                width: calc(46px * 9);
                 border: 1px solid red;
             }
+            #frameOptions {
+                margin-top: 30px;
+                font-family: verdana, arial, sans-serif;
+                font-weight: 700;
+            }
+            #frameOptions div {
+                padding: 5px 0;
+            }
+            #nine-sixteen,
+            #sixteen-nine {
+                display: none;
+            }
+
+            .selected {
+                display: block !important;
+            }
+
         </style>
         <title>Lyrics</title>
     </head>
@@ -410,10 +427,23 @@
                 </div>
                 <pre id="output"></pre>
                 <button id="run">Run</button>
+                <div id="frameOptions">
+                    <div data-frame="none">
+                        <input id="none" type="radio" name="aspect-ratios" value="none" checked="checked">
+                        <label for="none">None</label>
+                    </div>
+                    <div data-frame="9-16">
+                        <input id="9-16" type="radio" name="aspect-ratios" value="9-16">
+                        <label for="9-16">9:16</label>
+                    </div>
+                    <div data-frame="16-9">
+                        <input id="16-9" type="radio" name="aspect-ratios" value="16-9">
+                        <label for="16-9">16:9</label>
+                    </div>
+                </div>
             </div>
-            <div id="four-three"></div>
-            <div id="lyrics">
-            </div>
+            <div class="aspect-ratio-frame" id="nine-sixteen"></div>
+            <div id="lyrics"></div>
         </div>
         <script>
             /*
@@ -479,6 +509,10 @@
             let startTimestamp = null;
             let rafHandle = null;
             let dialogueList = [];
+
+            let isPaused = false;
+            let pauseStart = 0;      // timestamp when paused
+            let pauseAccum = 0;      // total paused time to subtract from playback
 
             // ... (advanceCarousel function remains the same) ...
             function advanceCarousel() {
@@ -565,22 +599,60 @@
             }
 
             function timedLoop(now) {
-                const elapsed = now - startTimestamp;
+                if (isPaused) {
+                    rafHandle = requestAnimationFrame(timedLoop);
+                    return;
+                }
 
-                // Check if we need to advance
+                const elapsed = now - startTimestamp - pauseAccum;
+
                 if (
                     currentIndex < dialogueList.length - 1 &&
                     elapsed >= dialogueList[currentIndex + 1].startTimeMs
                 ) {
-                    advanceCarousel();       // ← your animation function
+                    advanceCarousel();
                     currentIndex++;
                 }
 
-                // Keep going until end
                 if (currentIndex < dialogueList.length - 1) {
                     rafHandle = requestAnimationFrame(timedLoop);
                 }
             }
+
+            function pausePlayback() {
+                if (!isPaused) {
+                    isPaused = true;
+                    pauseStart = performance.now();
+                }
+            }
+
+            function resumePlayback() {
+                if (isPaused) {
+                    const now = performance.now();
+                    pauseAccum += now - pauseStart;  // add to total paused time
+                    isPaused = false;
+                }
+            }
+            
+            function togglePausePlay() {
+                if (isPaused) {
+                    resumePlayback();
+                } else {
+                    pausePlayback();
+                }
+            }
+
+            document.addEventListener('keydown', (e) => {
+                // Prevent spacebar from scrolling the page
+                if (e.code === 'Space') {
+                    e.preventDefault();
+                    togglePausePlay();
+                }
+            });
+
+
+
+
 
 
 
@@ -615,6 +687,28 @@
                     reader.readAsText(file);
                 }
             });
+
+            const radios = document.querySelectorAll('#frameOptions input[name="aspect-ratios"]');
+
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Hide all preview frames
+                    _$('.aspect-ratio-frame').removeClass('selected');
+
+                    // Show the correct one
+                    if (radio.value === '9-16') {
+                        document.querySelector('#nine-sixteen').classList.add('selected');
+                    }
+
+                    if (radio.value === '16-9') {
+                        document.querySelector('#sixteen-nine').classList.add('selected');
+                    }
+
+                    // If "none", do nothing (all remain hidden)
+                });
+            });
+
+
 
 
             // Reminder: Ensure parseVTT and the global variables are defined above this script block.
