@@ -2,6 +2,9 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Animated Lyrics">
         <script>
             class PanelWrapper extends HTMLElement {}
                 window.customElements.define('panel-wrapper', PanelWrapper);
@@ -379,7 +382,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                border: 1px solid red;
             }
             #lyrics {
                 transform: translateY(270px);
