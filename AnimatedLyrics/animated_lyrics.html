@@ -6,6 +6,9 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Animated Lyrics">
         <link rel="manifest" href="/manifest.json">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
         <script>
             class PanelWrapper extends HTMLElement {}
@@ -423,6 +426,14 @@
                 display: block !important;
             }
 
+            .UnifrakturCook {
+                font-family: UnifrakturCook;
+            }
+
+            .LukiestGuy {
+                font-family: "Luckiest Guy";
+            }
+
         </style>
         <title>Lyrics</title>
     </head>
@@ -450,7 +461,7 @@
                 </div>
             </div>
             <div class="aspect-ratio-frame" id="nine-sixteen"></div>
-            <div id="lyrics"></div>
+            <div class="LuckiestGuy" id="lyrics"></div>
         </div>
         <script>
             /*
