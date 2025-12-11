@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            class PanelWrapper extends HTMLElement {}
+                window.customElements.define('panel-wrapper', PanelWrapper);
+
+                class PanelInner extends HTMLElement {
+                connectedCallback() {
+                    if (this.hasAttribute('space')) {
+                    const VAL = this.getAttribute('space');
+                    const valList = VAL.split(',');
+                    if (valList.length > 1) {
+                        this.style.paddingTop = valList[0] + "px";
+                        this.style.paddingBottom = valList[1] + "px";
+                    }
+                    else {
+                        this.style.paddingTop = VAL + "px";
+                        this.style.paddingBottom = VAL + "px";
+                    }
+                    }
+                }
+                }
+                window.customElements.define('panel-inner', PanelInner);
+
+                document.addEventListener('DOMContentLoaded', () => {
+
+                class PanelComplete extends PanelWrapper {
+                    connectedCallback() {
+                    const VAL = this.getAttribute('space');
+                    const prepped = this.innerHTML;
+                    const valList = (VAL) ? VAL.split(',') : null;
+                    if (VAL) {
+                        if (valList.length > 1) {
+                        this.innerHTML = `<panel-inner space="${valList[0]},${valList[1]}">${prepped}</panel-inner>`;
+                        }
+                        else {
+                        this.innerHTML = `<panel-inner space="${valList[0]}">${prepped}</panel-inner>`;
+                        }
+                    }
+                    else {
+                        this.innerHTML = `<panel-inner>${prepped}</panel-inner>`;
+                    }
+                    }
+                }
+
+                window.customElements.define('x-panel', PanelComplete);
+
+                });
+
+                class clearWrap extends HTMLElement {
+                connectedCallback() {
+                    if (this.hasAttribute('space')) {
+                    const VAL = this.getAttribute('space');
+                    const valList = VAL.split(',');
+                    if (valList.length > 1) {
+                        this.style.paddingTop = valList[0] + "px";
+                        this.style.paddingBottom = valList[1] + "px";
+                    }
+                    else {
+                        this.style.paddingTop = VAL + "px";
+                        this.style.paddingBottom = VAL + "px";
+                    }
+                    }
+                }
+                }
+                window.customElements.define('clear-wrap', clearWrap);
+
+                class colorWrap extends HTMLElement {
+                connectedCallback() {
+                    if (this.hasAttribute('space')) {
+                    const VAL = this.getAttribute('space');
+                    const valList = VAL.split(',');
+                    if (valList.length > 1) {
+                        this.style.paddingTop = valList[0] + "px";
+                        this.style.paddingBottom = valList[1] + "px";
+                    }
+                    else {
+                        this.style.paddingTop = VAL + "px";
+                        this.style.paddingBottom = VAL + "px";
+                    }
+                    }
+                }
+                }
+                window.customElements.define('x-wrap', colorWrap);
+
+                class borderWrap extends HTMLElement {
+                connectedCallback() {
+                    if (this.hasAttribute('space')) {
+                    const VAL = this.getAttribute('space');
+                    const valList = VAL.split(',');
+                    if (valList.length > 1) {
+                        this.style.paddingTop = valList[0] + "px";
+                        this.style.paddingBottom = valList[1] + "px";
+                    }
+                    else {
+                        this.style.paddingTop = VAL + "px";
+                        this.style.paddingBottom = VAL + "px";
+                    }
+                    }
+                }
+                }
+                window.customElements.define('border-wrap', borderWrap);
+
+                class segmentElem extends HTMLElement {
+                connectedCallback() {
+                    if (this.hasAttribute('of')) {
+                    const SEG = this.getAttribute('of');
+                    const self = this;
+                    let classSeg = '';
+                    switch(SEG) {
+                        case '2':
+                        classSeg = 'half';
+                        break;
+                        case '3':
+                        classSeg = 'thirds';
+                        break;
+                        case '4':
+                        classSeg = 'fourths';
+                        break;
+                        case '5':
+                        classSeg = 'fifths';
+                        break;
+                        case '6':
+                        classSeg = 'sixths';
+                        break;
+                        case '7':
+                        classSeg = 'sevenths';
+                        break;
+                        case '8':
+                        classSeg = 'eighths';
+                        break;
+                        default:
+                        classSeg = 'eighths';
+                        break;
+                    }
+                    if (classSeg) {
+                        self.classList.add(classSeg);
+                    }
+                    }
+                }
+                }
+                window.customElements.define('x-segment', segmentElem);
+
+                class primeSegment extends HTMLElement {}
+                window.customElements.define('prime-seg', primeSegment);
+
+                class segMajor extends HTMLElement {}
+                window.customElements.define('x-major', segMajor);
+
+                class segMinor extends HTMLElement {}
+                window.customElements.define('x-minor', segMinor);
+
+                class segCell extends HTMLElement {}
+                window.customElements.define('x-cell', segCell);
+        </script>
+        <style>
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-family: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            panel-wrapper,panel-inner,x-panel,clear-wrap,x-wrap,border-wrap,x-minor,x-major,x-cell{display:block}panel-wrapper panel-inner,x-panel panel-inner{margin:0 auto;padding:60px 0;width:1200px}:root{--gutter:15px}x-segment{display:flex;flex-flow:row wrap}prime-seg{display:flex;flex-flow:row nowrap}prime-seg > x-minor{flex-shrink:0}prime-seg > x-major{flex-grow:1;flex-basis:0}x-minor,x-major,x-cell{flex-grow:0;flex-shrink:0}.stack > x-minor:nth-child(1n),.stack > x-major:nth-child(1n),.stack > x-cell:nth-child(1n),.half > x-minor:nth-child(1n),.half > x-major:nth-child(1n),.half > x-cell:nth-child(1n),.half > x-minor:nth-child(2n),.half > x-major:nth-child(2n),.half > x-cell:nth-child(2n),.thirds > x-minor:nth-child(1n),.thirds > x-major:nth-child(1n),.thirds > x-cell:nth-child(1n),.fourths > x-minor:nth-child(1n),.fourths > x-major:nth-child(1n),.fourths > x-cell:nth-child(1n),.fourths.major-in-the-middle > x-minor:nth-child(1n),.fourths.major-in-the-middle > x-major:nth-child(1n),.fifths > x-minor:nth-child(1n),.fifths > x-major:nth-child(1n),.fifths > x-cell:nth-child(1n),.fifths.major-in-the-middle > x-minor:nth-child(1n),.fifths.major-in-the-middle > x-major:nth-child(1n),.sixths > x-cell:nth-child(1n),.sevenths > x-minor:nth-child(1n),.sevenths > x-major:nth-child(1n),.sevenths > x-cell:nth-child(1n),prime-seg > x-minor:nth-child(1n),prime-seg > x-major:nth-child(1n){margin-right:var(--gutter);margin-left:0}.stack > x-minor:last-child,.stack > x-major:last-child,.stack > x-cell:last-child,.half > x-minor:last-child,.half > x-major:last-child,.half > x-cell:last-child,.thirds > x-minor:last-child,.thirds > x-major:last-child,.thirds > x-cell:last-child,.fourths > x-minor:last-child,.fourths > x-major:last-child,.fourths > x-cell:last-child,.fourths.major-in-the-middle > x-minor:last-child,.fourths.major-in-the-middle > x-major:last-child,.fifths > x-minor:last-child,.fifths > x-major:last-child,.fifths > x-cell:last-child,.fifths.major-in-the-middle > x-minor:last-child,.fifths.major-in-the-middle > x-major:last-child,.sixths > x-cell:last-child,.sevenths > x-minor:last-child,.sevenths > x-major:last-child,.sevenths > .cell:last-child,prime-seg > x-minor:last-child,prime-seg > x-major:last-child{margin-right:0}.stack > x-minor:nth-child(1n),.stack > x-major:nth-child(1n),.stack > x-cell:nth-child(1n),.half > x-minor:nth-child(2n),.half > x-major:nth-child(2n),.half > x-cell:nth-child(2n),.thirds > x-minor:nth-child(3n),.thirds > x-major:nth-child(3n),.thirds > x-cell:nth-child(3n),.fourths > x-minor:nth-child(4n),.fourths > x-major:nth-child(4n),.fourths > x-cell:nth-child(4n),.fourths.major-in-the-middle > x-minor:nth-child(4n),.fourths.major-in-the-middle > x-major:nth-child(4n),.fifths > x-minor:nth-child(5n),.fifths > x-major:nth-child(5n),.fifths > x-cell:nth-child(5n),.fifths.major-in-the-middle > x-minor:nth-child(5n),.fifths.major-in-the-middle > x-major:nth-child(5n),.sixths > x-cell:nth-child(6n),.sevenths > x-minor:nth-child(7n),.sevenths > x-major:nth-child(7n),.sevenths > x-cell:nth-child(7n),prime-seg > x-minor:nth-child(2n),prime-seg > x-major:nth-child(2n){margin-right:0;margin-left:auto}.stack > x-minor,.stack > x-major,.stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.half > x-minor,.half > x-major,.half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.thirds > x-minor,.thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}@media only screen and (max-width:calc(1200px + 50px)){panel-wrapper panel-inner,x-panel panel-inner{padding:60px 25px;width:calc(100% - 50px)}}@media only screen and (max-width:768px){panel-wrapper panel-inner,x-panel panel-inner{padding:60px 15px;width:calc(100% - 30px)}}@media only screen and (max-width:640px){panel-wrapper panel-inner,x-panel panel-inner{padding:60px 10px;width:calc(100% - 20px)}}@media only screen and (max-width:1199px){.lg-half > x-minor:nth-child(1n),.lg-half > x-major:nth-child(1n),.lg-half > x-cell:nth-child(1n),.lg-half > x-minor:nth-child(2n),.lg-half > x-major:nth-child(2n),.lg-half > x-cell:nth-child(2n),.lg-thirds > x-minor:nth-child(1n),.lg-thirds > x-major:nth-child(1n),.lg-thirds > x-cell:nth-child(1n),.lg-fourths > x-minor:nth-child(1n),.lg-fourths > x-major:nth-child(1n),.lg-fourths > x-cell:nth-child(1n),.lg-fifths > x-minor:nth-child(1n),.lg-fifths > x-major:nth-child(1n),.lg-fifths > x-cell:nth-child(1n),.lg-sixths > x-cell:nth-child(1n),.lg-sevenths > x-minor:nth-child(1n),.lg-sevenths > x-major:nth-child(1n),.lg-sevenths > x-cell:nth-child(1n){margin-right:var(--gutter);margin-left:0}.lg-half > x-minor:last-child,.lg-half > x-major:last-child,.lg-half > x-cell:last-child,.lg-thirds > x-minor:last-child,.lg-thirds > x-major:last-child,.lg-thirds > x-cell:last-child,.lg-fourths > x-minor:last-child,.lg-fourths > x-major:last-child,.lg-fourths > x-cell:last-child,.lg-fifths > x-minor:last-child,.lg-fifths > x-major:last-child,.lg-fifths > x-cell:last-child,.lg-sixths > x-cell:last-child,.lg-sevenths > x-minor:last-child,.lg-sevenths > x-major:last-child,.lg-sevenths > x-cell:last-child{margin-right:0}.lg-half > x-minor:nth-child(2n),.lg-half > x-major:nth-child(2n),.lg-half > x-cell:nth-child(2n),.lg-thirds > x-minor:nth-child(3n),.lg-thirds > x-major:nth-child(3n),.lg-thirds > x-cell:nth-child(3n),.lg-fourths > x-minor:nth-child(4n),.lg-fourths > x-major:nth-child(4n),.lg-fourths > x-cell:nth-child(4n),.lg-fifths > x-minor:nth-child(5n),.lg-fifths > x-major:nth-child(5n),.lg-fifths > x-cell:nth-child(5n),.lg-sixths > x-cell:nth-child(6n),.lg-sevenths > x-minor:nth-child(7n),.lg-sevenths > x-major:nth-child(7n),.lg-sevenths > x-cell:nth-child(7n){margin-right:0;margin-left:auto}.lg-stack > x-minor,.lg-stack > x-major,.lg-stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.lg-half > x-minor,.lg-half > x-major,.lg-half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.lg-thirds > x-minor,.lg-thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.lg-thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.lg-fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.lg-fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.lg-fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.lg-fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.lg-fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.lg-fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.lg-sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.lg-sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.lg-sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.lg-sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.lg-sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.lg-sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}}@media only screen and (max-width:960px){.md-half > x-minor:nth-child(1n),.md-half > x-major:nth-child(1n),.md-half > x-cell:nth-child(1n),.md-half > x-minor:nth-child(2n),.md-half > x-major:nth-child(2n),.md-half > x-cell:nth-child(2n),.md-thirds > x-minor:nth-child(1n),.md-thirds > x-major:nth-child(1n),.md-thirds > x-cell:nth-child(1n),.md-fourths > x-minor:nth-child(1n),.md-fourths > x-major:nth-child(1n),.md-fourths > x-cell:nth-child(1n),.md-fifths > x-minor:nth-child(1n),.md-fifths > x-major:nth-child(1n),.md-fifths > x-cell:nth-child(1n),.md-sixths > x-cell:nth-child(1n),.md-sevenths > x-minor:nth-child(1n),.md-sevenths > x-major:nth-child(1n),.md-sevenths > x-cell:nth-child(1n){margin-right:var(--gutter);margin-left:0}.md-half > x-minor:last-child,.md-half > x-major:last-child,.md-half > x-cell:last-child,.md-thirds > x-minor:last-child,.md-thirds > x-major:last-child,.md-thirds > x-cell:last-child,.md-fourths > x-minor:last-child,.md-fourths > x-major:last-child,.md-fourths > x-cell:last-child,.md-fifths > x-minor:last-child,.md-fifths > x-major:last-child,.md-fifths > x-cell:last-child,.md-sixths > x-cell:last-child,.md-sevenths > x-minor:last-child,.md-sevenths > x-major:last-child,.md-sevenths > x-cell:last-child{margin-right:0}.md-half > x-minor:nth-child(2n),.md-half > x-major:nth-child(2n),.md-half > x-cell:nth-child(2n),.md-thirds > x-minor:nth-child(3n),.md-thirds > x-major:nth-child(3n),.md-thirds > x-cell:nth-child(3n),.md-fourths > x-minor:nth-child(4n),.md-fourths > x-major:nth-child(4n),.md-fourths > x-cell:nth-child(4n),.md-fifths > x-minor:nth-child(5n),.md-fifths > x-major:nth-child(5n),.md-fifths > x-cell:nth-child(5n),.md-sixths > x-cell:nth-child(6n),.md-sevenths > x-minor:nth-child(7n),.md-sevenths > x-major:nth-child(7n),.md-sevenths > x-cell:nth-child(7n){margin-right:0;margin-left:auto}.md-stack > x-minor,.md-stack > x-major,.md-stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.md-half > x-minor,.md-half > x-major,.md-half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.md-thirds > x-minor,.md-thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.md-thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.md-fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.md-fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.md-fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.md-fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.md-fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.md-fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.md-sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.md-sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.md-sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.md-sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.md-sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.md-sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}}@media only screen and (max-width:768px){.tablet-half > x-minor:nth-child(1n),.tablet-half > x-major:nth-child(1n),.tablet-half > x-cell:nth-child(1n),.tablet-half > x-minor:nth-child(2n),.tablet-half > x-major:nth-child(2n),.tablet-half > x-cell:nth-child(2n),.tablet-thirds > x-minor:nth-child(1n),.tablet-thirds > x-major:nth-child(1n),.tablet-thirds > x-cell:nth-child(1n),.tablet-fourths > x-minor:nth-child(1n),.tablet-fourths > x-major:nth-child(1n),.tablet-fourths > x-cell:nth-child(1n),.tablet-fifths > x-minor:nth-child(1n),.tablet-fifths > x-major:nth-child(1n),.tablet-fifths > x-cell:nth-child(1n),.tablet-sixths > x-cell:nth-child(1n),.tablet-sevenths > x-minor:nth-child(1n),.tablet-sevenths > x-major:nth-child(1n),.tablet-sevenths > x-cell:nth-child(1n){margin-right:var(--gutter);margin-left:0}.tablet-half > x-minor:last-child,.tablet-half > x-major:last-child,.tablet-half > x-cell:last-child,.tablet-thirds > x-minor:last-child,.tablet-thirds > x-major:last-child,.tablet-thirds > x-cell:last-child,.tablet-fourths > x-minor:last-child,.tablet-fourths > x-major:last-child,.tablet-fourths > x-cell:last-child,.tablet-fifths > x-minor:last-child,.tablet-fifths > x-major:last-child,.tablet-fifths > x-cell:last-child,.tablet-sixths > x-cell:last-child,.tablet-sevenths > x-minor:last-child,.tablet-sevenths > x-major:last-child,.tablet-sevenths > x-cell:last-child{margin-right:0}.tablet-half > x-minor:nth-child(2n),.tablet-half > x-major:nth-child(2n),.tablet-half > x-cell:nth-child(2n),.tablet-thirds > x-minor:nth-child(3n),.tablet-thirds > x-major:nth-child(3n),.tablet-thirds > x-cell:nth-child(3n),.tablet-fourths > x-minor:nth-child(4n),.tablet-fourths > x-major:nth-child(4n),.tablet-fourths > x-cell:nth-child(4n),.tablet-fifths > x-minor:nth-child(5n),.tablet-fifths > x-major:nth-child(5n),.tablet-fifths > x-cell:nth-child(5n),.tablet-sixths > x-cell:nth-child(6n),.tablet-sevenths > x-minor:nth-child(7n),.tablet-sevenths > x-major:nth-child(7n),.tablet-sevenths > x-cell:nth-child(7n){margin-right:0;margin-left:auto}.tablet-stack > x-minor,.tablet-stack > x-major,.tablet-stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.tablet-half > x-minor,.tablet-half > x-major,.tablet-half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.tablet-thirds > x-minor,.tablet-thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.tablet-thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.tablet-fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.tablet-fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.tablet-fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.tablet-fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.tablet-fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.tablet-fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.tablet-sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.tablet-sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.tablet-sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.tablet-sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.tablet-sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.tablet-sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}}@media screen and (max-width:640px){.sm-half > x-minor:nth-child(1n),.sm-half > x-major:nth-child(1n),.sm-half > x-cell:nth-child(1n),.sm-half > x-minor:nth-child(2n),.sm-half > x-major:nth-child(2n),.sm-half > x-cell:nth-child(2n),.sm-thirds > x-minor:nth-child(1n),.sm-thirds > x-major:nth-child(1n),.sm-thirds > x-cell:nth-child(1n),.sm-fourths > x-minor:nth-child(1n),.sm-fourths > x-major:nth-child(1n),.sm-fourths > x-cell:nth-child(1n),.sm-fifths > x-minor:nth-child(1n),.sm-fifths > x-major:nth-child(1n),.sm-fifths > x-cell:nth-child(1n),.sm-sixths > x-cell:nth-child(1n),.sm-sevenths > x-minor:nth-child(1n),.sm-sevenths > x-major:nth-child(1n),.sm-sevenths > x-cell:nth-child(1n){margin-right:var(--gutter);margin-left:0}.sm-half > x-minor:last-child,.sm-half > x-major:last-child,.sm-half > x-cell:last-child,.sm-thirds > x-minor:last-child,.sm-thirds > x-major:last-child,.sm-thirds > x-cell:last-child,.sm-fourths > x-minor:last-child,.sm-fourths > x-major:last-child,.sm-fourths > x-cell:last-child,.sm-fifths > x-minor:last-child,.sm-fifths > x-major:last-child,.sm-fifths > x-cell:last-child,.sm-sixths > x-cell:last-child,.sm-sevenths > x-minor:last-child,.sm-sevenths > x-major:last-child,.sm-sevenths > x-cell:last-child{margin-right:0}.sm-half > x-minor:nth-child(2n),.sm-half > x-major:nth-child(2n),.sm-half > x-cell:nth-child(2n),.sm-thirds > x-minor:nth-child(3n),.sm-thirds > x-major:nth-child(3n),.sm-thirds > x-cell:nth-child(3n),.sm-fourths > x-minor:nth-child(4n),.sm-fourths > x-major:nth-child(4n),.sm-fourths > x-cell:nth-child(4n),.sm-fifths > x-minor:nth-child(5n),.sm-fifths > x-major:nth-child(5n),.sm-fifths > x-cell:nth-child(5n),.sm-sixths > x-cell:nth-child(6n),.sm-sevenths > x-minor:nth-child(7n),.sm-sevenths > x-major:nth-child(7n),.sm-sevenths > x-cell:nth-child(7n){margin-right:0;margin-left:auto}.sm-stack > x-minor,.sm-stack > x-major,.sm-stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.sm-half > x-minor,.sm-half > x-major,.sm-half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.sm-thirds > x-minor,.sm-thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.sm-thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.sm-fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.sm-fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.sm-fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.sm-fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.sm-fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.sm-fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.sm-sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.sm-sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.sm-sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.sm-sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.sm-sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.sm-sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}}@media screen and (max-width:420px){.xs-half > x-minor:nth-child(1n),.xs-half > x-major:nth-child(1n),.xs-half > x-cell:nth-child(1n),.xs-half > x-minor:nth-child(2n),.xs-half > x-major:nth-child(2n),.xs-half > x-cell:nth-child(2n),.xs-thirds > x-minor:nth-child(1n),.xs-thirds > x-major:nth-child(1n),.xs-thirds > x-cell:nth-child(1n),.xs-fourths > x-minor:nth-child(1n),.xs-fourths > x-major:nth-child(1n),.xs-fourths > x-cell:nth-child(1n),.xs-fifths > x-minor:nth-child(1n),.xs-fifths > x-major:nth-child(1n),.xs-fifths > x-cell:nth-child(1n),.xs-sixths > x-cell:nth-child(1n),.xs-sevenths > x-minor:nth-child(1n),.xs-sevenths > x-major:nth-child(1n),.xs-sevenths > x-cell:nth-child(1n){margin-right:var(--gutter);margin-left:0}.xs-half > x-minor:last-child,.xs-half > x-major:last-child,.xs-half > x-cell:last-child,.xs-thirds > x-minor:last-child,.xs-thirds > x-major:last-child,.xs-thirds > x-cell:last-child,.xs-fourths > x-minor:last-child,.xs-fourths > x-major:last-child,.xs-fourths > x-cell:last-child,.xs-fifths > x-minor:last-child,.xs-fifths > x-major:last-child,.xs-fifths > x-cell:last-child,.xs-sixths > x-cell:last-child,.xs-sevenths > x-minor:last-child,.xs-sevenths > x-major:last-child,.xs-sevenths > x-cell:last-child{margin-right:0}.xs-half > x-minor:nth-child(2n),.xs-half > x-major:nth-child(2n),.xs-half > x-cell:nth-child(2n),.xs-thirds > x-minor:nth-child(3n),.xs-thirds > x-major:nth-child(3n),.xs-thirds > x-cell:nth-child(3n),.xs-fourths > x-minor:nth-child(4n),.xs-fourths > x-major:nth-child(4n),.xs-fourths > x-cell:nth-child(4n),.xs-fifths > x-minor:nth-child(5n),.xs-fifths > x-major:nth-child(5n),.xs-fifths > x-cell:nth-child(5n),.xs-sixths > x-cell:nth-child(6n),.xs-sevenths > x-minor:nth-child(7n),.xs-sevenths > x-major:nth-child(7n),.xs-sevenths > x-cell:nth-child(7n){margin-right:0;margin-left:auto}.xs-stack > x-minor,.xs-stack > x-major,.xs-stack > x-cell{flex-basis:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));max-width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1));width:calc(99.98% * 1/1 - (var(--gutter) - var(--gutter) * 1/1))}.xs-half > x-minor,.xs-half > x-major,.xs-half > x-cell{flex-basis:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));max-width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2));width:calc(99.98% * 1/2 - (var(--gutter) - var(--gutter) * 1/2))}.xs-thirds > x-minor,.xs-thirds > x-cell{flex-basis:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));max-width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3));width:calc(99.98% * 1/3 - (var(--gutter) - var(--gutter) * 1/3))}.xs-thirds > x-major{flex-basis:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));max-width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3));width:calc(99.98% * 2/3 - (var(--gutter) - var(--gutter) * 2/3))}.xs-fourths > x-cell{flex-basis:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));max-width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4));width:calc(99.98% * 1/4 - (var(--gutter) - var(--gutter) * 1/4))}.xs-fifths > x-minor{flex-basis:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));max-width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13));width:calc(99.98% * 5/13 - (var(--gutter) - var(--gutter) * 5/13))}.xs-fifths > x-major{flex-basis:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));max-width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13));width:calc(99.98% * 8/13 - (var(--gutter) - var(--gutter) * 8/13))}.xs-fifths.true > x-minor{flex-basis:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));max-width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5));width:calc(99.98% * 2/5 - (var(--gutter) - var(--gutter) * 2/5))}.xs-fifths.true > x-major{flex-basis:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));max-width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5));width:calc(99.98% * 3/5 - (var(--gutter) - var(--gutter) * 3/5))}.xs-fifths > x-cell{flex-basis:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));max-width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5));width:calc(99.98% * 1/5 - (var(--gutter) - var(--gutter) * 1/5))}.xs-sixths > x-cell{flex-basis:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));max-width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6));width:calc(99.98% * 1/6 - (var(--gutter) - var(--gutter) * 1/6))}.xs-sevenths > x-minor{flex-basis:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));max-width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23));width:calc(99.98% * 10/23 - (var(--gutter) - var(--gutter) * 10/23))}.xs-sevenths > x-major{flex-basis:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));max-width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23));width:calc(99.98% * 13/23 - (var(--gutter) - var(--gutter) * 13/23))}.xs-sevenths.true > x-minor{flex-basis:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));max-width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7));width:calc(99.98% * 3/7 - (var(--gutter) - var(--gutter) * 3/7))}.xs-sevenths.true > x-major{flex-basis:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));max-width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7));width:calc(99.98% * 4/7 - (var(--gutter) - var(--gutter) * 4/7))}.xs-sevenths > x-cell{flex-basis:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));max-width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7));width:calc(99.98% * 1/7 - (var(--gutter) - var(--gutter) * 1/7))}}.vertical-center{align-items:center}clear-wrap{margin:40px 0}x-wrap{padding:15px;background-color:#e4e4e4}border-wrap{padding:15px;border:1px solid #e4e4e4}border-wrap{margin:15px 0}border-wrap.inner{margin:0}.rack{display:flex;flex-flow:row wrap}.rack.right{justify-content:flex-end}.rack.center{justify-content:center}.rack > div,.rack > a,.rack > i{display:block;flex-grow:0;flex-shrink:0;padding-left:10px;padding-right:10px;text-align:center}.rack.no-gap > div,.rack.no-gap > a,.rack.no-gap > i{padding-left:0;padding-right:0}.rack > div:first-child,.rack > a:first-child,.rack > i:first-child{padding-left:0}.rack.extend > div,.rack.extend > a,.rack.extend > i{flex-grow:1}.rack > div:last-child,.rack > a:last-child,.rack > i:last-child{padding-right:0}.with-dividers div,.with-dividers a,.with-dividers i{border-right-width:1px;border-right-style:solid;border-right-color:inherit}.with-dividers div:last-child,.with-dividers a:last-child,.with-dividers i:last-child{border-right:none}
+            body {
+                line-height: 1;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            table {
+                border-collapse: separate;
+                border-spacing: 0;
+                vertical-align: middle;
+            }
+            caption,
+            th,
+            td {
+                text-align: left;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+            a img {
+                border: none;
+            }
+            body {
+                font-family: impact, sans-serif;
+                font-weight: 300;
+                background-color: #444;
+            }
+            panel-wrapper {
+                background-color: #fff;
+            }
+            .left-justify {
+                text-align: left !important;
+            }
+            .center-justify {
+                text-align: center !important;
+            }
+            .right-justify {
+                text-align: right !important;
+            }
+            .center {
+                margin: 0 auto;
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+            h1 {
+                font-size: 3.3rem;
+                padding: 25px 0;
+                line-height: 1.15;
+            }
+            h2 {
+                padding: 20px 0;
+                font-size: 2.5rem;
+            }
+            h3 {
+                padding: 15px 0;
+                font-size: 1.9rem;
+            }
+            h4 {
+                font-size: 1.6rem;
+            }
+            h5 {
+                font-size: 0.83rem;
+            }
+            h6 {
+                font-size: 0.67rem;
+            }
+            h4,
+            h5 {
+                line-height: 1.3;
+            }
+            .line {
+                position: absolute;
+                margin: auto;
+                top: -5000px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                margin: 30px 0;
+                font-size: 2.3rem;
+                line-height: 1.5;
+                color: #fff;
+                opacity: 0.6;
+                transition: all 0.2s ease-in-out;
+            }
+            .line.visible {
+                top: 0;
+            }
+            .current.line {
+                font-size: 3rem;
+                color: #fff;
+                -webkit-text-stroke-width: 2px; /* Stroke thickness */
+                -webkit-text-stroke-color: black; /* Stroke color */
+                transform: translateY(0em);
+                opacity: 1;
+            }
+            panel-inner {
+                background-color: #1BED00;
+            }
+            .one-before {
+                font-size: 2.3rem;
+            }
+            .one-after {
+                font-size: 2.3rem;
+            }
+            .two-before {
+                transform: translateY(-11.8em);
+                font-size: 1rem;
+                opacity: 0;
+            }
+            .two-after {
+                transform: translateY(18.2em);
+                font-size: 1rem;
+                opacity: 0;
+
+            }
+            body, panel-wrapper {
+                background-color: #1BED00;
+            }
+            #actions {
+                position: absolute;
+                top:20px;
+                left: 20px;
+                z-index: 10;
+            }
+            button {
+                border: none;
+                padding: 5px 25px;
+                background: #3687a8;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button#run {
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .one-before {
+                transform: translateY(-3.8em);
+            }
+            .one-after {
+                transform: translateY(4.8em);
+            }
+            #container {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid red;
+            }
+            #lyrics {
+                transform: translateY(270px);
+            }
+        </style>
+        <title>Lyrics</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="actions">
+                <div>
+                    <input type="file" id="fileInput">
+                </div>
+                <pre id="output"></pre>
+                <button id="run">Run</button>
+            </div>
+            <div id="lyrics">
+            </div>
+        </div>
+        <script>
+            /*
+                jQuishy
+                ----------------------
+                Author: Jade C. Rigby
+                Date: 7/03/2023
+                Version: 1.5.0
+                License: MIT
+                ----------------------
+            */
+            [Element.prototype,CharacterData.prototype,DocumentType.prototype].forEach(function(t){t.hasOwnProperty("remove")||Object.defineProperty(t,"remove",{configurable:!0,enumerable:!0,writable:!0,value:function(){null!==this.parentNode&&this.parentNode.removeChild(this)}})}),Array.prototype.forEach||(Array.prototype.forEach=function(t){var s,i;if(null==this)throw new TypeError("this is null or not defined");var e=Object(this),n=e.length>>>0;if("function"!=typeof t)throw new TypeError(t+" is not a function");for(arguments.length>1&&(s=arguments[1]),i=0;i<n;){var o;i in e&&(o=e[i],t.call(s,o,i,e)),i++}}),window.NodeList&&!NodeList.prototype.forEach&&(NodeList.prototype.forEach=function(t,s){s=s||window;for(var i=0;i<this.length;i++)t.call(s,this[i],i,this)});var jQuishy=function(t){this.t,"string"==typeof t?this.t=document.querySelectorAll(t):t instanceof HTMLCollection?this.t=[].slice.call(t):void 0!==t&&(this.t=[t]),this.items=this.t,this.item=this.t[0],this.vanilla=1===this.t.length?this.t[0]:this.t,this.asString=this.vanilla.innerHTML};function paPos(t,s,i){t.forEach(function(t){t.insertAdjacentHTML(s,i)})}function _$(t){return t?new jQuishy(t):"1.5.0"}jQuishy.prototype.first=function(){return this.t=[this.item],this},jQuishy.prototype.attr=function(t,s){var i=[];return this.t.forEach(function(e){if(void 0===s){var n=e.getAttribute(t);i.push(n)}else e.setAttribute(t,s)}),1===i.length?i[0]:i},jQuishy.prototype.css=function(t,s){return this.t.forEach(function(i){var e=[];if(e.push(t),s&&e.push(s),2===e.length)i.style.cssText=e[0]+" : "+e[1];else if(e[0]){var n="";for(var o in e[0]){n+=o.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase()+":"+e[0][o]+";"}i.style.cssText=n}}),this},jQuishy.prototype.hasClass=function(t){return this.t[0].classList?this.t[0].classList.contains(t):new RegExp("(^| )"+className+"( |$)","gi").test(this.t[0].className)},jQuishy.prototype.addClass=function(t){return this.t.forEach(function(s){s.classList?s.classList.add(t):s.className+=" "+t}),this},jQuishy.prototype.removeClass=function(t){return this.t.forEach(function(s){s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp("(^|\\b)"+t.split(" ").join("|")+"(\\b|$)","gi")," ")}),this},jQuishy.prototype.toggleClass=function(t){return this.t.forEach(function(s){if(s.classList)s.classList.toggle(t);else{var i=s.className.split(" "),e=i.indexOf(t);e>=0?i.splice(e,1):i.push(t),s.className=i.join(" ")}}),this},jQuishy.prototype.prepend=function(t){return paPos(this.t,"afterbegin",t),this},jQuishy.prototype.append=function(t){return paPos(this.t,"beforeend",t),this},jQuishy.prototype.parent=function(t){let s=null;const i=[];return this.t.forEach(function(e){t.startsWith(".")?void 0!==(s=function t(s,i){const e=s.parentNode;return e.classList.contains(i)?e:"BODY"!==e.nodeName?t(e,i):void 0}(e,t.substring(1)))&&i.push(s):t.startsWith("#")&&void 0!==(s=function t(s,i){const e=s.parentNode;return e.id==i?s.parentNode:"BODY"!==e.nodeName?t(s.parentNode,i):null}(e,t.substring(1)))&&i.push(s)}),this.t=i,this.vanilla=1===this.t.length?this.t[0]:this.t,this},jQuishy.prototype.click=function(t){return this.t.forEach(function(s){s.addEventListener("click",function(s){t(s)})}),this},jQuishy.prototype.delegate=function(t,s,i){return this.t[0].addEventListener(s,function(s){s.target&&s.target.matches(t)&&i(s)}),this};
+
+            function parseVTT(vttText) {
+                const lines = vttText
+                    .split('\n')
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0);
+
+                const dialogueEntries = [];
+                const timecodeIndicator = '-->';
+
+                for (let i = 0; i < lines.length; i++) {
+                    let currentLine = lines[i];
+
+                    if (currentLine.includes(timecodeIndicator)) {
+                        const timecode = currentLine;
+
+                        let textLines = [];
+                        let j = i + 1;
+
+                        // Collect ALL text lines until we hit a cue number or next timecode
+                        while (
+                            j < lines.length &&
+                            !lines[j].includes(timecodeIndicator) &&  // not timecode
+                            !/^\d+$/.test(lines[j])                  // not cue index
+                        ) {
+                            textLines.push(lines[j]);
+                            j++;
+                        }
+
+                        if (textLines.length > 0) {
+                            dialogueEntries.push({
+                                timecode,
+                                text: textLines.join(" <br />")
+                            });
+                        }
+
+                        // Skip ahead past the collected text lines
+                        i = j - 1;
+                    }
+                }
+
+                return dialogueEntries;
+            }
+
+
+            // A simple counter to track which line number we just made 'current'
+            // This needs to be defined in a scope accessible by advanceCarousel()
+            let currentLyricIndex = -1; 
+            let allLyricElements = [];
+            let currentIndex = 0;
+            let startTimestamp = null;
+            let rafHandle = null;
+            let dialogueList = [];
+
+            // ... (advanceCarousel function remains the same) ...
+            function advanceCarousel() {
+                // ... code from previous answer using nextElementSibling ...
+                _$('.two-before').removeClass('two-before').removeClass('visible'); 
+                _$('.one-before').removeClass('one-before').addClass('two-before');
+                _$('.current').removeClass('current').addClass('one-before');
+                _$('.one-after').removeClass('one-after').addClass('current');
+                _$('.two-after').removeClass('two-after').addClass('one-after');
+                
+                const newOneAfterElementNative = _$('.one-after').vanilla; 
+                if (newOneAfterElementNative) {
+                    const nextLineToCueNative = newOneAfterElementNative.nextElementSibling;
+                    if (nextLineToCueNative) {
+                        _$(nextLineToCueNative).addClass('visible').addClass('two-after');
+                    } else {
+                        console.log("Reached the end of the lyrics list. Stopping animation.");
+                        // clearInterval(carouselInterval); // If you're using the timer approach
+                    }
+                }
+            }
+
+
+            // NEW Function: Dynamically create the first 3 lines and assign classes
+            function initializeCarouselDynamic(dialogueList) {
+                const lyricsContainer = _$('#lyrics').vanilla;
+                lyricsContainer.innerHTML = ''; // Clear container
+
+                // Append ALL lines to the DOM first (all initially have just the 'line' class)
+                dialogueList.forEach((_item_) => {
+                    const elemHTML = `<div class="line">${_item_.text}</div>`;
+                    _$('#lyrics').append(elemHTML);
+                });
+
+                // Capture all raw elements into a global array
+                allLyricElements = Array.from(lyricsContainer.children);
+
+                if (allLyricElements.length < 3) {
+                    console.error("Need at least 3 lines of lyrics to start carousel in this mode.");
+                    return;
+                }
+
+                // --- Assign the specific initial classes to the first 3 physical elements ---
+
+                console.log(allLyricElements)
+
+                // Line 1: The starting current line
+                _$(allLyricElements[0]).addClass('visible').addClass('current');
+                
+                // Line 2: The next one up
+                _$(allLyricElements[1]).addClass('visible').addClass('one-after');
+                
+                // Line 3: The one after that (cued up for next transition)
+                _$(allLyricElements[2]).addClass('visible').addClass('two-after');
+                
+                // Lines 4+ have only the 'line' class
+
+                console.log("Dynamic initialization complete. First line is 'current'.");
+            }
+
+            function timeToMs(timeStr) {
+                // Formats: 00:15.000 OR 00:00:15.000
+                const parts = timeStr.split(':');
+                let h = 0, m = 0, s = 0;
+
+                if (parts.length === 3) {
+                    h = parseInt(parts[0], 10);
+                    m = parseInt(parts[1], 10);
+                    s = parseFloat(parts[2]);
+                } else {
+                    m = parseInt(parts[0], 10);
+                    s = parseFloat(parts[1]);
+                }
+
+                return (h * 3600 + m * 60 + s) * 1000;
+            }
+
+            function startTimedPlayback() {
+                startTimestamp = performance.now();
+                currentIndex = 0;
+
+                // Start the loop
+                rafHandle = requestAnimationFrame(timedLoop);
+            }
+
+            function timedLoop(now) {
+                const elapsed = now - startTimestamp;
+
+                // Check if we need to advance
+                if (
+                    currentIndex < dialogueList.length - 1 &&
+                    elapsed >= dialogueList[currentIndex + 1].startTimeMs
+                ) {
+                    advanceCarousel();       // ← your animation function
+                    currentIndex++;
+                }
+
+                // Keep going until end
+                if (currentIndex < dialogueList.length - 1) {
+                    rafHandle = requestAnimationFrame(timedLoop);
+                }
+            }
+
+
+
+
+            // ... (The main click handler code structure remains similar to the previous response, 
+            // using initializeCarouselDynamic instead of the old initialization function) ...
+
+
+
+            // The Main Click Handler
+            _$('#run').click(() => {
+                const file = _$('#fileInput').vanilla.files[0]; 
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        const contents = e.target.result;
+
+                        dialogueList = parseVTT(contents).map(entry => {
+                            const [startStr] = entry.timecode.split('-->').map(s => s.trim());
+                            return {
+                                ...entry,
+                                startTimeMs: timeToMs(startStr)
+                            };
+                        });
+
+                        initializeCarouselDynamic(dialogueList);
+                        startTimedPlayback();
+                    };
+
+                    reader.readAsText(file);
+                }
+            });
+
+
+            // Reminder: Ensure parseVTT and the global variables are defined above this script block.
+
+
+
+            // _$('#run').click(()=> {
+            //     const doc = _$('#fileInput').vanilla.files[0];
+            //     console.log(doc);
+            //      if (doc) {
+            //         const reader = new FileReader();
+            //         reader.onload = function(e) {
+            //             const contents = e.target.result;
+            //             const dialogueList = parseVTT(contents);
+            //             console.log(dialogueList);
+            //             dialogueList.forEach((_item_) => {
+            //                 const elem = `<div class="line">${_item_.text}</div>`;
+            //                 _$('#lyrics').append(elem);
+            //             });
+            //         }
+            //         reader.readAsText(doc); // Reads the file as a text string
+            //     }
+
+            //     _$('.two-before').removeClass('two-before').removeClass('visible');
+            //     _$('.one-before').removeClass('one-before').addClass('two-before');
+            //     _$('.current').removeClass('current').addClass('one-before');
+            //     _$('.one-after').removeClass('one-after').addClass('current');
+            //     _$('.two-after').removeClass('two-after').addClass('one-after');
+
+
+            // });
+
+        </script>
+    </body>
+</html>
