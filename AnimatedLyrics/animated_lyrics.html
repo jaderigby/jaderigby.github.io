@@ -7,7 +7,7 @@
         <meta name="apple-mobile-web-app-title" content="Animated Lyrics">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Cal+Sans&family=Fascinate&family=Germania+One&family=Gloria+Hallelujah&family=Lacquer&family=Limelight&family=Luckiest+Guy&family=Nerko+One&family=New+Rocker&family=Permanent+Marker&family=Pirata+One&family=Uncial+Antiqua&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Cal+Sans&family=Chewy&family=Germania+One&family=Gloria+Hallelujah&family=Lacquer&family=Limelight&family=Luckiest+Guy&family=New+Rocker&family=Permanent+Marker&family=Pirata+One&family=Trade+Winds&display=swap" rel="stylesheet">
 
         <script>
             class PanelWrapper extends HTMLElement {}
@@ -163,6 +163,21 @@
                 window.customElements.define('x-cell', segCell);
         </script>
         <style>
+            :root {
+                --font-base-size: 2.2rem;
+                --font-secondary-size: calc(var(--font-base-size) - 0.4rem);
+                --font-tertiary-size: calc(var(--font-base-size) - 1.7rem);
+                --enlarged-font-base-size: 2.4rem;
+                --enlarged-font-secondary-size: calc(var(--adjusted-font-base-size) - 0.4rem);
+                --adjusted-font-base-size: 2.1rem;
+                --adjusted-font-secondary-size: calc(var(--adjusted-font-base-size) - 0.4rem);
+                --adjusted2-font-base-size: 1.9rem;
+                --adjusted2-font-secondary-size: calc(var(--adjusted2-font-base-size) - 0.4rem);
+                --reduced-font-base-size: 1.85rem;
+                --reduced-font-secondary-size: calc(var(--reduced-font-base-size) - 0.4rem);
+                --reduced2-font-base-size: 1.55rem;
+                --reduced2-font-secondary-size: calc(var(--reduced2-font-base-size) - 0.4rem);
+            }
             html,
             body,
             div,
@@ -334,23 +349,6 @@
             panel-inner {
                 background-color: #1BED00;
             }
-            .one-before {
-                font-size: 1.8rem;
-            }
-            .one-after {
-                font-size: 1.8rem;
-            }
-            .two-before {
-                transform: translateY(-17.4em);
-                font-size: 0.5rem;
-                opacity: 0;
-            }
-            .two-after {
-                transform: translateY(28.6em);
-                font-size: 0.5rem;
-                opacity: 0;
-
-            }
             body, panel-wrapper {
                 background-color: #1BED00;
             }
@@ -431,9 +429,173 @@
                 font-weight: 700;
             }
 
-            .UnifrakturCook {
-                font-family: UnifrakturCook;
+
+
+
+            .current.line {
+                font-size: var(--font-base-size);
             }
+
+            .one-before {
+                font-size: var(--font-secondary-size);
+            }
+
+            .one-after {
+                font-size: var(--font-secondary-size);
+            }
+            
+            .two-before {
+                transform: translateY(-17.4em);
+                font-size: var(--font-tertiary-size);
+                /* opacity: 0; */
+            }
+            .two-after {
+                transform: translateY(28.6em);
+                font-size: 0.5rem;
+                /* opacity: 0; */
+            }
+
+            /* Small Fonts Adjustment Config */
+            .GermaniaOne .current.line
+            ,.PirataOne .current.line {
+                font-size: var(--enlarged-font-base-size);
+            }
+
+            .GermaniaOne .one-before
+            ,.PirataOne .one-before {
+                font-size: var(--enlarged-font-secondary-size);
+            }
+
+            .GermaniaOne .one-after
+            ,.PirataOne .one-after {
+                font-size: var(--enlarged-font-secondary-size);
+            }
+            .GermaniaOne .current.line
+            ,.PirataOne .current.line {
+                font-size: var(--enlarged-font-base-size);
+            }
+
+            .GermaniaOne .one-before
+            ,.PirataOne .one-before {
+                font-size: var(--enlarged-font-secondary-size);
+            }
+
+            .GermaniaOne .one-after
+            ,.PirataOne .one-after {
+                font-size: var(--enlarged-font-secondary-size);
+            }
+
+
+
+
+
+            
+
+            /* Large Fonts Adjustment Config */
+            .CalSans .current.line {
+                font-size: var(--adjusted-font-base-size);
+            }
+
+            .CalSans .one-before {
+                font-size: var(--adjusted-font-secondary-size);
+            }
+
+            .CalSans .one-after {
+                font-size: var(--adjusted-font-secondary-size);
+            }
+
+            .CalSans .one-before {
+                font-size: var(--adjusted-font-secondary-size);
+            }
+
+            .CalSans .one-after {
+                font-size: var(--adjusted-font-secondary-size);
+            }
+
+
+
+
+
+
+
+            .Lacquer .current.line {
+                font-size: var(--adjusted2-font-base-size);
+            }
+
+            .Lacquer .one-before {
+                font-size: var(--adjusted2-font-secondary-size);
+            }
+
+            .Lacquer .one-after {
+                font-size: var(--adjusted2-font-secondary-size);
+            }
+            
+            .Lacquer .two-before {
+                transform: translateY(-15.6em);
+            }
+            .Lacquer .two-after {
+                transform: translateY(24.6em);
+            }
+
+            .TradeWinds .current.line
+            ,.PermanentMarker .current.line
+            ,.LuckiestGuy .current.line
+            ,.Limelight .current.line {
+                font-size: var(--reduced-font-base-size);
+            }
+
+            .TradeWinds .one-before
+            ,.PermanentMarker .one-before
+            ,.LuckiestGuy .one-before
+            ,.Limelight .one-before {
+                font-size: var(--reduced-font-secondary-size);
+            }
+
+            .TradeWinds .one-after
+            ,.PermanentMarker .one-after
+            ,.LuckiestGuy .one-after
+            ,.Limelight .one-after {
+                font-size: var(--reduced-font-secondary-size);
+            }
+            
+            .TradeWinds .two-before
+            ,.PermanentMarker .two-before
+            ,.LuckiestGuy .two-before
+            ,.Limelight .two-before {
+                transform: translateY(-15em);
+            }
+            .TradeWinds .two-after
+            ,.PermanentMarker .two-after
+            ,.LuckiestGuy .two-after
+            ,.Limelight .two-after {
+                transform: translateY(23.4em);
+            }
+
+            .BungeeInline .current.line  {
+                font-size: var(--reduced2-font-base-size);
+            }
+
+            .BungeeInline .one-before  {
+                font-size: var(--reduced2-font-secondary-size);
+            }
+
+            .BungeeInline .one-after {
+                font-size: var(--reduced2-font-secondary-size);
+            }
+            
+            .BungeeInline .two-before {
+                transform: translateY(-15em);
+            }
+            .BungeeInline .two-after {
+                transform: translateY(23.4em);
+            }
+
+
+
+
+
+
+
 
             .LuckiestGuy {
                 font-family: "Luckiest Guy";
@@ -441,20 +603,11 @@
             .PirataOne {
                 font-family: "Pirata One";
             }
-            .Fascinate {
-                font-family: "Fascinate";
-            }
             .NewRocker {
                 font-family: "New Rocker";
             }
-            .Arbutus {
-                font-family: "Arbutus";
-            }
             .CalSans {
                 font-family: "Cal Sans";
-            }
-            .UncialAntiqua {
-                font-family: "Uncial Antiqua";
             }
             .Limelight {
                 font-family: "Limelight";
@@ -468,11 +621,17 @@
             .GermaniaOne {
                 font-family: "Germania One";
             }
-            .NerkoOne {
-                font-family: "Nerko One";
-            }
             .GloriaHallelujah {
                 font-family: "Gloria Hallelujah";
+            }
+            .BungeeInline {
+                font-family: "Bungee Inline";
+            }
+            .TradeWinds {
+                font-family: "Trade Winds";
+            }
+            .Chewy {
+                font-family: "Chewy";
             }
 
         </style>
@@ -503,25 +662,22 @@
                 <h4>Font:</h4>
                 <select id="fontSelector">
                     <option value="font-none">Impact</option>
-                    <option value="UnifrakturCook">UnifrakturCook</option>
                     <option value="LuckiestGuy">Lukiest Guy</option>
                     <option value="PirataOne">Pirata One</option>
-                    <option value="Fascinate">Fascinate</option>
                     <option value="NewRocker">New Rocker</option>
-                    <option value="Arbutus">Arbutus</option>
                     <option value="CalSans">Cal Sans</option>
-                    <option value="UncialAntiqua">Uncial Antiqua</option>
                     <option value="Limelight">Limelight</option>
                     <option value="PermanentMarker">Permanent Marker</option>
                     <option value="Lacquer">Lacquer</option>
                     <option value="GermaniaOne">Germania One</option>
-                    <option value="NerkoOne">Nerko One</option>
-                    <option value="GloriaHallelujah">GloriaHallelujah</option>
+                    <option value="BungeeInline">Bungee Inline</option>
+                    <option value="TradeWinds">Trade Winds</option>
+                    <option value="Chewy">Chewy</option>
                 </select>
             </div>
             
             <div class="aspect-ratio-frame" id="nine-sixteen"></div>
-            <div class="NewRocker" id="lyrics"></div>
+            <div id="lyrics"></div>
         </div>
         <script>
             /*
@@ -799,20 +955,18 @@
 
             const FONT_CLASSES = [
                 'font-none',
-                'UnifrakturCook',
                 'LuckiestGuy',
                 'PirataOne',
-                'Fascinate',
                 'NewRocker',
-                'Arbutus',
                 'CalSans',
-                'UncialAntiqua',
                 'Limelight',
                 'PermanentMarker',
                 'Lacquer',
                 'GermaniaOne',
-                'NerkoOne',
-                'GloriaHallelujah'
+                'GloriaHallelujah',
+                'BungeeInline',
+                'TradeWinds',
+                'Chewy' 
             ];
 
             fontSelector.addEventListener('change', () => {
