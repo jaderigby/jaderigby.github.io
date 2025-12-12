@@ -7,7 +7,7 @@
         <meta name="apple-mobile-web-app-title" content="Animated Lyrics">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Cal+Sans&family=Fascinate&family=Luckiest+Guy&family=New+Rocker&family=Pirata+One&family=Uncial+Antiqua&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Cal+Sans&family=Fascinate&family=Germania+One&family=Gloria+Hallelujah&family=Lacquer&family=Limelight&family=Luckiest+Guy&family=Nerko+One&family=New+Rocker&family=Permanent+Marker&family=Pirata+One&family=Uncial+Antiqua&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
         <script>
             class PanelWrapper extends HTMLElement {}
@@ -425,6 +425,12 @@
                 display: block !important;
             }
 
+            h4 {
+                margin-top: 20px;
+                font-family: verdana, sans-serif;
+                font-weight: 700;
+            }
+
             .UnifrakturCook {
                 font-family: UnifrakturCook;
             }
@@ -450,10 +456,23 @@
             .UncialAntiqua {
                 font-family: "Uncial Antiqua";
             }
-            h4 {
-                margin-top: 20px;
-                font-family: verdana, sans-serif;
-                font-weight: 700;
+            .Limelight {
+                font-family: "Limelight";
+            }
+            .PermanentMarker {
+                font-family: "Permanent Marker";
+            }
+            .Lacquer {
+                font-family: "Lacquer";
+            }
+            .GermaniaOne {
+                font-family: "Germania One";
+            }
+            .NerkoOne {
+                font-family: "Nerko One";
+            }
+            .GloriaHallelujah {
+                font-family: "Gloria Hallelujah";
             }
 
         </style>
@@ -492,6 +511,12 @@
                     <option value="Arbutus">Arbutus</option>
                     <option value="CalSans">Cal Sans</option>
                     <option value="UncialAntiqua">Uncial Antiqua</option>
+                    <option value="Limelight">Limelight</option>
+                    <option value="PermanentMarker">Permanent Marker</option>
+                    <option value="Lacquer">Lacquer</option>
+                    <option value="GermaniaOne">Germania One</option>
+                    <option value="NerkoOne">Nerko One</option>
+                    <option value="GloriaHallelujah">GloriaHallelujah</option>
                 </select>
             </div>
             
@@ -781,7 +806,13 @@
                 'NewRocker',
                 'Arbutus',
                 'CalSans',
-                'UncialAntiqua'
+                'UncialAntiqua',
+                'Limelight',
+                'PermanentMarker',
+                'Lacquer',
+                'GermaniaOne',
+                'NerkoOne',
+                'GloriaHallelujah'
             ];
 
             fontSelector.addEventListener('change', () => {
