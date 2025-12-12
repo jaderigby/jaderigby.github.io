@@ -447,12 +447,12 @@
             .two-before {
                 transform: translateY(-17.4em);
                 font-size: var(--font-tertiary-size);
-                /* opacity: 0; */
+                opacity: 0;
             }
             .two-after {
                 transform: translateY(28.6em);
                 font-size: 0.5rem;
-                /* opacity: 0; */
+                opacity: 0;
             }
 
             /* Small Fonts Adjustment Config */
@@ -596,33 +596,51 @@
 
 
 
-
+            .Impact {
+                font-family: Impact;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
+            }
             .LuckiestGuy {
                 font-family: "Luckiest Guy";
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
             }
             .PirataOne {
                 font-family: "Pirata One";
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
             }
             .NewRocker {
                 font-family: "New Rocker";
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
             }
             .CalSans {
                 font-family: "Cal Sans";
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
             }
             .Limelight {
                 font-family: "Limelight";
             }
             .PermanentMarker {
                 font-family: "Permanent Marker";
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
             }
             .Lacquer {
                 font-family: "Lacquer";
             }
             .GermaniaOne {
                 font-family: "Germania One";
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
             }
             .GloriaHallelujah {
                 font-family: "Gloria Hallelujah";
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
             }
             .BungeeInline {
                 font-family: "Bungee Inline";
@@ -632,6 +650,8 @@
             }
             .Chewy {
                 font-family: "Chewy";
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
             }
 
         </style>
@@ -661,7 +681,7 @@
                 </div>
                 <h4>Font:</h4>
                 <select id="fontSelector">
-                    <option value="font-none">Impact</option>
+                    <option value="Impact">Impact</option>
                     <option value="LuckiestGuy">Lukiest Guy</option>
                     <option value="PirataOne">Pirata One</option>
                     <option value="NewRocker">New Rocker</option>
@@ -677,7 +697,7 @@
             </div>
             
             <div class="aspect-ratio-frame" id="nine-sixteen"></div>
-            <div id="lyrics"></div>
+            <div class="Impact" id="lyrics"></div>
         </div>
         <script>
             /*
@@ -954,7 +974,7 @@
             const lyricEl = document.getElementById('lyrics');
 
             const FONT_CLASSES = [
-                'font-none',
+                'Impact',
                 'LuckiestGuy',
                 'PirataOne',
                 'NewRocker',
