@@ -429,6 +429,11 @@
                 font-weight: 700;
             }
 
+            #lyricsInput {
+                margin: 25px 0;
+                display: block;
+            }
+
 
 
 
@@ -694,6 +699,8 @@
                     <option value="TradeWinds">Trade Winds</option>
                     <option value="Chewy">Chewy</option>
                 </select>
+                <textarea id="lyricsInput" placeholder="Paste lyrics here..."></textarea>
+                <button id="exportSRT">Export SRT</button>
             </div>
             
             <div class="aspect-ratio-frame" id="nine-sixteen"></div>
@@ -993,6 +1000,73 @@
                 FONT_CLASSES.forEach(cls => lyricEl.classList.remove(cls));
                 lyricEl.classList.add(fontSelector.value);
             });
+
+
+
+
+
+            function msToTime(ms) {
+                const totalSeconds = Math.floor(ms / 1000);
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+
+                return (
+                    String(minutes).padStart(2, '0') + ':' +
+                    String(seconds).padStart(2, '0') + '.000'
+                );
+            }
+
+            function lyricsToSRT(text) {
+                const lines = text
+                    .split('\n')
+                    .map(l => l.trim())
+                    .filter(l => l.length > 0 && !/^\[.*?\]$/.test(l));
+
+                let srt = [];
+                let startMs = 0;
+
+                lines.forEach((line, index) => {
+                    const startTime = msToTime(startMs);
+                    const endTime = msToTime(startMs + 1000);
+
+                    srt.push(
+                        index + 1,
+                        `${startTime} --> ${endTime}`,
+                        line,
+                        ''
+                    );
+
+                    startMs += 2000;
+                });
+
+                return srt.join('\n');
+            }
+
+            function downloadSRT(filename, content) {
+                const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+            document.getElementById('exportSRT').addEventListener('click', () => {
+                const lyrics = document.getElementById('lyricsInput').value;
+                if (!lyrics.trim()) return;
+
+                const filename = prompt('Save SRT as:', 'lyrics.srt');
+                if (!filename) return;
+
+                const srt = lyricsToSRT(lyrics);
+                downloadSRT(filename.endsWith('.srt') ? filename : filename + '.srt', srt);
+            });
+
 
 
 
