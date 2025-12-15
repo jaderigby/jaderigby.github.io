@@ -687,10 +687,19 @@
                 font-family: "Chewy";
             }
 
+            #syncMarker {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: white;      /* or black */
+                pointer-events: none;
+            }
+
         </style>
         <title>Lyrics</title>
     </head>
     <body>
+        <div id="syncMarker"></div>
         <div id="container">
             <div id="actions">
                 <div>
@@ -951,10 +960,29 @@
 
 
 
-            // The Main Click Handler
-            _$('#run').click(() => {
-                const file = _$('#fileInput').vanilla.files[0]; 
 
+
+
+
+            function showSyncMarker() {
+                const marker = document.getElementById('syncMarker');
+
+                marker.style.display = 'block';
+
+                // guarantee at least 1 rendered frame
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                    marker.style.display = 'none';
+                    });
+                });
+            }
+
+
+
+
+
+            _$('#fileInput').vanilla.addEventListener('change', (e) => {
+                const file = _$('#fileInput').vanilla.files[0];
                 if (file) {
                     const reader = new FileReader();
 
@@ -970,11 +998,26 @@
                         });
 
                         initializeCarouselDynamic(dialogueList);
-                        startTimedPlayback();
                     };
 
                     reader.readAsText(file);
+                    
                 }
+
+            });
+
+
+             
+
+
+
+
+            // The Main Click Handler
+            _$('#run').click(() => {
+                if (!dialogueList.length) return;
+                startTimedPlayback();
+
+                        showSyncMarker();
             });
 
             const radios = document.querySelectorAll('#frameOptions input[name="aspect-ratios"]');
