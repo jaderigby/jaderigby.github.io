@@ -964,18 +964,7 @@
 
 
 
-            function showSyncMarker() {
-                const marker = document.getElementById('syncMarker');
-
-                marker.style.display = 'block';
-
-                // guarantee at least 1 rendered frame
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                    marker.style.display = 'none';
-                    });
-                });
-            }
+            
 
 
 
@@ -1009,15 +998,27 @@
 
              
 
-
+            let markerTimeoutId = null;
 
 
             // The Main Click Handler
             _$('#run').click(() => {
                 if (!dialogueList.length) return;
-                startTimedPlayback();
 
-                        showSyncMarker();
+                if (markerTimeoutId !== null) {
+                    clearTimeout(markerTimeoutId);
+                    markerTimeoutId = null;
+                }
+
+
+                const marker = document.getElementById('syncMarker');
+                marker.style.display = 'block';
+
+                markerTimeoutId = setTimeout(() => {
+                    marker.style.display = 'none';
+                    startTimedPlayback();  // start the lyrics animation
+                    markerTimeoutId = null; // reset
+                }, 1000); // 1 second
             });
 
             const radios = document.querySelectorAll('#frameOptions input[name="aspect-ratios"]');
