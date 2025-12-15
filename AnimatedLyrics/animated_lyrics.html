@@ -345,10 +345,10 @@
                 opacity: 1;
             }
             panel-inner {
-                background-color: #1BED00;
+                background-color: #00ff00;
             }
             body, panel-wrapper {
-                background-color: #1BED00;
+                background-color: #00ff00;
             }
             #actions {
                 position: absolute;
@@ -439,6 +439,14 @@
                 font-size: var(--font-secondary-size);
             }
             
+            /* settings for optimized green screen */
+            .one-before,
+            .one-after {
+                color: #f5f5f5;
+                opacity: 0.6;
+                filter: contrast(1.1);
+            }
+            
             .two-before {
                 font-size: var(--font-tertiary-size);
                 opacity: 0;
@@ -457,6 +465,10 @@
                 flex-flow: column;
                 height: 130px;
                 justify-content: center;
+                text-shadow:
+                    0 0 1px rgba(0,0,0,0.65),
+                    0 0 2px rgba(0,0,0,0.45),
+                    0 0 3px rgba(0,0,0,0.25);
                 /* border: 1px solid red; */
             }
             .line.one-before {
@@ -636,49 +648,33 @@
 
             .Impact {
                 font-family: Impact;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: black;
             }
             .LuckiestGuy {
                 font-family: "Luckiest Guy";
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: black;
             }
             .PirataOne {
                 font-family: "Pirata One";
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
             }
             .NewRocker {
                 font-family: "New Rocker";
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
             }
             .CalSans {
                 font-family: "Cal Sans";
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
             }
             .Limelight {
                 font-family: "Limelight";
             }
             .PermanentMarker {
                 font-family: "Permanent Marker";
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
             }
             .Lacquer {
                 font-family: "Lacquer";
             }
             .GermaniaOne {
                 font-family: "Germania One";
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: black;
             }
             .GloriaHallelujah {
                 font-family: "Gloria Hallelujah";
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: black;
             }
             .BungeeInline {
                 font-family: "Bungee Inline";
@@ -688,8 +684,6 @@
             }
             .Chewy {
                 font-family: "Chewy";
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: black;
             }
 
         </style>
