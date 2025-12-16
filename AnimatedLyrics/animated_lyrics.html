@@ -905,7 +905,7 @@
 
                 const elapsed = now - startTimestamp - pauseAccum;
 
-                if (
+                while (
                     currentIndex < dialogueList.length - 1 &&
                     elapsed >= dialogueList[currentIndex + 1].startTimeMs
                 ) {
@@ -917,6 +917,7 @@
                     rafHandle = requestAnimationFrame(timedLoop);
                 }
             }
+
 
             function pausePlayback() {
                 if (!isPaused) {
