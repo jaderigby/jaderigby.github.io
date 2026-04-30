@@ -1,90 +1,35 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<!-- <link rel="stylesheet" type="text/css" href="your/filepath/here" /> -->
-		<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-				font-size: 100%;
-			}
-			h1 {
-				font-size: 3.2rem;
-			}
-			h2 {
-				font-size: 2.8rem;
-			}
-			h3 {
-				font-size: 2.4rem;
-			}
-			h4 {
-				font-size: 2rem
-			}
-			h5 {
-				font-size: 1.6rem;
-			}
-			h6 {
-				font-size: 1.2rem;
-			}
-			body {
-				background-color: #444;
-			}
-			#container {
-				margin: 0 auto 30px;
-				padding: 30px;
-				width: 960px;
-				min-height: 500px;
-				background-color: #fff;
-				border-radius: 0 0 8px 8px;
-				box-shadow: 0 0 35px rgba(0,0,0,0.5);
-				font-family: arial, verdana, sans-serif;
-			}
-			.centerize {
-				position: absolute;
-				margin: auto;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0
-			}
-			.cf:after {
-				content: " ";
-				display: table;
-				clear: both;
-			}
-      a {
-        color: rgb(51, 119, 128);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      li {
-        margin: 10px 0;
-      }
-		</style>
-		<title>Table Of Contents</title>
-	</head>
-	<body>
-		<div id="container">
-			<ul>
-				<li><a href="marketing-setup-instructions.html">Marketing Setup</a></li>
-				<li><a href="FileSystem_Plan/index.html">FileSystem Presentation</a></li>
-				<li><a href="Bacon_Intro/index.html">Bacon Presentation</a> - <a href="Bacon_Intro/notes-output.html">Notes</a></li>
-				<li><a href="Recipes/app/home.html">Recipes</a></li>
-				<li><a href="teleprompter/index.html">Teleprompter</a></li>
-				<li><a href="knot-details/index.html">Knot Details</a></li>
-				<li><a href="lumafusion-subscribe-animation/index.html">Subscribe Animation</a></li>
-				<li><a href="style-guide/index.html">Style Guide</a> - <a href="style-guide/notes-output.html">Notes</a></li>
-				<li><a href="ux-guidelines-vol1/index.html">UX Guidelines Vol. 1</a> - <a href="ux-guidelines-vol1/notes-output.html">Notes</a></li>
-				<li><a href="ux-guidelines-vol2/index.html">UX Guidelines Vol. 2</a> - <a href="ux-guidelines-vol2/notes-output.html">Notes</a></li>
-				<li><a href="ux-guidelines-vol3/index.html">UX Guidelines Vol. 3</a> - <a href="ux-guidelines-vol3/notes-output.html">Notes</a></li>
-				<li><a href="ux-guidelines-vol4/index.html">UX Guidelines Vol. 4</a> - <a href="ux-guidelines-vol4/notes-output.html">Notes</a></li>
-				<li><a href="dev-guide/index.html">Dev Guide</a> - <a href="dev-guide/notes-output.html">Notes</a></li>
-				<li><a href="title-animations/presentation-page.html">Title Animation</a></li>
-      </ul>
-		</div>
-	</body>
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="website/segments/css/wc-segments.lib.min.css" />
+        <link rel="stylesheet" type="text/css" href="website/css/main.css" />
+        <script src="website/segments/js/segments.lib.js"></script>
+        <title>JadeRigby</title>
+    </head>
+    <body>
+        <panel-wrapper>
+            <panel-inner class="narrow">
+                <header>
+                    <h1 class="center">JadeRigby's Portfolio</h1>
+                </header>
+                <x-segment of="2">
+                    <x-cell>
+                        <div class="thumb">
+                            <a href="website/pages/epic-studio-project.html">
+                                <img src="website/img/epic-studio-project.jpg" alt="EPIC Studio Project">
+                            </a>
+                        </div>
+                    </x-cell>
+                    <x-cell>
+                        <div class="thumb">
+                            <a href="website/pages/epic-studio-project.html">
+                                <img src="website/img/optconnect-project.jpg" alt="EPIC Studio Project">
+                            </a>
+                        </div>
+                    </x-cell>
+                </x-segment>
+            </panel-inner>
+        </panel-wrapper>
+    </body>
 </html>
