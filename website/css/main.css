@@ -89,7 +89,7 @@ a img {
     border: none;
 }
 body {
-    font-family: Helvetica Neue, arial, verdana, sans-serif;
+    font-family: Helvetica Neue, 'Open Sans', arial, verdana, sans-serif;
     font-weight: 300;
     background-color: #444;
 }
@@ -152,8 +152,13 @@ header {
     margin-bottom: 25px;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
 .thumb {
     position: relative;
+    margin-bottom: 45px;
 }
 
 .thumb img {
@@ -161,10 +166,12 @@ header {
     position: relative;
     width: 400px;
     border: 8px solid #444;
+    transition: all 0.15s ease-in-out;
 }
 
 .thumb img:hover {
     border-color: skyblue;
+    box-shadow: 0 0 65px rgba(164, 228, 249, 0.65);
 }
 
 .thumb:after {
@@ -181,4 +188,19 @@ header {
 
 .narrow {
     width: 1000px;
+}
+
+.screen img {
+    margin-bottom: 65px;
+    border: 8px solid #444;
+}
+
+.screen img {
+    display: block;
+    width: 800px;
+}
+
+.for-mobile img {
+    width: 360px;
+    border-width: 3px;
 }
